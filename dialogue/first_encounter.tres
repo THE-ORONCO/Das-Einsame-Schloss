@@ -1,0 +1,387 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://cab2210ljp8k2"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_ft1aa"]
+
+[resource]
+script = ExtResource("1_ft1aa")
+graph_data = {
+"FIRST": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(490.05402, 250.0687),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00027, 394.0003),
+"to_dialog": "",
+"to_node": ["options_node_1"]
+},
+"dialogue_node_10": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_10",
+"node_index": 10,
+"node_type": "dialogue_node",
+"offset": Vector2(5640, 740),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00134, 394.00012),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_11": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_11",
+"node_index": 11,
+"node_type": "dialogue_node",
+"offset": Vector2(980, 180),
+"portrait": "",
+"size": Vector2(250.00052, 394.00018),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"]
+},
+"dialogue_node_12": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_12",
+"node_index": 12,
+"node_type": "dialogue_node",
+"offset": Vector2(1222.2523, 700.5298),
+"portrait": "",
+"size": Vector2(250.00055, 394.00055),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_13": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_13",
+"node_index": 13,
+"node_type": "dialogue_node",
+"offset": Vector2(1045.8195, 1293.9048),
+"portrait": "",
+"size": Vector2(250.00052, 394.00006),
+"to_dialog": "",
+"to_node": ["dialogue_node_4"]
+},
+"dialogue_node_14": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_14",
+"node_index": 14,
+"node_type": "dialogue_node",
+"offset": Vector2(2681.184, 948.003),
+"portrait": "",
+"size": Vector2(250.00043, 394.0008),
+"to_dialog": "",
+"to_node": ["dialogue_node_7"]
+},
+"dialogue_node_15": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_15",
+"node_index": 15,
+"node_type": "dialogue_node",
+"offset": Vector2(4080, 1620),
+"portrait": "",
+"size": Vector2(250.00037, 394.0005),
+"to_dialog": "",
+"to_node": ["dialogue_node_18"]
+},
+"dialogue_node_16": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_16",
+"node_index": 16,
+"node_type": "dialogue_node",
+"offset": Vector2(4420, 620),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00037, 394),
+"to_dialog": "",
+"to_node": ["options_node_3"]
+},
+"dialogue_node_17": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_17",
+"node_index": 17,
+"node_type": "dialogue_node",
+"offset": Vector2(4780, 1200),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00073, 394.00055),
+"to_dialog": "",
+"to_node": ["dialogue_node_19"]
+},
+"dialogue_node_18": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_18",
+"node_index": 18,
+"node_type": "dialogue_node",
+"offset": Vector2(4457.369, 1880.0834),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00037, 394.00098),
+"to_dialog": "",
+"to_node": ["options_node_3"]
+},
+"dialogue_node_19": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_19",
+"node_index": 19,
+"node_type": "dialogue_node",
+"offset": Vector2(5315.853, 1253.5112),
+"portrait": "",
+"size": Vector2(250.00037, 394),
+"to_dialog": "",
+"to_node": ["dialogue_node_10"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(1580, -200),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00076, 394.00024),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(1580, 380),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00076, 394),
+"to_dialog": "",
+"to_node": ["options_node_1"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(1520, 1200),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00092, 394.00104),
+"to_dialog": "",
+"to_node": ["options_node_1"]
+},
+"dialogue_node_5": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_5",
+"node_index": 5,
+"node_type": "dialogue_node",
+"offset": Vector2(3074.4502, 375.5186),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00061, 394),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_6": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_6",
+"node_index": 6,
+"node_type": "dialogue_node",
+"offset": Vector2(2684.4146, 353.58777),
+"portrait": "",
+"size": Vector2(250.00061, 394.00003),
+"to_dialog": "",
+"to_node": ["dialogue_node_5"]
+},
+"dialogue_node_7": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "FIRST_DIALOG_7",
+"node_index": 7,
+"node_type": "dialogue_node",
+"offset": Vector2(3120.7864, 1210.4647),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00061, 394.00064),
+"to_dialog": "",
+"to_node": ["options_node_3"]
+},
+"dialogue_node_8": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_8",
+"node_index": 8,
+"node_type": "dialogue_node",
+"offset": Vector2(3940, 900),
+"portrait": "",
+"size": Vector2(250, 394.00018),
+"to_dialog": "",
+"to_node": ["dialogue_node_16"]
+},
+"dialogue_node_9": {
+"char_expand": true,
+"character": "",
+"dialog_key": "FIRST_DIALOG_9",
+"node_index": 9,
+"node_type": "dialogue_node",
+"offset": Vector2(4437.006, 1233.7207),
+"portrait": "",
+"size": Vector2(250.00037, 394.0005),
+"to_dialog": "",
+"to_node": ["dialogue_node_17"]
+},
+"options_node_1": {
+"node_index": 1,
+"node_type": "options_node",
+"offset": Vector2(798.83276, 518.25555),
+"options_keys": ["FIRST_OPT1_1", "FIRST_OPT1_2", "FIRST_OPT1_3"],
+"size": Vector2(250.0008, 529),
+"to_dialog": "",
+"to_node": ["dialogue_node_11", "dialogue_node_12", "dialogue_node_13"]
+},
+"options_node_2": {
+"node_index": 2,
+"node_type": "options_node",
+"offset": Vector2(2360, 320),
+"options_keys": ["FIRST_OPT2_1", "FIRST_OPT2_2"],
+"size": Vector2(250, 379),
+"to_dialog": "",
+"to_node": ["dialogue_node_6", "dialogue_node_14"]
+},
+"options_node_3": {
+"node_index": 3,
+"node_type": "options_node",
+"offset": Vector2(3629.5068, 1183.1376),
+"options_keys": ["FIRST_OPT3_1", "FIRST_OPT3_2", "FIRST_OPT3_3"],
+"size": Vector2(250.00006, 529),
+"to_dialog": "",
+"to_node": ["dialogue_node_8", "dialogue_node_9", "dialogue_node_15"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(189, 172),
+"size": Vector2(190.00009, 97),
+"start_id": "FIRST",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"FIRST_DIALOG_1": {
+"default": "“Release me! I beg of you!\"",
+"en": ""
+},
+"FIRST_DIALOG_10": {
+"default": "“You could? Please do so! I CANNOT ENDURE THIS PAIN ANY LONGER.”",
+"en": ""
+},
+"FIRST_DIALOG_11": {
+"default": "“Who are you?”",
+"en": ""
+},
+"FIRST_DIALOG_12": {
+"default": "“Ar-are you actually a real ghost?",
+"en": ""
+},
+"FIRST_DIALOG_13": {
+"default": "“AAAAAAAAAAAAAAAAAH”",
+"en": ""
+},
+"FIRST_DIALOG_14": {
+"default": "“Where are the rest of the castle’s inhabitants?”",
+"en": ""
+},
+"FIRST_DIALOG_15": {
+"default": "“How long have you been haunting this place?”",
+"en": ""
+},
+"FIRST_DIALOG_16": {
+"default": "“Yes, my husband. It is him that I had longed for the most.”",
+"en": ""
+},
+"FIRST_DIALOG_17": {
+"default": "“Yes, but I feel as if they aren’t the only thing keeping me tied to this place.”
+",
+"en": ""
+},
+"FIRST_DIALOG_18": {
+"default": "“I wouldn’t know. It has been so long, I have lost track of time.”
+",
+"en": ""
+},
+"FIRST_DIALOG_19": {
+"default": "“I can unlock those chains for you.”",
+"en": ""
+},
+"FIRST_DIALOG_2": {
+"default": "“I am the lady of this castle. Well, I used to be. Now, I am just an apparition - a shell of my former self.”",
+"en": ""
+},
+"FIRST_DIALOG_3": {
+"default": " “I… I believe so. I am aware of my surroundings, I am aware of myself. But still, I do not feel a thing… and I remember my death?”
+",
+"en": ""
+},
+"FIRST_DIALOG_4": {
+"default": "“Be not afraid, for I mean you no harm. I only want to rest peacefully.”
+",
+"en": ""
+},
+"FIRST_DIALOG_5": {
+"default": "“I was the last remaining inhabitant of the castle. My last few years were… grueling. It is all too hazy now, the only feeling I remember is pain, sorrow and anguish. If I could be sure, I would say that I died from a broken heart or perhaps loneliness. Is it even possible to die in such a way?”
+",
+"en": ""
+},
+"FIRST_DIALOG_6": {
+"default": "“How did you die?”",
+"en": ""
+},
+"FIRST_DIALOG_7": {
+"default": " “They all perished long before I did. They all ascended and left this world for another. I, however, cannot seem to be able to do so.”
+",
+"en": ""
+},
+"FIRST_DIALOG_8": {
+"default": "“Is there anybody you remember?”",
+"en": ""
+},
+"FIRST_DIALOG_9": {
+"default": "“Are these chains holding you captive?”",
+"en": ""
+},
+"FIRST_OPT1_1": {
+"default": "“Who are you?”"
+},
+"FIRST_OPT1_2": {
+"default": "“Ar-are you actually a real ghost?”"
+},
+"FIRST_OPT1_3": {
+"default": "“AAAAAAAAAAAAAAAAAH”"
+},
+"FIRST_OPT2_1": {
+"default": "“How did you die?”"
+},
+"FIRST_OPT2_2": {
+"default": "“Where are the rest of the castle’s inhabitants?”"
+},
+"FIRST_OPT3_1": {
+"default": "“Is there anybody you remember?”"
+},
+"FIRST_OPT3_2": {
+"default": "“Are these chains holding you captive?”"
+},
+"FIRST_OPT3_3": {
+"default": "“How long have you been haunting this place?”"
+}
+}
+characters = {
+"FIRST": {
+"dialogue_ghost": 2784968421574489778
+}
+}

@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(480, 80),
 "portrait": "GodontUseThis",
-"size": Vector2(281, 452),
+"size": Vector2(281.00037, 394.00012),
 "to_dialog": "",
 "to_node": ["options_node_1"]
 },
@@ -26,7 +26,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1200, 2340),
 "portrait": "GodontUseThis",
-"size": Vector2(281, 452),
+"size": Vector2(281.00043, 394.00012),
 "to_dialog": "",
 "to_node": ["set_variable_node_1"]
 },
@@ -38,7 +38,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1200, 1240),
 "portrait": "GodontUseThis",
-"size": Vector2(281.00012, 452.00006),
+"size": Vector2(281.00043, 394.00018),
 "to_dialog": "",
 "to_node": ["set_variable_node_1"]
 },
@@ -50,7 +50,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1200, 700),
 "portrait": "GodontUseThis",
-"size": Vector2(281, 452.00006),
+"size": Vector2(281.00043, 394.00012),
 "to_dialog": "",
 "to_node": ["set_variable_node_1"]
 },
@@ -62,7 +62,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1200, 1800),
 "portrait": "GodontUseThis",
-"size": Vector2(281, 452.00012),
+"size": Vector2(281.00043, 394.00024),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -74,16 +74,16 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(2260, 1520),
 "portrait": "GodontUseThis",
-"size": Vector2(281, 452),
+"size": Vector2(280.99976, 394.00012),
 "to_dialog": "",
 "to_node": ["END"]
 },
 "options_node_1": {
 "node_index": 1,
 "node_type": "options_node",
-"offset": Vector2(860, 380.17017),
+"offset": Vector2(860, 380.3103),
 "options_keys": ["TEST_START_OPT1_1", "TEST_START_OPT1_2", "TEST_START_OPT1_3", "TEST_START_OPT1_4"],
-"size": Vector2(250, 736),
+"size": Vector2(250.00015, 679.00024),
 "to_dialog": "",
 "to_node": ["dialogue_node_2", "dialogue_node_3", "dialogue_node_4", "dialogue_node_5"]
 },
@@ -93,7 +93,7 @@ graph_data = {
 "node_type": "set_variable_node",
 "offset": Vector2(1580, 1600),
 "operator": 0,
-"size": Vector2(606.99963, 90),
+"size": Vector2(634.9997, 77.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_6"],
 "var_metadata": {},
@@ -104,7 +104,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(140, 160),
-"size": Vector2(227, 97),
+"size": Vector2(227.00006, 75.00003),
 "start_id": "TEST_START",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
