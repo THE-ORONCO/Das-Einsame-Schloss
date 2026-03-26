@@ -55,3 +55,16 @@ func _on_options_hidden() -> void:
 	# --------------------------------------------------------------------------
 	if options_container:
 		options_container.hide()
+
+## Set a portrait to be displayed in the dialog box
+func display_portrait(character_parent: Node, portrait_node: Node) -> void:
+	if not portrait_display:
+		printerr("[Sprouty Dialogs] Cannot display the portrait in the dialog box. The dialog box doesn't have a portrait display.")
+	
+	if not portrait_display.has_node(NodePath(character_parent.name)):
+		character_parent.add_child(portrait_node)
+		portrait_display.add_child(character_parent)
+	else:
+		# If the character node already exists, add the portrait to it
+		portrait_display.get_node(NodePath(character_parent.name)).add_child(portrait_node)
+	_is_displaying_portrait = true

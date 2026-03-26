@@ -4,11 +4,11 @@ extends Area3D
 var interactable := false
 signal interacted
 
-func _on_body_entered(body: Node3D) -> void:
+func _on_body_entered(_body: Node3D) -> void:
 	interactable = true
 	print("Entered")
 
-func _on_body_exited(body: Node3D) -> void:
+func _on_body_exited(_body: Node3D) -> void:
 	interactable = false
 	print("Exited")
 

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://bi2555cb148vg"]
+
+[ext_resource type="Script" uid="uid://ygs6blymsjbh" path="res://addons/sprouty_dialogs/resources/portrait_data.gd" id="1_vwigf"]
+[ext_resource type="Script" uid="uid://kwoapf8il7ee" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_xnws8"]
+
+[sub_resource type="Resource" id="Resource_vwigf"]
+script = ExtResource("1_vwigf")
+portrait_scene_uid = 3281862116271763728
+portrait_scene_path = "res://dialogue/dialog_portrait.tscn"
+export_overrides = {
+"portrait_image": {
+"type": 4,
+"value": "res://icon.svg"
+}
+}
+typing_sound = {}
+
+[resource]
+script = ExtResource("1_xnws8")
+key_name = "dialog_character"
+display_name = {
+"default": "Scrungly",
+"en": ""
+}
+dialog_box_uid = 1179299976903579754
+dialog_box_path = "res://dialogue/dialog_box.tscn"
+portrait_on_dialog_box = true
+default_portrait = "Character_Idle"
+portraits = {
+"Character_Idle": {
+"data": SubResource("Resource_vwigf"),
+"index": 0
+}
+}

@@ -18,7 +18,7 @@ move_lower = 24.0
 
 [node name="unlock_area" type="Area2D" parent="." unique_id=647380735]
 unique_name_in_owner = true
-collision_layer = 8
+collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="unlock_area" unique_id=467181513]

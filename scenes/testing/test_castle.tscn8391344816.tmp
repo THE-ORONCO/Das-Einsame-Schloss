@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://2fwkdkbme2nc" path="res://entities/character/character.tscn" id="1_i1rtt"]
 [ext_resource type="Script" uid="uid://d1vn0bjwqsasw" path="res://entities/dialog_starter.gd" id="3_j22dg"]
 [ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="3_xedob"]
-[ext_resource type="Resource" uid="uid://cpuc0bnasebge" path="res://scenes/testing/test_dialogue.tres" id="4_4dnb8"]
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="4_j22dg"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
+[ext_resource type="Resource" uid="uid://4ef6fuf4kpvc" path="res://dialogue/ghost_dialogue.tres" id="6_jgjqe"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_61nqe"]
 
@@ -37,12 +37,12 @@ metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
 
 [node name="DialogPlayer" type="Node" parent="NPC/DialogStarter" unique_id=2068710613]
 script = ExtResource("5_tgeax")
-_dialog_data_uid = 5867127728501058900
-_dialog_file_name = "test_dialogue"
-_dialog_data = ExtResource("4_4dnb8")
-_start_id = "START"
+_dialog_data_uid = 2044093214873243336
+_dialog_file_name = "ghost_dialogue"
+_dialog_data = ExtResource("6_jgjqe")
+_start_id = "TEST_START"
 _play_on_ready = false
-_destroy_on_end = true
+_destroy_on_end = false
 _print_debug = false
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 

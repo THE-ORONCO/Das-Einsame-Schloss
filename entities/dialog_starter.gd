@@ -16,11 +16,8 @@ var dialogue: DialogPlayer:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if Engine.is_editor_hint(): return
 	interaction_point.interacted.connect(dialogue.start, CONNECT_ONE_SHOT)
-	var state_before = GameState.current_state
-	dialogue.dialog_started.connect(GameState.talk)
-	dialogue.dialog_ended.connect(GameState.set_state.bind(state_before))
-	
 
 
 func _get_configuration_warnings() -> PackedStringArray:

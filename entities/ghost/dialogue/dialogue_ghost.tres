@@ -5,13 +5,21 @@
 
 [sub_resource type="Resource" id="Resource_1m0by"]
 script = ExtResource("1_kgl46")
-portrait_scene_uid = 3930359452776825469
-portrait_scene_path = "res://entities/ghost/dialogue/godont_use_this.tscn"
+portrait_scene_uid = 3281862116271763728
+portrait_scene_path = "res://dialogue/dialog_portrait.tscn"
 export_overrides = {
 "portrait_image": {
 "type": 4,
 "value": "res://icon.svg"
 }
+}
+transform_settings = {
+"ignore_main_transform": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"rotation": 180.0,
+"scale": Vector2(1, 1),
+"scale_lock_ratio": true
 }
 typing_sound = {}
 
@@ -23,12 +31,12 @@ display_name = {
 "en": ""
 }
 description = "a ghosty ghost"
-dialog_box_uid = 752992288399894570
-dialog_box_path = "res://entities/ghost/dialogue/ghost_dialogue_box.tscn"
+dialog_box_uid = 1179299976903579754
+dialog_box_path = "res://dialogue/dialog_box.tscn"
 portrait_on_dialog_box = true
-default_portrait = "GodontUseThis"
+default_portrait = "Ghost_Idle"
 portraits = {
-"GodontUseThis": {
+"Ghost_Idle": {
 "data": SubResource("Resource_1m0by"),
 "index": 0
 }

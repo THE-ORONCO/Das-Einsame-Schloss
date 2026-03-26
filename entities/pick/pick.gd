@@ -10,6 +10,8 @@ var turn_speed: float = 1
 
 
 func _physics_process(delta: float) -> void:
+	if GameState.current_state != GameState.LOCK_PICK: return
+	
 	var move_dir: Vector2 = Input.get_vector("pick_left", "pick_right", "pick_up", "pick_down")
 	self.linear_velocity = move_dir * speed
 		 

@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://cpuc0bnasebge"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_chucd"]
+
+[resource]
+script = ExtResource("1_chucd")
+graph_data = {
+"START": {
+"call_method_node_1": {
+"autoload": "GameState",
+"method": "pick_test_lock",
+"node_index": 1,
+"node_type": "call_method_node",
+"offset": Vector2(1400, 760),
+"parameters": [],
+"size": Vector2(292.00003, 232),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(580, 140),
+"portrait": "Ghost_Idle",
+"size": Vector2(281, 452),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "dialog_character",
+"dialog_key": "START_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(960, 420),
+"portrait": "Character_Idle",
+"size": Vector2(293, 452),
+"to_dialog": "",
+"to_node": ["call_method_node_1"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(260, 200),
+"size": Vector2(227.00002, 97.00003),
+"start_id": "START",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"START_DIALOG_1": {
+"default": "hi from ghost",
+"en": ""
+},
+"START_DIALOG_2": {
+"default": "hi from character",
+"en": ""
+}
+}
+characters = {
+"START": {
+"dialog_character": 3005546294628586876,
+"dialogue_ghost": 2784968421574489778
+}
+}

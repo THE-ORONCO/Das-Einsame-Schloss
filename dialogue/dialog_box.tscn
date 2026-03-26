@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://ky0w47wt5tpa"]
+[gd_scene format=3 uid="uid://q2i5spvwgsja"]
 
-[ext_resource type="Script" uid="uid://bugaiutt1sxo3" path="res://entities/ghost/dialogue/ghost_dialogue_box.gd" id="1_a35cv"]
-[ext_resource type="Texture2D" uid="uid://tkq4pamepmr5" path="res://addons/sprouty_dialogs/editor/icons/interactable/collapse-down.svg" id="2_0v688"]
-[ext_resource type="Script" uid="uid://cdtkvrnke623v" path="res://addons/sprouty_dialogs/nodes/dialog_option.gd" id="3_y3alg"]
+[ext_resource type="Script" uid="uid://bseddc8dcy78i" path="res://dialogue/dialog_box.gd" id="1_2aby8"]
+[ext_resource type="Script" uid="uid://cdtkvrnke623v" path="res://addons/sprouty_dialogs/nodes/dialog_option.gd" id="2_ckpfk"]
+[ext_resource type="Texture2D" uid="uid://tkq4pamepmr5" path="res://addons/sprouty_dialogs/editor/icons/interactable/collapse-down.svg" id="3_0o3go"]
 
 [node name="GhostDialogueBox" type="Control" unique_id=1628163317 node_paths=PackedStringArray("dialog_display", "name_display", "continue_indicator", "portrait_display", "options_container", "option_template")]
 custom_minimum_size = Vector2(300, 150)
@@ -14,13 +14,13 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-script = ExtResource("1_a35cv")
+script = ExtResource("1_2aby8")
 typing_speed = 0.05
 max_characters = 0
 dialog_display = NodePath("MarginContainer/VBoxContainer/DialogPanel/MarginContainer/DialogContainer/DialogDisplay")
 name_display = NodePath("MarginContainer/VBoxContainer/DialogPanel/MarginContainer/DialogContainer/NameDisplay")
 continue_indicator = NodePath("MarginContainer/VBoxContainer/DialogPanel/MarginContainer/DialogContainer/ContinueIndicator")
-portrait_display = NodePath("MarginContainer/VBoxContainer/Control/HBoxContainer/PortraitLeft")
+portrait_display = NodePath("MarginContainer/VBoxContainer/Control/Portrait")
 options_container = NodePath("MarginContainer/VBoxContainer/Control/OptionsContainer")
 option_template = NodePath("MarginContainer/VBoxContainer/Control/OptionsContainer/DialogOption")
 
@@ -44,21 +44,13 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/Control" unique_id=864903676]
-layout_mode = 0
+[node name="Portrait" type="Control" parent="MarginContainer/VBoxContainer/Control" unique_id=98880257]
+anchors_preset = 0
 offset_top = 4.0
-offset_right = 1052.0
+offset_right = 524.0
 offset_bottom = 289.0
-size_flags_vertical = 3
-
-[node name="PortraitLeft" type="Control" parent="MarginContainer/VBoxContainer/Control/HBoxContainer" unique_id=98880257]
-layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="PortraitRight" type="Control" parent="MarginContainer/VBoxContainer/Control/HBoxContainer" unique_id=1494449796]
-layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Control" unique_id=279380225]
 layout_mode = 1
@@ -77,21 +69,21 @@ alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 text = "Option 1"
-script = ExtResource("3_y3alg")
+script = ExtResource("2_ckpfk")
 metadata/_custom_type_script = "uid://cdtkvrnke623v"
 
 [node name="DialogOption2" type="Button" parent="MarginContainer/VBoxContainer/Control/OptionsContainer" unique_id=1352693340]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Option 2"
-script = ExtResource("3_y3alg")
+script = ExtResource("2_ckpfk")
 metadata/_custom_type_script = "uid://cdtkvrnke623v"
 
 [node name="DialogOption3" type="Button" parent="MarginContainer/VBoxContainer/Control/OptionsContainer" unique_id=1480274170]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Option 2"
-script = ExtResource("3_y3alg")
+script = ExtResource("2_ckpfk")
 metadata/_custom_type_script = "uid://cdtkvrnke623v"
 
 [node name="DialogPanel" type="Panel" parent="MarginContainer/VBoxContainer" unique_id=1182817394]
@@ -130,7 +122,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture = ExtResource("2_0v688")
+texture = ExtResource("3_0o3go")
 expand_mode = 2
 stretch_mode = 5
 

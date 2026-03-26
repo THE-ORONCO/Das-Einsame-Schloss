@@ -6,24 +6,25 @@
 [ext_resource type="PackedScene" uid="uid://cjrrsf4gc180i" path="res://entities/dirt/dirt.tscn" id="3_8f5g6"]
 [ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="4_e44qc"]
 [ext_resource type="PackedScene" uid="uid://biy5ugxxadayn" path="res://entities/lock/tumbler/tumbler.tscn" id="5_wuasl"]
-[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="7_l8rcy"]
-[ext_resource type="Resource" uid="uid://g3nmod60e3wv" path="res://scenes/testing/test_lock_picked_dialogue.tres" id="8_a6cio"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="7_4msdv"]
+[ext_resource type="Resource" uid="uid://4ef6fuf4kpvc" path="res://dialogue/ghost_dialogue.tres" id="8_5pj7p"]
 
-[node name="Test" type="Node2D" unique_id=203358695 node_paths=PackedStringArray("dialog_after")]
+[node name="Test" type="Node2D" unique_id=203358695]
 script = ExtResource("1_r6g08")
-dialog_after = NodePath("DialogPlayer")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2125800329]
 
 [node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("1_8anb8")]
-position = Vector2(199, 299)
+position = Vector2(-378, -32)
 
 [node name="Pick" parent="." unique_id=740996554 instance=ExtResource("2_ln3kt")]
-position = Vector2(815, 313)
+position = Vector2(238, -18)
 
 [node name="Dirt" parent="." unique_id=1075283443 instance=ExtResource("3_8f5g6")]
-position = Vector2(613, 321)
+position = Vector2(36, -10)
 
 [node name="tumbler" type="Node2D" parent="." unique_id=649621100]
-position = Vector2(580, 337)
+position = Vector2(3, 6)
 
 [node name="Tumbler" parent="tumbler" unique_id=696676676 instance=ExtResource("5_wuasl")]
 position = Vector2(-283, 74)
@@ -36,7 +37,7 @@ position = Vector2(-125, 77)
 
 [node name="pins" type="Node2D" parent="." unique_id=2110920680]
 unique_name_in_owner = true
-position = Vector2(582, 369)
+position = Vector2(5, 38)
 
 [node name="Pin" parent="pins" unique_id=1335108495 instance=ExtResource("4_e44qc")]
 position = Vector2(-287, 135)
@@ -53,13 +54,13 @@ move_lower = 64.113
 position = Vector2(-122, 139)
 move_lower = 65.014
 
-[node name="DialogPlayer" type="Node" parent="." unique_id=527691360]
-script = ExtResource("7_l8rcy")
-_dialog_data_uid = 479747130778102977
-_dialog_file_name = "test_lock_picked_dialogue"
-_dialog_data = ExtResource("8_a6cio")
-_start_id = "START"
-_play_on_ready = false
+[node name="DialogPlayer" type="Node" parent="." unique_id=158347961]
+script = ExtResource("7_4msdv")
+_dialog_data_uid = 2044093214873243336
+_dialog_file_name = "ghost_dialogue"
+_dialog_data = ExtResource("8_5pj7p")
+_start_id = "TEST_START"
+_play_on_ready = true
 _destroy_on_end = true
-_print_debug = false
+_print_debug = true
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
