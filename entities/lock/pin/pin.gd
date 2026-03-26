@@ -6,6 +6,7 @@ extends Node2D
 @onready var groove: GrooveJoint2D = $groove
 @onready var spring: DampedSpringJoint2D = $spring
 @onready var pin: RigidBody2D = $Pin
+@onready var block: RigidBody2D = $block
 
 @export_range(0,64)
 var spring_strength: float = 32:
@@ -31,9 +32,25 @@ var move_lower: float =  24:
 			groove.length = move_lower 
 			spring.length = move_lower
 	
+## if the pin is locked into the correct position
+#var locked: bool = false:
+	#set(val):
+		#locked = val
+		#pin.freeze = locked
+	
 func _ready() -> void:
 	if Engine.is_editor_hint(): return 
 	
 	spring_strength = spring_strength
 	move_lower = move_lower
 	move_upper = move_upper
+	
+	
+func _process(delta: float) -> void:
+	if Engine.is_editor_hint(): return 
+	
+	var turner: float = Input.get_axis("turner_tight", "turner_loose")
+	block.linear_velocity = Vector2(turner * 20, 0)
+	#for body in pin.get_colliding_bodies():
+		#if body is Pick:
+			#pin.freeze = false

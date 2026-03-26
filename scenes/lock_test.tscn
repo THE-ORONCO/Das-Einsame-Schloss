@@ -31,11 +31,11 @@ position = Vector2(50, 28)
 position = Vector2(81, 27)
 
 [node name="pins" type="Node2D" parent="." unique_id=2110920680]
-position = Vector2(5, 39)
+position = Vector2(5, 38)
 
 [node name="Pin" parent="pins" unique_id=1335108495 instance=ExtResource("4_e44qc")]
 position = Vector2(19, 25)
-spring_strength = 17.352
+spring_strength = 50.929
 move_upper = 2.9579999999999984
 move_lower = 20.435
 
@@ -44,3 +44,9 @@ position = Vector2(48, 24)
 
 [node name="Pin3" parent="pins" unique_id=1219276083 instance=ExtResource("4_e44qc")]
 position = Vector2(79, 23)
+
+[node name="Pin4" parent="pins" unique_id=1792015638 instance=ExtResource("4_e44qc")]
+position = Vector2(115, -11)
+spring_strength = 17.352
+move_upper = 2.9579999999999984
+move_lower = 20.435

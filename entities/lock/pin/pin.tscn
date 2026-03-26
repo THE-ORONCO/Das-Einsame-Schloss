@@ -8,6 +8,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emukn"]
 size = Vector2(15, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjdtg"]
+size = Vector2(5, 4)
+
 [node name="Pin" type="Node2D" unique_id=1335108495]
 script = ExtResource("1_yjdtg")
 
@@ -37,6 +40,8 @@ collision_mask = 6
 mass = 0.1
 gravity_scale = 0.0
 lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pin" unique_id=171853730]
 position = Vector2(0.5, 0)
@@ -44,4 +49,34 @@ shape = SubResource("RectangleShape2D_emukn")
 
 [node name="Icon" type="Sprite2D" parent="Pin" unique_id=1435312622]
 scale = Vector2(0.125, 0.2265625)
+texture = ExtResource("2_8rkxn")
+
+[node name="block_groove" type="GrooveJoint2D" parent="." unique_id=757656207]
+rotation = -1.5707964
+node_a = NodePath("../RestPosition")
+node_b = NodePath("../block")
+length = 13.0
+initial_offset = 13.0
+
+[node name="block_spring" type="DampedSpringJoint2D" parent="." unique_id=1007429424]
+rotation = -1.5707964
+node_a = NodePath("../RestPosition")
+node_b = NodePath("../block")
+length = 13.0
+rest_length = 13.0
+stiffness = 32.0
+damping = 0.5
+
+[node name="block" type="RigidBody2D" parent="." unique_id=1904999968]
+position = Vector2(13, -7)
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block" unique_id=1818823687]
+shape = SubResource("RectangleShape2D_yjdtg")
+
+[node name="Icon" type="Sprite2D" parent="block" unique_id=1401252725]
+scale = Vector2(0.039062485, 0.031250004)
 texture = ExtResource("2_8rkxn")

@@ -1,3 +1,4 @@
+class_name Pick
 extends RigidBody2D
 
 
