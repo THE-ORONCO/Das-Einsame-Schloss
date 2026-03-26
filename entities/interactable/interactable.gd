@@ -1,3 +1,4 @@
+class_name Interactible
 extends Area3D
 
 var interactable := false

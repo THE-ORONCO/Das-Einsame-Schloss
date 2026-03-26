@@ -56,7 +56,7 @@ func _physics_process(_delta: float) -> void:
 	if abs(turning) >= 0.0001:
 		cylinder.linear_velocity.x = turning * 100
 	else:
-		cylinder.linear_velocity.x = clamp(cylinder.linear_velocity.x, -100, 1)
+		cylinder.linear_velocity.x = clamp(cylinder.linear_velocity.x, -100, 10)
 
 func _on_unlock_area_body_entered(body: Node2D) -> void:
 	unlocked = true

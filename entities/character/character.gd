@@ -6,6 +6,7 @@ const JUMP_VELOCITY = 4.5
 
 
 func _physics_process(delta: float) -> void:
+	if GameState.current_state != GameState.WALKING: return
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
