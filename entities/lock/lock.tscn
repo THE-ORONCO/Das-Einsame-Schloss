@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dmrc2e072mukh"]
+
+[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="1_2dbbp"]
+[ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin.tscn" id="2_2dbbp"]
+
+[node name="Lock" type="Node2D" unique_id=1995817171]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=496550688]
+position = Vector2(96.5, -35)
+scale = Vector2(1.7734375, 0.101562455)
+texture = ExtResource("1_2dbbp")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=444472857]
+position = Vector2(-9.25, -9.999998)
+scale = Vector2(0.14453128, 0.49999997)
+texture = ExtResource("1_2dbbp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1004575419]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=880163441]
+polygon = PackedVector2Array(209, -28, 211, -43, -19, -43, -20, 22, -1, 22, 1, -27)
+
+[node name="Pin" parent="." unique_id=1632214667 instance=ExtResource("2_2dbbp")]
+position = Vector2(18, 12)
+
+[node name="Pin2" parent="." unique_id=1335108495 instance=ExtResource("2_2dbbp")]
+position = Vector2(43, 12)
+
+[node name="Pin3" parent="." unique_id=1420814773 instance=ExtResource("2_2dbbp")]
+position = Vector2(67, 12)
+
+[node name="Pin4" parent="." unique_id=1458989572 instance=ExtResource("2_2dbbp")]
+position = Vector2(91, 12)
