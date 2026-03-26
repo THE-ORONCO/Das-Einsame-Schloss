@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bykh5cae2g7at"]
 
 [ext_resource type="PackedScene" uid="uid://2fwkdkbme2nc" path="res://entities/character/character.tscn" id="1_bly62"]
+[ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="2_0ysgy"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bly62"]
 
@@ -9,10 +10,14 @@
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1702876007]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 3, 0)
 
-[node name="CharacterBody3D" parent="." unique_id=1159888165 instance=ExtResource("1_bly62")]
+[node name="character" parent="." unique_id=1159888165 instance=ExtResource("1_bly62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 2
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2019631280]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=2019631280]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1134339147]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1134339147]
 shape = SubResource("WorldBoundaryShape3D_bly62")
+
+[node name="Area3D" parent="." unique_id=1269265622 instance=ExtResource("2_0ysgy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5845389, 0, -0.07492924)
