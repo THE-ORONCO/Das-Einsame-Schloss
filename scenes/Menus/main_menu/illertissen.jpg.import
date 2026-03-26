@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvex5yntews2k"
-path="res://.godot/imported/illertissen.jpg-39cb6bb3c8dff981790499974351e841.ctex"
+path="res://.godot/imported/illertissen.jpg-c3cdb0451b7dc44d325e4f0de03bde2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/main_menu/illertissen.jpg"
-dest_files=["res://.godot/imported/illertissen.jpg-39cb6bb3c8dff981790499974351e841.ctex"]
+source_file="res://scenes/Menus/main_menu/illertissen.jpg"
+dest_files=["res://.godot/imported/illertissen.jpg-c3cdb0451b7dc44d325e4f0de03bde2a.ctex"]
 
 [params]
 
