@@ -3,22 +3,33 @@
 [ext_resource type="Script" uid="uid://cb5m8dd4iaacn" path="res://entities/pick/pick.gd" id="1_8aik6"]
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="2_is6dl"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=740996554]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_is6dl"]
+radius = 5.0
+height = 18.0
+
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=279109275]
 collision_layer = 4
 collision_mask = 3
+gravity_scale = 0.0
+linear_damp = 31.106
 script = ExtResource("1_8aik6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=987313874]
-position = Vector2(-288, 20)
-polygon = PackedVector2Array(5, -17, 2, -6, -8, -7, 0, -23, 288, -24, 289, -16)
+position = Vector2(-147.9, 18.4)
+polygon = PackedVector2Array(5, -17, 0, -23, 288, -24, 289, -16)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1966838933]
-position = Vector2(-142, 0.99999905)
+position = Vector2(-1.8999786, -0.60000134)
 scale = Vector2(2.1875, 0.062499996)
 texture = ExtResource("2_is6dl")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=943143417]
-position = Vector2(-287.99997, 5.000001)
-rotation = -1.2974794
-scale = Vector2(0.14322017, 0.07084813)
+position = Vector2(-147.80168, 3.8422465)
+rotation = 1.5707964
+scale = Vector2(0.15013027, 0.087739594)
 texture = ExtResource("2_is6dl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=367956433]
+position = Vector2(-148, 3)
+scale = Vector2(1.0791949, 1.1556684)
+shape = SubResource("CapsuleShape2D_is6dl")

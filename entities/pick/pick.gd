@@ -1,20 +1,20 @@
-extends CharacterBody2D
+extends RigidBody2D
 
 
-const SPEED: Vector2 = Vector2(100,20)
+@export
+var speed: Vector2 = Vector2(200,100)
+
+@export_range(0., 100.)
+var turn_speed: float = 40
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
 
 	
 	var move_dir: Vector2 = Input.get_vector("pick_left", "pick_right", "pick_up", "pick_down")
-	var vel: Vector2 = move_dir * SPEED
-	self.velocity = vel
-	
+	self.linear_velocity = move_dir * speed
+		 
 	var turn: float = Input.get_axis("turner_loose", "turner_tight")
-	
+	self.angular_velocity = turn * turn_speed
 
-	move_and_slide()
+	move_and_collide(Vector2.ZERO)

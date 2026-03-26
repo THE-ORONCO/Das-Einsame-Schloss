@@ -2,12 +2,33 @@
 
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="1_emukn"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xurte"]
-radius = 6.0
-
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_e5wp6"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emukn"]
+size = Vector2(15, 28)
+
 [node name="Node2D" type="Node2D" unique_id=1335108495]
+
+[node name="RestPosition" type="StaticBody2D" parent="." unique_id=86207496]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RestPosition" unique_id=1861564159]
+shape = SubResource("SeparationRayShape2D_e5wp6")
+
+[node name="groove" type="GrooveJoint2D" parent="." unique_id=1476144609]
+node_a = NodePath("../RestPosition")
+node_b = NodePath("../Pin")
+length = 20.0
+initial_offset = 12.0
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=7970142]
+position = Vector2(0, -18)
+node_a = NodePath("../RestPosition")
+node_b = NodePath("../Pin")
+length = 38.0
+stiffness = 64.0
+damping = 0.5
 
 [node name="Pin" type="RigidBody2D" parent="." unique_id=1632214667]
 collision_layer = 2
@@ -16,20 +37,9 @@ mass = 0.1
 lock_rotation = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pin" unique_id=171853730]
-shape = SubResource("CapsuleShape2D_xurte")
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_emukn")
 
 [node name="Icon" type="Sprite2D" parent="Pin" unique_id=1435312622]
 scale = Vector2(0.125, 0.2265625)
 texture = ExtResource("1_emukn")
-
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="." unique_id=7970142]
-position = Vector2(0, -18)
-node_a = NodePath("../RestPosition")
-node_b = NodePath("../Pin")
-length = 38.0
-stiffness = 30.0
-
-[node name="RestPosition" type="StaticBody2D" parent="." unique_id=86207496]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RestPosition" unique_id=1861564159]
-shape = SubResource("SeparationRayShape2D_e5wp6")
