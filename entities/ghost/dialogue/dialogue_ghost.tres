@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="SproutyDialogsCharacterData" format=3 uid="uid://bfxca1us55roc"]
+
+[ext_resource type="Script" uid="uid://kwoapf8il7ee" path="res://addons/sprouty_dialogs/resources/character_data.gd" id="1_hyh4b"]
+[ext_resource type="Script" uid="uid://ygs6blymsjbh" path="res://addons/sprouty_dialogs/resources/portrait_data.gd" id="1_kgl46"]
+
+[sub_resource type="Resource" id="Resource_1m0by"]
+script = ExtResource("1_kgl46")
+portrait_scene_uid = 3930359452776825469
+portrait_scene_path = "res://entities/ghost/dialogue/godont_use_this.tscn"
+export_overrides = {
+"portrait_image": {
+"type": 4,
+"value": "res://icon.svg"
+}
+}
+typing_sound = {}
+
+[resource]
+script = ExtResource("1_hyh4b")
+key_name = "dialogue_ghost"
+display_name = {
+"default": "Ghost",
+"en": ""
+}
+description = "a ghosty ghost"
+dialog_box_uid = 752992288399894570
+dialog_box_path = "res://entities/ghost/dialogue/ghost_dialogue_box.tscn"
+portrait_on_dialog_box = true
+default_portrait = "GodontUseThis"
+portraits = {
+"GodontUseThis": {
+"data": SubResource("Resource_1m0by"),
+"index": 0
+}
+}

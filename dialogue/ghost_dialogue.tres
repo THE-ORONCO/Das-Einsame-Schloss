@@ -1,0 +1,159 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://4ef6fuf4kpvc"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_g4pxd"]
+
+[resource]
+script = ExtResource("1_g4pxd")
+graph_data = {
+"TEST_START": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "TEST_START_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(480, 80),
+"portrait": "GodontUseThis",
+"size": Vector2(281, 452),
+"to_dialog": "",
+"to_node": ["options_node_1"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "TEST_START_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(1200, 2340),
+"portrait": "GodontUseThis",
+"size": Vector2(281.00003, 452),
+"to_dialog": "",
+"to_node": ["set_variable_node_1"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "TEST_START_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(1200, 1240),
+"portrait": "GodontUseThis",
+"size": Vector2(281.00015, 452.0003),
+"to_dialog": "",
+"to_node": ["set_variable_node_1"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "TEST_START_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(1200, 700),
+"portrait": "GodontUseThis",
+"size": Vector2(281.00003, 452.00006),
+"to_dialog": "",
+"to_node": ["set_variable_node_1"]
+},
+"dialogue_node_5": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "TEST_START_DIALOG_5",
+"node_index": 5,
+"node_type": "dialogue_node",
+"offset": Vector2(1200, 1800),
+"portrait": "GodontUseThis",
+"size": Vector2(281.00003, 452.00012),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_6": {
+"char_expand": true,
+"character": "",
+"dialog_key": "TEST_START_DIALOG_6",
+"node_index": 6,
+"node_type": "dialogue_node",
+"offset": Vector2(2260, 1520),
+"portrait": "",
+"size": Vector2(250, 452.00024),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"options_node_1": {
+"node_index": 1,
+"node_type": "options_node",
+"offset": Vector2(860, 380),
+"options_keys": ["TEST_START_OPT1_1", "TEST_START_OPT1_2", "TEST_START_OPT1_3", "TEST_START_OPT1_4"],
+"size": Vector2(250.00003, 736.00024),
+"to_dialog": "",
+"to_node": ["dialogue_node_2", "dialogue_node_3", "dialogue_node_4", "dialogue_node_5"]
+},
+"set_variable_node_1": {
+"new_value": true,
+"node_index": 1,
+"node_type": "set_variable_node",
+"offset": Vector2(1580, 1600),
+"operator": 0,
+"size": Vector2(571.9995, 130.99988),
+"to_dialog": "",
+"to_node": ["dialogue_node_6"],
+"var_metadata": {},
+"var_name": "dialogue",
+"var_type": 1
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(140, 160),
+"size": Vector2(227, 97),
+"start_id": "TEST_START",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"TEST_START_DIALOG_1": {
+"default": "Hewow
+Me is Ghost 
+Big scary :3",
+"en": ""
+},
+"TEST_START_DIALOG_2": {
+"default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+"en": ""
+},
+"TEST_START_DIALOG_3": {
+"default": "hehe me very skawy",
+"en": ""
+},
+"TEST_START_DIALOG_4": {
+"default": "b",
+"en": ""
+},
+"TEST_START_DIALOG_5": {
+"default": "is me not skawy enuf? :,(",
+"en": ""
+},
+"TEST_START_DIALOG_6": {
+"default": "My final words
+bodgeye",
+"en": ""
+},
+"TEST_START_OPT1_1": {
+"default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+},
+"TEST_START_OPT1_2": {
+"default": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+},
+"TEST_START_OPT1_3": {
+"default": "a"
+},
+"TEST_START_OPT1_4": {
+"default": "..."
+}
+}
+characters = {
+"TEST_START": {
+"dialogue_ghost": 2784968421574489778
+}
+}
