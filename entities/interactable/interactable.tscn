@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_suq05"]
 
-[node name="Area3D" type="Area3D" unique_id=1269265622]
+[node name="Interactible" type="Area3D" unique_id=1269265622]
 collision_mask = 2
 script = ExtResource("1_pwkmt")
 
