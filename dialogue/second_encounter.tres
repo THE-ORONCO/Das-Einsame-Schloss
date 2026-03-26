@@ -1,0 +1,224 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://bhes71doxqbvc"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_qpgwu"]
+
+[resource]
+script = ExtResource("1_qpgwu")
+graph_data = {
+"SECOND": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(280, 120),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00017, 394.00003),
+"to_dialog": "",
+"to_node": ["dialogue_node_7"]
+},
+"dialogue_node_10": {
+"char_expand": true,
+"character": "",
+"dialog_key": "SECOND_DIALOG_10",
+"node_index": 10,
+"node_type": "dialogue_node",
+"offset": Vector2(1740, 260),
+"portrait": "",
+"size": Vector2(250.0003, 394.00107),
+"to_dialog": "",
+"to_node": ["dialogue_node_5"]
+},
+"dialogue_node_11": {
+"char_expand": true,
+"character": "",
+"dialog_key": "SECOND_DIALOG_11",
+"node_index": 11,
+"node_type": "dialogue_node",
+"offset": Vector2(1700, 980),
+"portrait": "",
+"size": Vector2(250.00006, 394.00043),
+"to_dialog": "",
+"to_node": ["dialogue_node_6"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(1020, 100),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00064, 394.00003),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(2140, -260),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00006, 394.0005),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(2160, 220),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00012, 394.00085),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_5": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_5",
+"node_index": 5,
+"node_type": "dialogue_node",
+"offset": Vector2(2160, 720),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00061, 394.00003),
+"to_dialog": "",
+"to_node": ["options_node_2"]
+},
+"dialogue_node_6": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "SECOND_DIALOG_6",
+"node_index": 6,
+"node_type": "dialogue_node",
+"offset": Vector2(2180, 1240),
+"portrait": "GodontUseThis",
+"size": Vector2(250.00012, 394.00024),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_7": {
+"char_expand": true,
+"character": "",
+"dialog_key": "SECOND_DIALOG_7",
+"node_index": 7,
+"node_type": "dialogue_node",
+"offset": Vector2(947.8468, 743.06146),
+"portrait": "",
+"size": Vector2(250.00037, 394.0003),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"]
+},
+"dialogue_node_8": {
+"char_expand": true,
+"character": "",
+"dialog_key": "SECOND_DIALOG_8",
+"node_index": 8,
+"node_type": "dialogue_node",
+"offset": Vector2(1760, -940),
+"portrait": "",
+"size": Vector2(250.00018, 394.00006),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_9": {
+"char_expand": true,
+"character": "",
+"dialog_key": "SECOND_DIALOG_9",
+"node_index": 9,
+"node_type": "dialogue_node",
+"offset": Vector2(1720, -340),
+"portrait": "",
+"size": Vector2(250.00006, 394.00012),
+"to_dialog": "",
+"to_node": ["dialogue_node_4"]
+},
+"options_node_2": {
+"node_index": 2,
+"node_type": "options_node",
+"offset": Vector2(1315.9894, 366.03003),
+"options_keys": ["SECOND_OPT2_1", "SECOND_OPT2_2", "SECOND_OPT2_3", "SECOND_OPT2_4"],
+"size": Vector2(250.00037, 679),
+"to_dialog": "",
+"to_node": ["dialogue_node_8", "dialogue_node_9", "dialogue_node_10", "dialogue_node_11"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(48, 90),
+"size": Vector2(190, 97.00026),
+"start_id": "SECOND",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"SECOND_DIALOG_1": {
+"default": "“YOU DID IT! YOU SET ME FREE! But, why is nothing happening? No… Am I still bound to the castle…”",
+"en": ""
+},
+"SECOND_DIALOG_10": {
+"default": "“I need more information about your engagement ring.”",
+"en": ""
+},
+"SECOND_DIALOG_11": {
+"default": "“Alright, I’ll get to work.”",
+"en": ""
+},
+"SECOND_DIALOG_2": {
+"default": "“I am sensing a connection to three objects from my past. A necklace, a pair of glasses and my engagement ring. Try finding those three items, I believe they are somewhere in the castle.”
+",
+"en": ""
+},
+"SECOND_DIALOG_3": {
+"default": "“It was a gift from my husband. It was beautiful. It reminds me of warmth, for some strange reason",
+"en": ""
+},
+"SECOND_DIALOG_4": {
+"default": "“I don’t recall being short sighted, but I remember using a pair of glasses when viewing art.” ",
+"en": ""
+},
+"SECOND_DIALOG_5": {
+"default": "“I don’t remember wearing it, but oddly, I think of porcelain whenever I am reminded of it.”",
+"en": ""
+},
+"SECOND_DIALOG_6": {
+"default": "“Thank you and good luck!”",
+"en": ""
+},
+"SECOND_DIALOG_7": {
+"default": "“Any idea what could be keeping you  bound?”",
+"en": ""
+},
+"SECOND_DIALOG_8": {
+"default": "“Tell me more about the necklace.”",
+"en": ""
+},
+"SECOND_DIALOG_9": {
+"default": "“I would like to know more about the glasses.”",
+"en": ""
+},
+"SECOND_OPT2_1": {
+"default": "“Tell me more about the necklace.”"
+},
+"SECOND_OPT2_2": {
+"default": "“I would like to know more about the glasses.”"
+},
+"SECOND_OPT2_3": {
+"default": "“I need more information about your engagement ring.”"
+},
+"SECOND_OPT2_4": {
+"default": "“Alright, I’ll get to work.”"
+}
+}
+characters = {
+"SECOND": {
+"dialogue_ghost": 2784968421574489778
+}
+}

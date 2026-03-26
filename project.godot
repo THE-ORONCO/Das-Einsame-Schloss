@@ -73,8 +73,8 @@ variables/variables={
 "value": false
 }
 }
-internal/play_dialog_path="res://scenes/testing/test_dialogue.tres"
-internal/play_start_id="START"
+internal/play_dialog_path="res://dialogue/third_encounter.tres"
+internal/play_start_id="THIRD"
 
 [gui]
 
