@@ -42,8 +42,13 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer" unique_id=1219450671]
+layout_mode = 2
+size_flags_horizontal = 0
+
 [node name="AudioSliderMaster" parent="VBoxContainer" unique_id=1422607701 instance=ExtResource("4_gn0ho")]
 layout_mode = 2
+focus_neighbor_top = NodePath("../CheckButton")
 audio_bus_name = "Master"
 
 [node name="AudioSliderSFX" parent="VBoxContainer" unique_id=1266949156 instance=ExtResource("4_gn0ho")]
