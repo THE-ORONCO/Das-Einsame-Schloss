@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ki5ekhq8532"
-path.s3tc="res://.godot/imported/character_spritesheet.png-4560508ee6d80be3845dfd4ad9331e85.s3tc.ctex"
+uid="uid://dva3m3mgytane"
+path.s3tc="res://.godot/imported/character_idle.png-686a645e007d960bafd726427afd80a6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://entities/character/character_spritesheet.png"
-dest_files=["res://.godot/imported/character_spritesheet.png-4560508ee6d80be3845dfd4ad9331e85.s3tc.ctex"]
+source_file="res://entities/character/character_idle.png"
+dest_files=["res://.godot/imported/character_idle.png-686a645e007d960bafd726427afd80a6.s3tc.ctex"]
 
 [params]
 

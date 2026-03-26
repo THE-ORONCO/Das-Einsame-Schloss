@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Das Einsame Schloss"
-run/main_scene="uid://d4e0pcnkiwhcu"
+run/main_scene="uid://d0r10hwbi4wa6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

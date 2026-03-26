@@ -4,6 +4,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+@onready var animation: AnimatedSprite3D = %animation
+
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.WALKING: return
@@ -27,3 +29,18 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	_animate_sprite()
+
+
+func _animate_sprite() -> void:
+	if velocity.length_squared() < 0.1:
+		animation.play("idle")
+		return
+	
+	var dir := velocity.normalized()
+	if abs(dir.x) > abs(dir.z):
+		if dir.x > 0: animation.play("right")
+		if dir.x < 0: animation.play("left")
+	elif abs(dir.x) < abs(dir.z) :
+		if dir.z > 0: animation.play("down")
+		if dir.z < 0: animation.play("up")
