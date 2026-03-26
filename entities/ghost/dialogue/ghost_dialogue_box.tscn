@@ -70,6 +70,7 @@ offset_left = -150.0
 offset_right = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_behavior_recursive = 2
 alignment = 1
 
 [node name="DialogOption" type="Button" parent="MarginContainer/VBoxContainer/Control/OptionsContainer" unique_id=953392771]

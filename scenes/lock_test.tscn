@@ -15,6 +15,7 @@ script = ExtResource("1_r6g08")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2125800329]
 
 [node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("1_8anb8")]
+position = Vector2(-378, -32)
 
 [node name="Pick" parent="." unique_id=740996554 instance=ExtResource("2_ln3kt")]
 position = Vector2(238, -18)
@@ -26,33 +27,35 @@ position = Vector2(36, -10)
 position = Vector2(3, 6)
 
 [node name="Tumbler" parent="tumbler" unique_id=696676676 instance=ExtResource("5_wuasl")]
-position = Vector2(21, 29)
+position = Vector2(-283, 74)
 
 [node name="Tumbler2" parent="tumbler" unique_id=1415628755 instance=ExtResource("5_wuasl")]
-position = Vector2(50, 28)
+position = Vector2(-201, 78)
 
 [node name="Tumbler3" parent="tumbler" unique_id=82940026 instance=ExtResource("5_wuasl")]
-position = Vector2(81, 27)
+position = Vector2(-125, 77)
 
 [node name="pins" type="Node2D" parent="." unique_id=2110920680]
 unique_name_in_owner = true
 position = Vector2(5, 38)
 
 [node name="Pin" parent="pins" unique_id=1335108495 instance=ExtResource("4_e44qc")]
-position = Vector2(19, 25)
+position = Vector2(-287, 135)
 spring_strength = 64.0
-move_upper = 2.9579999999999984
-move_lower = 20.435
+move_upper = -1.6900000000000013
+move_lower = 87.139
 
 [node name="Pin2" parent="pins" unique_id=1012677249 instance=ExtResource("4_e44qc")]
-position = Vector2(48, 24)
+position = Vector2(-204, 139)
 spring_strength = 64.0
+move_lower = 64.113
 
 [node name="Pin3" parent="pins" unique_id=1219276083 instance=ExtResource("4_e44qc")]
-position = Vector2(79, 23)
+position = Vector2(-122, 139)
+move_lower = 65.014
 
 [node name="Pin4" parent="pins" unique_id=1792015638 instance=ExtResource("4_e44qc")]
-position = Vector2(114, -25)
+position = Vector2(37, 77)
 spring_strength = 17.352
 move_upper = 2.9579999999999984
 move_lower = 20.435

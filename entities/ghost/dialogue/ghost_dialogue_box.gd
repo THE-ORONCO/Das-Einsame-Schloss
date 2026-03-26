@@ -42,7 +42,9 @@ func _on_options_displayed() -> void:
 	# --------------------------------------------------------------------------
 	if options_container:
 		options_container.show()
-		options_container.get_child(0).grab_focus()
+		var first_option: DialogOption = options_container.get_child(0)
+		first_option.call_deferred("grab_focus")
+		
 
 
 func _on_options_hidden() -> void:

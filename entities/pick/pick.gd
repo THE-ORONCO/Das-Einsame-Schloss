@@ -3,10 +3,10 @@ extends RigidBody2D
 
 
 @export
-var speed: Vector2 = Vector2(200,100)
+var speed: Vector2 = Vector2(700,300)
 
-@export_range(0., 100.)
-var turn_speed: float = .1
+@export_range(0., 3.)
+var turn_speed: float = 1
 
 
 func _physics_process(delta: float) -> void:

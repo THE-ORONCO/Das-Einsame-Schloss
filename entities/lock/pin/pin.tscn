@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="2_8rkxn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yjdtg"]
-radius = 6.0
+radius = 25.019993
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_e5wp6"]
 
@@ -14,6 +14,7 @@ rough = true
 
 [node name="Pin" type="Node2D" unique_id=1335108495]
 script = ExtResource("1_yjdtg")
+move_lower = 24.0
 
 [node name="unlock_area" type="Area2D" parent="." unique_id=647380735]
 unique_name_in_owner = true
@@ -37,14 +38,14 @@ shape = SubResource("SeparationRayShape2D_e5wp6")
 unique_name_in_owner = true
 node_a = NodePath("../../RestPosition")
 node_b = NodePath("../Pin")
-length = 24.0
+length = 64.0
 initial_offset = 1.0
 
 [node name="spring" type="DampedSpringJoint2D" parent="pin_assembly" unique_id=7970142]
 unique_name_in_owner = true
 node_a = NodePath("../../RestPosition")
 node_b = NodePath("../Pin")
-length = 24.0
+length = 64.0
 stiffness = 64.0
 damping = 0.5
 
@@ -58,11 +59,11 @@ contact_monitor = true
 max_contacts_reported = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pin_assembly/Pin" unique_id=268148899]
-polygon = PackedVector2Array(5, -14, 8, -12, 8, 14, -7, 14, -7, -14)
+polygon = PackedVector2Array(18, -45, 28, -36, 28, 46, -27, 46, -27, -45)
 
 [node name="Icon" type="Sprite2D" parent="pin_assembly/Pin" unique_id=1435312622]
-position = Vector2(0.5, -1.7881393e-07)
-scale = Vector2(0.1171875, 0.21874999)
+position = Vector2(-1.4305115e-06, 0)
+scale = Vector2(0.45703122, 0.71874994)
 texture = ExtResource("2_8rkxn")
 
 [node name="block_assembly" type="Node2D" parent="." unique_id=123564368]
@@ -72,20 +73,20 @@ position = Vector2(6, 0)
 rotation = -1.5707964
 node_a = NodePath("../../RestPosition")
 node_b = NodePath("../cylinder")
-length = 10.0
-initial_offset = 10.0
+length = 34.0
+initial_offset = 34.0
 
 [node name="block_spring" type="DampedSpringJoint2D" parent="block_assembly" unique_id=1007429424]
 rotation = -1.5707964
 node_a = NodePath("../../RestPosition")
 node_b = NodePath("../cylinder")
-length = 10.0
-rest_length = 10.0
+length = 34.0
+rest_length = 34.0
 stiffness = 64.0
 
 [node name="cylinder" type="RigidBody2D" parent="block_assembly" unique_id=1904999968]
 unique_name_in_owner = true
-position = Vector2(10, 0)
+position = Vector2(34, 0)
 collision_layer = 10
 collision_mask = 2
 mass = 40.0
@@ -94,11 +95,12 @@ gravity_scale = 0.0
 lock_rotation = true
 
 [node name="Icon" type="Sprite2D" parent="block_assembly/cylinder" unique_id=1401252725]
-scale = Vector2(0.039062485, 0.031250004)
+position = Vector2(-2.3841858e-07, 0)
+scale = Vector2(0.109375015, 0.039062504)
 texture = ExtResource("2_8rkxn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="block_assembly/cylinder" unique_id=1772380983]
-polygon = PackedVector2Array(2, 2, -3, 0, 2, -2)
+polygon = PackedVector2Array(6, 5, -8, 0, 6, -5)
 
 [connection signal="body_entered" from="unlock_area" to="." method="_on_unlock_area_body_entered"]
 [connection signal="body_exited" from="unlock_area" to="." method="_on_unlock_area_body_exited"]

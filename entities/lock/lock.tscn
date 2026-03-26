@@ -7,18 +7,18 @@
 script = ExtResource("1_c3vu3")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=496550688]
-position = Vector2(96.5, -35)
-scale = Vector2(1.7734375, 0.101562455)
+position = Vector2(340, -133)
+scale = Vector2(5.5679684, 0.31249997)
 texture = ExtResource("1_2dbbp")
 
 [node name="Icon3" type="Sprite2D" parent="." unique_id=1281596472]
-position = Vector2(97, 35)
-scale = Vector2(1.7734375, 0.101562455)
+position = Vector2(343, 165)
+scale = Vector2(5.566406, 0.3164062)
 texture = ExtResource("1_2dbbp")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=444472857]
-position = Vector2(-9.25, -0.99999905)
-scale = Vector2(0.14453128, 0.64062494)
+position = Vector2(-1.7500014, 22.49998)
+scale = Vector2(0.26171875, 2.6953123)
 texture = ExtResource("1_2dbbp")
 
 [node name="body" type="StaticBody2D" parent="." unique_id=1004575419]
@@ -27,4 +27,5 @@ collision_mask = 0
 
 [node name="shape" type="CollisionPolygon2D" parent="body" unique_id=880163441]
 unique_name_in_owner = true
-polygon = PackedVector2Array(209, -28, 211, -43, -19, -43, -19, 41, 212, 42, 212, 28, 0, 28, 1, -27)
+position = Vector2(0.30000305, 0.5)
+polygon = PackedVector2Array(685.7, -121.5, 687.7, -148.5, -22.300003, -151.5, -24.300003, 195.5, 693.7, 177.5, 699.7, 139.5, 5.699997, 145.5, 4.699997, -121.5)

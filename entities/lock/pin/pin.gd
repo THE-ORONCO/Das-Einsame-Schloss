@@ -27,8 +27,8 @@ var move_upper: float = 0:
 			pin.position = Vector2(0, move_upper)
 			rest_position.position = Vector2(0, move_upper)
 			
-@export_range(0, 64)
-var move_lower: float =  24:
+@export_range(0, 128)
+var move_lower: float =  64:
 	set(val): 
 		move_lower = val
 		if groove != null : 
@@ -54,7 +54,7 @@ func _physics_process(_delta: float) -> void:
 	
 	var turning: float = Input.get_axis("turner_tight", "turner_loose")
 	if abs(turning) >= 0.0001:
-		cylinder.linear_velocity.x = turning * 20
+		cylinder.linear_velocity.x = turning * 100
 	else:
 		cylinder.linear_velocity.x = clamp(cylinder.linear_velocity.x, -100, 1)
 

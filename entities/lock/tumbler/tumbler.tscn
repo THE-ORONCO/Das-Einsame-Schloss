@@ -17,7 +17,7 @@ shape = SubResource("SeparationRayShape2D_3cfy0")
 [node name="groove" type="GrooveJoint2D" parent="." unique_id=755716395]
 node_a = NodePath("../RestPosition")
 node_b = NodePath("../Tumbler")
-length = 26.0
+length = 64.0
 initial_offset = 1.0
 
 [node name="Tumbler" type="RigidBody2D" parent="." unique_id=358369326]
@@ -28,8 +28,9 @@ gravity_scale = 0.3
 lock_rotation = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tumbler" unique_id=440886639]
-polygon = PackedVector2Array(-7, -20, 6, -20, 8, -16, 8, 18, 5, 20, -7, 20)
+polygon = PackedVector2Array(-26, -44, 22, -44, 28, -37, 28, 38, 21, 45, -26, 45)
 
 [node name="Icon" type="Sprite2D" parent="Tumbler" unique_id=792055258]
-scale = Vector2(0.1171875, 0.32421878)
+position = Vector2(0, 9.536743e-07)
+scale = Vector2(0.45703122, 0.71874994)
 texture = ExtResource("2_0tmj2")
