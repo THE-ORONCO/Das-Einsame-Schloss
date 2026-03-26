@@ -37,8 +37,9 @@ vertical_alignment = 1
 
 [node name="continue" type="Button" parent="PauseMenu/VBoxContainer" unique_id=959510410]
 layout_mode = 2
+focus_neighbor_top = NodePath("../quit")
 theme = ExtResource("1_x3ywu")
-text = "continue"
+text = "Continue"
 
 [node name="settings" type="Button" parent="PauseMenu/VBoxContainer" unique_id=942851065]
 layout_mode = 2
@@ -52,10 +53,12 @@ text = "Main Menu"
 
 [node name="quit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=277881994]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../continue")
 theme = ExtResource("1_x3ywu")
 text = "Quit"
 
 [node name="Options" parent="." unique_id=1682390146 instance=ExtResource("2_hv25b")]
+visible = false
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/settings" to="." method="_on_settings_pressed"]

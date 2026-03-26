@@ -19,7 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 func toggle_pause() -> void:
 	is_paused = !is_paused
-	# get_tree().paused = is_paused
+	get_tree().paused = is_paused
 	if is_paused:
 		pause_menu.show()
 		resume_button.grab_focus()
@@ -43,6 +43,3 @@ func _on_main_menu_pressed() -> void:
 
 func _on_continue_pressed() -> void:
 	toggle_pause()
-
-func open_settings(vbox: VBoxContainer) -> void:
-	pass
