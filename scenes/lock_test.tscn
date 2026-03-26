@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://d4e0pcnkiwhcu"]
 
 [ext_resource type="PackedScene" uid="uid://dmrc2e072mukh" path="res://entities/lock/lock.tscn" id="1_8anb8"]
+[ext_resource type="Script" uid="uid://de4ifafcd0p1i" path="res://scenes/lock_test.gd" id="1_r6g08"]
 [ext_resource type="PackedScene" uid="uid://c7m7m5623eowl" path="res://entities/pick/pick.tscn" id="2_ln3kt"]
 [ext_resource type="PackedScene" uid="uid://cjrrsf4gc180i" path="res://entities/dirt/dirt.tscn" id="3_8f5g6"]
 [ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="4_e44qc"]
 [ext_resource type="PackedScene" uid="uid://biy5ugxxadayn" path="res://entities/lock/tumbler/tumbler.tscn" id="5_wuasl"]
 
 [node name="Test" type="Node2D" unique_id=203358695]
+script = ExtResource("1_r6g08")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2125800329]
 
 [node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("1_8anb8")]
 
-[node name="CharacterBody2D" parent="." unique_id=740996554 instance=ExtResource("2_ln3kt")]
+[node name="Pick" parent="." unique_id=740996554 instance=ExtResource("2_ln3kt")]
 position = Vector2(238, -18)
 
 [node name="Dirt" parent="." unique_id=1075283443 instance=ExtResource("3_8f5g6")]
@@ -31,22 +33,24 @@ position = Vector2(50, 28)
 position = Vector2(81, 27)
 
 [node name="pins" type="Node2D" parent="." unique_id=2110920680]
+unique_name_in_owner = true
 position = Vector2(5, 38)
 
 [node name="Pin" parent="pins" unique_id=1335108495 instance=ExtResource("4_e44qc")]
 position = Vector2(19, 25)
-spring_strength = 50.929
+spring_strength = 64.0
 move_upper = 2.9579999999999984
 move_lower = 20.435
 
 [node name="Pin2" parent="pins" unique_id=1012677249 instance=ExtResource("4_e44qc")]
 position = Vector2(48, 24)
+spring_strength = 64.0
 
 [node name="Pin3" parent="pins" unique_id=1219276083 instance=ExtResource("4_e44qc")]
 position = Vector2(79, 23)
 
 [node name="Pin4" parent="pins" unique_id=1792015638 instance=ExtResource("4_e44qc")]
-position = Vector2(115, -11)
+position = Vector2(114, -25)
 spring_strength = 17.352
 move_upper = 2.9579999999999984
 move_lower = 20.435

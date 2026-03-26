@@ -2,11 +2,14 @@
 class_name Pin 
 extends Node2D
 
-@onready var rest_position: StaticBody2D = $RestPosition
-@onready var groove: GrooveJoint2D = $groove
-@onready var spring: DampedSpringJoint2D = $spring
-@onready var pin: RigidBody2D = $Pin
-@onready var block: RigidBody2D = $block
+@onready var rest_position: StaticBody2D = %RestPosition
+@onready var groove: GrooveJoint2D = %groove
+@onready var spring: DampedSpringJoint2D = %spring
+@onready var pin: RigidBody2D = %Pin
+@onready var cylinder: RigidBody2D = %cylinder
+@onready var unlock_area: Area2D = %unlock_area
+
+signal lock_state_change
 
 @export_range(0,64)
 var spring_strength: float = 32:
@@ -32,11 +35,11 @@ var move_lower: float =  24:
 			groove.length = move_lower 
 			spring.length = move_lower
 	
-## if the pin is locked into the correct position
-#var locked: bool = false:
-	#set(val):
-		#locked = val
-		#pin.freeze = locked
+## if the pin is unlocked / placed in the correct position
+var unlocked: bool = false:
+	set(val):
+		unlocked = val
+		lock_state_change.emit()
 	
 func _ready() -> void:
 	if Engine.is_editor_hint(): return 
@@ -46,11 +49,18 @@ func _ready() -> void:
 	move_upper = move_upper
 	
 	
-func _process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return 
 	
-	var turner: float = Input.get_axis("turner_tight", "turner_loose")
-	block.linear_velocity = Vector2(turner * 20, 0)
-	#for body in pin.get_colliding_bodies():
-		#if body is Pick:
-			#pin.freeze = false
+	var turning: float = Input.get_axis("turner_tight", "turner_loose")
+	if abs(turning) >= 0.0001:
+		cylinder.linear_velocity.x = turning * 20
+	else:
+		cylinder.linear_velocity.x = clamp(cylinder.linear_velocity.x, -100, 1)
+
+func _on_unlock_area_body_entered(body: Node2D) -> void:
+	unlocked = true
+	$pin_assembly/Pin/Icon.modulate = Color.RED
+func _on_unlock_area_body_exited(body: Node2D) -> void:
+	unlocked = false
+	$pin_assembly/Pin/Icon.modulate = Color.WHITE
