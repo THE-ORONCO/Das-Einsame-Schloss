@@ -21,8 +21,6 @@ SproutyDialogs="*uid://c8gxm75j80u8c"
 
 [display]
 
-window/size/viewport_width=576
-window/size/viewport_height=324
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"

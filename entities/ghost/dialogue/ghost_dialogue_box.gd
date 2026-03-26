@@ -42,6 +42,7 @@ func _on_options_displayed() -> void:
 	# --------------------------------------------------------------------------
 	if options_container:
 		options_container.show()
+		options_container.get_child(0).grab_focus()
 
 
 func _on_options_hidden() -> void:
