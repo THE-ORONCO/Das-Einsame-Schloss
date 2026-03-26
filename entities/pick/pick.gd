@@ -14,5 +14,7 @@ func _physics_process(delta: float) -> void:
 		 
 	var turn: float = Input.get_axis("pick_anti_clockwise", "pick_clockwise")
 	self.angular_velocity = turn * turn_speed
-
+	
+	self.lock_rotation = !Input.is_action_pressed("pick_anti_clockwise") && !Input.is_action_pressed("pick_clockwise")
+	
 	move_and_collide(Vector2.ZERO)

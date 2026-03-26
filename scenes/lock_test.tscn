@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmrc2e072mukh" path="res://entities/lock/lock.tscn" id="1_8anb8"]
 [ext_resource type="PackedScene" uid="uid://c7m7m5623eowl" path="res://entities/pick/pick.tscn" id="2_ln3kt"]
+[ext_resource type="PackedScene" uid="uid://cjrrsf4gc180i" path="res://entities/dirt/dirt.tscn" id="3_8f5g6"]
 
 [node name="Test" type="Node2D" unique_id=203358695]
 
@@ -11,3 +12,6 @@
 
 [node name="CharacterBody2D" parent="." unique_id=740996554 instance=ExtResource("2_ln3kt")]
 position = Vector2(238, -18)
+
+[node name="Dirt" parent="." unique_id=1075283443 instance=ExtResource("3_8f5g6")]
+position = Vector2(36, -10)
