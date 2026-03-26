@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://uq8ken51crrw"]
+
+[ext_resource type="Script" uid="uid://8pp2qn44uu5w" path="res://scenes/Menus/ui_manager.gd" id="1_hv25b"]
+[ext_resource type="Theme" uid="uid://e0756hvdpqi6" path="res://ui/menu_theme.tres" id="1_x3ywu"]
+[ext_resource type="PackedScene" uid="uid://b286ruo7ej0s6" path="res://scenes/Menus/options_menu.tscn" id="2_hv25b"]
+
+[node name="UIManager" type="CanvasLayer" unique_id=876532496]
+process_mode = 3
+script = ExtResource("1_hv25b")
+
+[node name="PauseMenu" type="Control" parent="." unique_id=855520259]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu" unique_id=770522882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 690.0
+offset_top = 320.0
+offset_right = 1190.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer" unique_id=1578183859]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Pause Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="continue" type="Button" parent="PauseMenu/VBoxContainer" unique_id=959510410]
+layout_mode = 2
+theme = ExtResource("1_x3ywu")
+text = "continue"
+
+[node name="settings" type="Button" parent="PauseMenu/VBoxContainer" unique_id=942851065]
+layout_mode = 2
+theme = ExtResource("1_x3ywu")
+text = "Settings"
+
+[node name="main_menu" type="Button" parent="PauseMenu/VBoxContainer" unique_id=2107572873]
+layout_mode = 2
+theme = ExtResource("1_x3ywu")
+text = "Main Menu"
+
+[node name="quit" type="Button" parent="PauseMenu/VBoxContainer" unique_id=277881994]
+layout_mode = 2
+theme = ExtResource("1_x3ywu")
+text = "Quit"
+
+[node name="Options" parent="." unique_id=1682390146 instance=ExtResource("2_hv25b")]
+
+[connection signal="pressed" from="PauseMenu/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="PauseMenu/VBoxContainer/quit" to="." method="_on_quit_pressed"]

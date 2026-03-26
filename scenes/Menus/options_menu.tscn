@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b286ruo7ej0s6"]
+
+[ext_resource type="Theme" uid="uid://e0756hvdpqi6" path="res://ui/menu_theme.tres" id="1_liyum"]
+[ext_resource type="Script" uid="uid://bmyq1dlk007cl" path="res://scenes/Menus/options_menu.gd" id="1_qldvp"]
+[ext_resource type="PackedScene" uid="uid://wllmgjqyw7nh" path="res://scenes/Menus/AudioSlider.tscn" id="4_gn0ho"]
+
+[node name="Options" type="Panel" unique_id=1682390146]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qldvp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1933949312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13023421, 0.15201873, 0.1933713, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1985406181]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLabel" type="Label" parent="VBoxContainer" unique_id=1177484375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioSliderMaster" parent="VBoxContainer" unique_id=1422607701 instance=ExtResource("4_gn0ho")]
+layout_mode = 2
+audio_bus_name = "Master"
+
+[node name="AudioSliderSFX" parent="VBoxContainer" unique_id=1266949156 instance=ExtResource("4_gn0ho")]
+layout_mode = 2
+audio_bus_name = "SFX"
+
+[node name="AudioSliderMusic" parent="VBoxContainer" unique_id=2016504555 instance=ExtResource("4_gn0ho")]
+layout_mode = 2
+audio_bus_name = "Music"
+
+[node name="back" type="Button" parent="VBoxContainer" unique_id=1945643737]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme = ExtResource("1_liyum")
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
