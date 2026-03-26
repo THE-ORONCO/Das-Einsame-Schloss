@@ -5,16 +5,14 @@ extends RigidBody2D
 var speed: Vector2 = Vector2(200,100)
 
 @export_range(0., 100.)
-var turn_speed: float = 40
+var turn_speed: float = .1
 
 
 func _physics_process(delta: float) -> void:
-
-	
 	var move_dir: Vector2 = Input.get_vector("pick_left", "pick_right", "pick_up", "pick_down")
 	self.linear_velocity = move_dir * speed
 		 
-	var turn: float = Input.get_axis("turner_loose", "turner_tight")
+	var turn: float = Input.get_axis("pick_anti_clockwise", "pick_clockwise")
 	self.angular_velocity = turn * turn_speed
 
 	move_and_collide(Vector2.ZERO)
