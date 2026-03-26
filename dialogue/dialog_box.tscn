@@ -45,10 +45,13 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Portrait" type="Control" parent="MarginContainer/VBoxContainer/Control" unique_id=98880257]
-anchors_preset = 0
-offset_top = 4.0
-offset_right = 524.0
-offset_bottom = 289.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -503.0
+offset_right = 586.0
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
