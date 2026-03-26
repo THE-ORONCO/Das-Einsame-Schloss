@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://6o2dc6vxjq08"]
+
+[ext_resource type="Texture2D" uid="uid://ccl01s0cedlb3" path="res://entities/emp/EMP-Geraet.png" id="1_j84g5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsied"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq1x6"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lh05o"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23esd"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ugkr"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ainfm"]
+atlas = ExtResource("1_j84g5")
+region = Rect2(0, 64, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsied")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq1x6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lh05o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23esd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ugkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ainfm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

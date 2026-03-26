@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dwxk1pq4p4sk4"]
+
+[ext_resource type="Texture2D" uid="uid://dn62lsvq5yip7" path="res://entities/emp/EMP-Geraet_0.png" id="1_6ugkr"]
+[ext_resource type="Texture2D" uid="uid://dlxrsyk2cuxyb" path="res://entities/emp/EMP-Geraet_1.png" id="2_ainfm"]
+[ext_resource type="Texture2D" uid="uid://58ey8jq60le4" path="res://entities/emp/EMP-Geraet_2.png" id="3_78j1k"]
+[ext_resource type="Texture2D" uid="uid://ckrj6ow8jol0r" path="res://entities/emp/EMP-Geraet_3.png" id="4_ic6l2"]
+[ext_resource type="Texture2D" uid="uid://b5877b8ngvfmc" path="res://entities/emp/EMP-Geraet_4.png" id="5_egjg2"]
+[ext_resource type="Texture2D" uid="uid://bjgx6qyq8t002" path="res://entities/emp/EMP-Geraet_5.png" id="6_viw3q"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_f2l7f"]
+frames = 6
+pause = true
+frame_0/texture = ExtResource("1_6ugkr")
+frame_1/texture = ExtResource("2_ainfm")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_78j1k")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_ic6l2")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_egjg2")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_viw3q")
+frame_5/duration = 1.0
+
+[node name="Emp" type="Control" unique_id=1621379061]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=376628389]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -494.0
+offset_top = -428.0
+offset_right = -454.0
+offset_bottom = -388.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(8, 8)
+texture = SubResource("AnimatedTexture_f2l7f")
