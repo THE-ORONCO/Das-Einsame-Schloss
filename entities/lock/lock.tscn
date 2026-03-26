@@ -1,64 +1,30 @@
 [gd_scene format=3 uid="uid://dmrc2e072mukh"]
 
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="1_2dbbp"]
-[ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="2_2dbbp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbbp"]
-size = Vector2(9.75, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3vu3"]
-size = Vector2(10.875, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_61quh"]
-size = Vector2(11.875, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3f0p"]
-size = Vector2(122.9375, 20)
+[ext_resource type="Script" uid="uid://dxxr7j55dm16u" path="res://entities/lock/lock.gd" id="1_c3vu3"]
 
 [node name="Lock" type="Node2D" unique_id=1995817171]
+script = ExtResource("1_c3vu3")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=496550688]
 position = Vector2(96.5, -35)
 scale = Vector2(1.7734375, 0.101562455)
 texture = ExtResource("1_2dbbp")
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=444472857]
-position = Vector2(-9.25, -9.999998)
-scale = Vector2(0.14453128, 0.49999997)
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1281596472]
+position = Vector2(97, 35)
+scale = Vector2(1.7734375, 0.101562455)
 texture = ExtResource("1_2dbbp")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1004575419]
+[node name="Icon2" type="Sprite2D" parent="." unique_id=444472857]
+position = Vector2(-9.25, -0.99999905)
+scale = Vector2(0.14453128, 0.64062494)
+texture = ExtResource("1_2dbbp")
+
+[node name="body" type="StaticBody2D" parent="." unique_id=1004575419]
+unique_name_in_owner = true
 collision_mask = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=880163441]
-polygon = PackedVector2Array(209, -28, 211, -43, -19, -43, -19, 41, -2, 41, 0, 5, 1, -27)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1061694700]
-position = Vector2(5, 32)
-shape = SubResource("RectangleShape2D_2dbbp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1115249914]
-position = Vector2(33.4375, 32)
-shape = SubResource("RectangleShape2D_c3vu3")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=110147260]
-position = Vector2(62.9375, 32)
-shape = SubResource("RectangleShape2D_61quh")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=442515363]
-position = Vector2(148.40625, 33)
-shape = SubResource("RectangleShape2D_g3f0p")
-
-[node name="Pin" parent="." unique_id=1335108495 instance=ExtResource("2_2dbbp")]
-position = Vector2(18.875, 29)
-spring_strength = 64.0
-
-[node name="Pin2" parent="." unique_id=1747327919 instance=ExtResource("2_2dbbp")]
-position = Vector2(47.875, 28)
-spring_strength = 64.0
-
-[node name="Pin3" parent="." unique_id=128391020 instance=ExtResource("2_2dbbp")]
-position = Vector2(77.875, 28)
-resistance = 0.715
-move_upper = -8.873
-move_lower = 35.944
+[node name="shape" type="CollisionPolygon2D" parent="body" unique_id=880163441]
+unique_name_in_owner = true
+polygon = PackedVector2Array(209, -28, 211, -43, -19, -43, -19, 41, 212, 42, 212, 28, 0, 28, 1, -27)
