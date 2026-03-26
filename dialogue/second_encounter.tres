@@ -13,32 +13,32 @@ graph_data = {
 "node_index": 1,
 "node_type": "dialogue_node",
 "offset": Vector2(280, 120),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00017, 394.00003),
+"portrait": "",
+"size": Vector2(281.00006, 441.00006),
 "to_dialog": "",
 "to_node": ["dialogue_node_7"]
 },
 "dialogue_node_10": {
 "char_expand": true,
-"character": "",
+"character": "dialog_character",
 "dialog_key": "SECOND_DIALOG_10",
 "node_index": 10,
 "node_type": "dialogue_node",
 "offset": Vector2(1740, 260),
 "portrait": "",
-"size": Vector2(250.0003, 394.00107),
+"size": Vector2(293, 452.00006),
 "to_dialog": "",
 "to_node": ["dialogue_node_5"]
 },
 "dialogue_node_11": {
 "char_expand": true,
-"character": "",
+"character": "dialog_character",
 "dialog_key": "SECOND_DIALOG_11",
 "node_index": 11,
 "node_type": "dialogue_node",
 "offset": Vector2(1700, 980),
 "portrait": "",
-"size": Vector2(250.00006, 394.00043),
+"size": Vector2(293, 452),
 "to_dialog": "",
 "to_node": ["dialogue_node_6"]
 },
@@ -49,8 +49,8 @@ graph_data = {
 "node_index": 2,
 "node_type": "dialogue_node",
 "offset": Vector2(1020, 100),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00064, 394.00003),
+"portrait": "",
+"size": Vector2(281.00003, 441),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -61,8 +61,8 @@ graph_data = {
 "node_index": 3,
 "node_type": "dialogue_node",
 "offset": Vector2(2140, -260),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00006, 394.0005),
+"portrait": "",
+"size": Vector2(281, 441),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -73,8 +73,8 @@ graph_data = {
 "node_index": 4,
 "node_type": "dialogue_node",
 "offset": Vector2(2160, 220),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00012, 394.00085),
+"portrait": "",
+"size": Vector2(281, 441.00015),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -85,8 +85,8 @@ graph_data = {
 "node_index": 5,
 "node_type": "dialogue_node",
 "offset": Vector2(2160, 720),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00061, 394.00003),
+"portrait": "",
+"size": Vector2(281, 441.00018),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -97,53 +97,53 @@ graph_data = {
 "node_index": 6,
 "node_type": "dialogue_node",
 "offset": Vector2(2180, 1240),
-"portrait": "GodontUseThis",
-"size": Vector2(250.00012, 394.00024),
+"portrait": "",
+"size": Vector2(281.00006, 441),
 "to_dialog": "",
 "to_node": ["END"]
 },
 "dialogue_node_7": {
 "char_expand": true,
-"character": "",
+"character": "dialog_character",
 "dialog_key": "SECOND_DIALOG_7",
 "node_index": 7,
 "node_type": "dialogue_node",
 "offset": Vector2(947.8468, 743.06146),
 "portrait": "",
-"size": Vector2(250.00037, 394.0003),
+"size": Vector2(293, 452.00006),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
 "dialogue_node_8": {
 "char_expand": true,
-"character": "",
+"character": "dialog_character",
 "dialog_key": "SECOND_DIALOG_8",
 "node_index": 8,
 "node_type": "dialogue_node",
 "offset": Vector2(1760, -940),
 "portrait": "",
-"size": Vector2(250.00018, 394.00006),
+"size": Vector2(293, 452),
 "to_dialog": "",
 "to_node": ["dialogue_node_3"]
 },
 "dialogue_node_9": {
 "char_expand": true,
-"character": "",
+"character": "dialog_character",
 "dialog_key": "SECOND_DIALOG_9",
 "node_index": 9,
 "node_type": "dialogue_node",
 "offset": Vector2(1720, -340),
 "portrait": "",
-"size": Vector2(250.00006, 394.00012),
+"size": Vector2(293, 452.00006),
 "to_dialog": "",
 "to_node": ["dialogue_node_4"]
 },
 "options_node_2": {
 "node_index": 2,
 "node_type": "options_node",
-"offset": Vector2(1315.9894, 366.03003),
+"offset": Vector2(1315.9894, 366.2002),
 "options_keys": ["SECOND_OPT2_1", "SECOND_OPT2_2", "SECOND_OPT2_3", "SECOND_OPT2_4"],
-"size": Vector2(250.00037, 679),
+"size": Vector2(250.00043, 736.0001),
 "to_dialog": "",
 "to_node": ["dialogue_node_8", "dialogue_node_9", "dialogue_node_10", "dialogue_node_11"]
 },
@@ -151,7 +151,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(48, 90),
-"size": Vector2(190, 97.00026),
+"size": Vector2(227, 97.00043),
 "start_id": "SECOND",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -219,6 +219,7 @@ dialogs = {
 }
 characters = {
 "SECOND": {
+"dialog_character": 3005546294628586876,
 "dialogue_ghost": 2784968421574489778
 }
 }
