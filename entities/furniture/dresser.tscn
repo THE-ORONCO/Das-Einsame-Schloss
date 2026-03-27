@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b8pmmovpsyo1u"]
+
+[ext_resource type="PackedScene" uid="uid://bu008lpgfn4kr" path="res://entities/furniture/dresser.gltf" id="1_14x76"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r1th7"]
+size = Vector3(2.0844421, 1.5029297, 2.265625)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1624864195]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 4
+
+[node name="blockbench_export" parent="." unique_id=2088953375 instance=ExtResource("1_14x76")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=357342604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0056915283, 0.74853516, 0)
+shape = SubResource("BoxShape3D_r1th7")

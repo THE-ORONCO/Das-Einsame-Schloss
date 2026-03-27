@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://p805qlu6j0kh"]
+
+[ext_resource type="PackedScene" uid="uid://tkkeuy5xawb2" path="res://entities/furniture/closet.gltf" id="1_3l2tx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7211j"]
+size = Vector3(4.2734375, 3.9819336, 1.9667969)
+
+[node name="Node3D" type="StaticBody3D" unique_id=1034400752]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 4
+
+[node name="blockbench_export" parent="." unique_id=216071233 instance=ExtResource("1_3l2tx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1533664542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9942732, -0.3959961)
+shape = SubResource("BoxShape3D_7211j")
