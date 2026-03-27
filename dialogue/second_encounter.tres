@@ -12,9 +12,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_1",
 "node_index": 1,
 "node_type": "dialogue_node",
-"offset": Vector2(280, 120),
-"portrait": "",
-"size": Vector2(281.00006, 441),
+"offset": Vector2(440, 120),
+"portrait": "Ghost_Idle",
+"size": Vector2(281.0005, 394.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_7"]
 },
@@ -24,9 +24,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_10",
 "node_index": 10,
 "node_type": "dialogue_node",
-"offset": Vector2(1740, 260),
-"portrait": "",
-"size": Vector2(293, 452.00012),
+"offset": Vector2(1700, 320),
+"portrait": "Character_Idle",
+"size": Vector2(293.0006, 394.00037),
 "to_dialog": "",
 "to_node": ["dialogue_node_5"]
 },
@@ -36,9 +36,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_11",
 "node_index": 11,
 "node_type": "dialogue_node",
-"offset": Vector2(1700, 980),
-"portrait": "",
-"size": Vector2(293, 452),
+"offset": Vector2(1380, 680),
+"portrait": "Character_Idle",
+"size": Vector2(293.00012, 394.0001),
 "to_dialog": "",
 "to_node": ["dialogue_node_6"]
 },
@@ -49,8 +49,8 @@ graph_data = {
 "node_index": 2,
 "node_type": "dialogue_node",
 "offset": Vector2(1020, 100),
-"portrait": "",
-"size": Vector2(281, 441.0001),
+"portrait": "Ghost_Idle",
+"size": Vector2(281.0002, 394.00043),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -60,9 +60,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_3",
 "node_index": 3,
 "node_type": "dialogue_node",
-"offset": Vector2(2140, -260),
-"portrait": "",
-"size": Vector2(281, 441),
+"offset": Vector2(1960, -460),
+"portrait": "Ghost_Idle",
+"size": Vector2(280.9995, 394.00018),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -72,9 +72,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_4",
 "node_index": 4,
 "node_type": "dialogue_node",
-"offset": Vector2(2160, 220),
-"portrait": "",
-"size": Vector2(281, 441.00018),
+"offset": Vector2(2000, 0),
+"portrait": "Ghost_Idle",
+"size": Vector2(281.00018, 394.0001),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -84,9 +84,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_5",
 "node_index": 5,
 "node_type": "dialogue_node",
-"offset": Vector2(2160, 720),
-"portrait": "",
-"size": Vector2(281, 441.0002),
+"offset": Vector2(2020, 460),
+"portrait": "Ghost_Idle",
+"size": Vector2(281.0008, 394.00018),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -96,9 +96,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_6",
 "node_index": 6,
 "node_type": "dialogue_node",
-"offset": Vector2(2180, 1240),
-"portrait": "",
-"size": Vector2(281.00024, 441),
+"offset": Vector2(1700, 760),
+"portrait": "Ghost_Idle",
+"size": Vector2(281.0006, 394.00067),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -108,9 +108,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_7",
 "node_index": 7,
 "node_type": "dialogue_node",
-"offset": Vector2(947.8468, 743.06146),
-"portrait": "",
-"size": Vector2(293.00006, 452.0001),
+"offset": Vector2(720, 120),
+"portrait": "Character_Idle",
+"size": Vector2(293.0002, 394.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
@@ -120,9 +120,9 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_8",
 "node_index": 8,
 "node_type": "dialogue_node",
-"offset": Vector2(1760, -940),
-"portrait": "",
-"size": Vector2(293, 452),
+"offset": Vector2(1620, -520),
+"portrait": "Character_Idle",
+"size": Vector2(293.0006, 394),
 "to_dialog": "",
 "to_node": ["dialogue_node_3"]
 },
@@ -132,26 +132,26 @@ graph_data = {
 "dialog_key": "SECOND_DIALOG_9",
 "node_index": 9,
 "node_type": "dialogue_node",
-"offset": Vector2(1720, -340),
-"portrait": "",
-"size": Vector2(293.00012, 452.00006),
+"offset": Vector2(1660, -100),
+"portrait": "Character_Idle",
+"size": Vector2(293.00055, 394.00043),
 "to_dialog": "",
 "to_node": ["dialogue_node_4"]
 },
 "options_node_2": {
 "node_index": 2,
 "node_type": "options_node",
-"offset": Vector2(1315.9894, 366.2002),
+"offset": Vector2(1320, -100),
 "options_keys": ["SECOND_OPT2_1", "SECOND_OPT2_2", "SECOND_OPT2_3", "SECOND_OPT2_4"],
-"size": Vector2(250.00037, 736.0002),
+"size": Vector2(250.00122, 679),
 "to_dialog": "",
 "to_node": ["dialogue_node_8", "dialogue_node_9", "dialogue_node_10", "dialogue_node_11"]
 },
 "start_node_1": {
 "node_index": 1,
 "node_type": "start_node",
-"offset": Vector2(48, 90),
-"size": Vector2(227.00002, 97.000404),
+"offset": Vector2(200, 0),
+"size": Vector2(226.99973, 75.00018),
 "start_id": "SECOND",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]
@@ -160,7 +160,10 @@ graph_data = {
 }
 dialogs = {
 "SECOND_DIALOG_1": {
-"default": "“YOU DID IT! YOU SET ME FREE! But, why is nothing happening? No… Am I still bound to the castle…”",
+"default": "“YOU DID IT! YOU SET ME FREE!\" 
+\"But, why isn't anything happening?\"
+\"No… \"
+\"Could I still bound to the castle…?\"",
 "en": ""
 },
 "SECOND_DIALOG_10": {
@@ -172,20 +175,30 @@ dialogs = {
 "en": ""
 },
 "SECOND_DIALOG_2": {
-"default": "“I am sensing a connection to three objects from my past. A necklace, a pair of glasses and my engagement ring. Try finding those three items, I believe they are somewhere in the castle.”
+"default": "“I am sensing a connection to three objects from my past.\" 
+\"A necklace,\" 
+\"a pair of glasses\" 
+\"and my engagement ring.\" 
+\"Try finding those three items.\"
+\"I believe they are somewhere in the castle.”
 ",
 "en": ""
 },
 "SECOND_DIALOG_3": {
-"default": "“It was a gift from my husband. It was beautiful. It reminds me of warmth, for some strange reason",
+"default": "“It was a gift from my husband.\"
+\"It was beautiful.\" 
+\"It reminded me of warmth, for some strange reason.\"
+",
 "en": ""
 },
 "SECOND_DIALOG_4": {
-"default": "“I don’t recall being short sighted, but I remember using a pair of glasses when viewing art.” ",
+"default": "“I don’t recall being short sighted.\"
+\"But I remember using a pair of glasses when viewing art.” ",
 "en": ""
 },
 "SECOND_DIALOG_5": {
-"default": "“I don’t remember wearing it, but oddly, I think of porcelain whenever I am reminded of it.”",
+"default": "“I don’t remember wearing it.\"
+\"But oddly, I think of porcelain whenever I am reminded of it.”",
 "en": ""
 },
 "SECOND_DIALOG_6": {
