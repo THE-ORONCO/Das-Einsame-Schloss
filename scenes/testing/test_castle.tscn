@@ -38,10 +38,22 @@ environment = SubResource("Environment_4dd1a")
 
 [node name="WallDoor" parent="Room1" unique_id=272459560 instance=ExtResource("1_atenw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+locked = true
 sound_interact = ExtResource("2_xlm3y")
 
 [node name="Marker3D" type="Marker3D" parent="Room1/WallDoor" unique_id=2085582859]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04286933, 0, -47.458256)
+
+[node name="DialogPlayer" type="Node" parent="Room1/WallDoor" unique_id=1740371098]
+script = ExtResource("5_tgeax")
+_dialog_data_uid = 6310426270137687607
+_dialog_file_name = "example"
+_dialog_data = ExtResource("11_fyw57")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)

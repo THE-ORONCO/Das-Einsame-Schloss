@@ -25,6 +25,7 @@ size = Vector3(20, 2.1619873, 0)
 script = ExtResource("1_ueqem")
 
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_erntf")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.8773148)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]

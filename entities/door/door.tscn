@@ -17,6 +17,7 @@ script = ExtResource("1_bfv6c")
 sound_interact = ExtResource("3_uq1c4")
 
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_dsbe1")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9860542)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=252196236]
