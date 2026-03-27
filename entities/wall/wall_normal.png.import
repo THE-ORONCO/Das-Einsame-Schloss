@@ -2,26 +2,27 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rrr4haaja4xn"
-path="res://.godot/imported/wood.png-b812ae4eaa9fe46f9512bf206fa7030f.ctex"
+uid="uid://fcrly1rhpmxk"
+path.s3tc="res://.godot/imported/wall_normal.png-60aa3872cfdda2d27b88f78f5ed01cce.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://entities/tiles/wood.png"
-dest_files=["res://.godot/imported/wood.png-b812ae4eaa9fe46f9512bf206fa7030f.ctex"]
+source_file="res://entities/wall/wall_normal.png"
+dest_files=["res://.godot/imported/wall_normal.png-60aa3872cfdda2d27b88f78f5ed01cce.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

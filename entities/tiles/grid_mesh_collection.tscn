@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://co3wkqygfxcwk"]
+
+[ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="1_wunxr"]
+[ext_resource type="Texture2D" uid="uid://bovgyaim44nu1" path="res://entities/tiles/wood_normal.png" id="2_vjpvn"]
+[ext_resource type="Texture2D" uid="uid://c7nbmribjxohw" path="res://entities/tiles/rocks.png" id="3_jlrv3"]
+[ext_resource type="Texture2D" uid="uid://cu6c8xb3kdo8l" path="res://entities/tiles/rocks_normal.png" id="4_v55t2"]
+[ext_resource type="Texture2D" uid="uid://tyhh7alhax8s" path="res://entities/wall/wall.png" id="5_84tqv"]
+[ext_resource type="Texture2D" uid="uid://fcrly1rhpmxk" path="res://entities/wall/wall_normal.png" id="6_ajkcv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w7ga8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlah8"]
+detail_enabled = true
+detail_albedo = ExtResource("1_wunxr")
+detail_normal = ExtResource("2_vjpvn")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_exhp3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugwoc"]
+detail_enabled = true
+detail_albedo = ExtResource("3_jlrv3")
+detail_normal = ExtResource("4_v55t2")
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ufl12"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrnum"]
+detail_enabled = true
+detail_albedo = ExtResource("5_84tqv")
+detail_normal = ExtResource("6_ajkcv")
+texture_filter = 0
+
+[node name="GridMeshCollection" type="Node3D" unique_id=1120159701]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1313422711]
+mesh = SubResource("PlaneMesh_w7ga8")
+surface_material_override/0 = SubResource("StandardMaterial3D_mlah8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2005258879]
+mesh = SubResource("PlaneMesh_exhp3")
+surface_material_override/0 = SubResource("StandardMaterial3D_ugwoc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1839411378]
+mesh = SubResource("PlaneMesh_ufl12")
+surface_material_override/0 = SubResource("StandardMaterial3D_hrnum")
