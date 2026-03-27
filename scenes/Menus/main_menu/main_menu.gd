@@ -2,11 +2,13 @@ extends Control
 
 @onready var main_buttons: VBoxContainer = $MainButtons
 @onready var start_button: Button = $MainButtons/start
+@onready var credits: Control = $Credits
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	main_buttons.visible = true
+	credits.visible = false
 	start_button.grab_focus()
 	UiManager._connect_ui_sounds(self)
 	AudioManager.play_ambient()
@@ -27,3 +29,11 @@ func _on_options_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_credits_pressed() -> void:
+	credits.visible = true
+
+
+func _on_credits_back_pressed() -> void:
+	credits.visible = false	
