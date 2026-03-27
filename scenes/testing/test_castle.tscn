@@ -6,8 +6,11 @@
 [ext_resource type="Resource" uid="uid://cpuc0bnasebge" path="res://scenes/testing/test_dialogue.tres" id="4_4dnb8"]
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="4_j22dg"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
+[ext_resource type="Script" uid="uid://hp4xo3068b5y" path="res://entities/spook/spook_point.gd" id="7_atenw"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="7_xedob"]
 [ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall_hori.tscn" id="8_j22dg"]
+[ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="8_jgjqe"]
+[ext_resource type="Texture2D" uid="uid://c7nbmribjxohw" path="res://entities/tiles/rocks.png" id="9_atenw"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_61nqe"]
 
@@ -48,8 +51,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669794, 0, 0)
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 texture = ExtResource("4_j22dg")
 
+[node name="SpookPoint" type="Marker3D" parent="Room1/NPC" unique_id=739723235]
+script = ExtResource("7_atenw")
+metadata/_custom_type_script = "uid://hp4xo3068b5y"
+
 [node name="Wall" parent="Room1" unique_id=272459560 instance=ExtResource("8_j22dg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.088392)
+
+[node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+double_sided = false
+texture_filter = 2
+render_priority = -100
+texture = ExtResource("8_jgjqe")
+region_enabled = true
+region_rect = Rect2(500, 500, 500, 500)
 
 [node name="Room2" type="Node3D" parent="." unique_id=1510660550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09994507, 0, -64.34654)
@@ -61,7 +77,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02012968, 0, -10.0089035)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04166603, 0, 65.31506)
 
 [node name="Wall2" parent="Room2" unique_id=48168582 instance=ExtResource("8_j22dg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.124309, 0, -10.000999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12430906, 0, -10.000999)
+
+[node name="floor" type="Sprite3D" parent="Room2" unique_id=1681073962]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+texture_filter = 2
+render_priority = -100
+texture = ExtResource("9_atenw")
+region_enabled = true
+region_rect = Rect2(500, 500, 500, 500)
 
 [node name="Character" parent="." unique_id=1159888165 instance=ExtResource("1_i1rtt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27268744, 0)

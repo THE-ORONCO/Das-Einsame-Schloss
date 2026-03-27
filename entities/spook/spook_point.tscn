@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b1yawdyvaadun"]
+
+[ext_resource type="Script" uid="uid://hp4xo3068b5y" path="res://entities/spook/spook_point.gd" id="1_q2b5y"]
+
+[node name="SpookPoint" type="Marker3D" unique_id=2016770948]
+script = ExtResource("1_q2b5y")

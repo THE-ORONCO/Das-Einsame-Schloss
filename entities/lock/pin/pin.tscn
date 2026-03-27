@@ -11,9 +11,9 @@ radius = 25.019993
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_e5wp6"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cxt6j"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v1bbv"]
 shader = ExtResource("3_bemgs")
-shader_parameter/scale = Vector2(3.4375, 5.6875)
+shader_parameter/scale = Vector2(3.4375, 5.6874995)
 shader_parameter/right = 5
 shader_parameter/top = 5
 shader_parameter/left = 5
@@ -23,7 +23,7 @@ shader_parameter/bottom = 5
 friction = 4.0
 rough = true
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kjeqj"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cxt6j"]
 shader = ExtResource("3_bemgs")
 shader_parameter/scale = Vector2(0.109375015, 0.039062504)
 shader_parameter/right = 0
@@ -82,9 +82,9 @@ polygon = PackedVector2Array(18, -45, 28, -36, 28, 46, -27, 46, -27, -45)
 
 [node name="Lock" type="Sprite2D" parent="pin_assembly/Pin" unique_id=1652425985]
 texture_filter = 1
-material = SubResource("ShaderMaterial_cxt6j")
-position = Vector2(0.49999928, 0.4999994)
-scale = Vector2(3.4375, 5.6875)
+material = SubResource("ShaderMaterial_v1bbv")
+position = Vector2(0.49999928, 0.4999981)
+scale = Vector2(3.4375, 5.6874995)
 texture = ExtResource("3_v1bbv")
 region_rect = Rect2(240, 80, 16, 16)
 script = ExtResource("3_8rkxn")
@@ -122,7 +122,7 @@ gravity_scale = 0.0
 lock_rotation = true
 
 [node name="Icon" type="Sprite2D" parent="block_assembly/cylinder" unique_id=1401252725]
-material = SubResource("ShaderMaterial_kjeqj")
+material = SubResource("ShaderMaterial_cxt6j")
 position = Vector2(-2.3841858e-07, 0)
 scale = Vector2(0.109375015, 0.039062504)
 texture = ExtResource("2_8rkxn")

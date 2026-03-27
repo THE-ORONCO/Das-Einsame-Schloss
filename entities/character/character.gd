@@ -5,7 +5,10 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var animation: AnimatedSprite3D = %animation
+@onready var emp_tex: AnimatedTexture = %emp.texture
 
+@export
+var spook_increments: Array[float] = [1000000, 5, 4, 2, 1, .5]
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.WALKING: return
@@ -30,6 +33,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_animate_sprite()
+	_update_emp()
 
 
 func _animate_sprite() -> void:
@@ -44,3 +48,16 @@ func _animate_sprite() -> void:
 	elif abs(dir.x) < abs(dir.z) :
 		if dir.z > 0: animation.play("down")
 		if dir.z < 0: animation.play("up")
+
+
+func _update_emp() -> void:
+	var distance := HauntedPlaces.nearest_spook_distance(self.global_position)
+	var max_spook := spook_increments.size()
+	for i in range(max_spook):
+		var increment := spook_increments[i]
+		if distance <= increment:
+			var random_offset := randf() *3 - 1
+			emp_tex.current_frame = clampf(i + random_offset, 0, max_spook - 1) 
+
+	
+	

@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://b4hiip7c7ac14" path="res://entities/character/character.gd" id="1_6i0tm"]
 [ext_resource type="Texture2D" uid="uid://3ki5ekhq8532" path="res://entities/character/character_spritesheet.png" id="2_6i0tm"]
 [ext_resource type="Texture2D" uid="uid://dva3m3mgytane" path="res://entities/character/character_idle.png" id="3_7315l"]
+[ext_resource type="Texture2D" uid="uid://dn62lsvq5yip7" path="res://entities/emp/EMP-Geraet_0.png" id="4_4ya86"]
+[ext_resource type="Texture2D" uid="uid://dlxrsyk2cuxyb" path="res://entities/emp/EMP-Geraet_1.png" id="5_0vyii"]
+[ext_resource type="Texture2D" uid="uid://58ey8jq60le4" path="res://entities/emp/EMP-Geraet_2.png" id="6_6y70v"]
+[ext_resource type="Texture2D" uid="uid://ckrj6ow8jol0r" path="res://entities/emp/EMP-Geraet_3.png" id="7_wu0gw"]
+[ext_resource type="Texture2D" uid="uid://b5877b8ngvfmc" path="res://entities/emp/EMP-Geraet_4.png" id="8_0i2jp"]
+[ext_resource type="Texture2D" uid="uid://bjgx6qyq8t002" path="res://entities/emp/EMP-Geraet_5.png" id="9_555hj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7315l"]
 
@@ -160,6 +166,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xrw5f"]
+frames = 6
+pause = true
+frame_0/texture = ExtResource("4_4ya86")
+frame_1/texture = ExtResource("5_0vyii")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("6_6y70v")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("7_wu0gw")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("8_0i2jp")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("9_555hj")
+frame_5/duration = 1.0
+
 [node name="Character" type="CharacterBody3D" unique_id=1159888165]
 script = ExtResource("1_6i0tm")
 
@@ -175,3 +196,29 @@ sprite_frames = SubResource("SpriteFrames_oo5hp")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.24390331
+
+[node name="ui" type="Control" parent="." unique_id=503274718]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="emp" type="TextureRect" parent="ui" unique_id=211814646]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -434.0
+offset_top = -420.0
+offset_right = -394.0
+offset_bottom = -380.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(8, 8)
+texture = SubResource("AnimatedTexture_xrw5f")
