@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://nrbgsf054nht"]
+
+[ext_resource type="Texture2D" uid="uid://dpelkr5w5tiw3" path="res://entities/chimney/Kamin_Wohnzimmer.png" id="1_t4h3t"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f6hdl"]
+height = 0.56744385
+radius = 0.56591797
+
+[node name="Chimney" type="Node3D" unique_id=1889667099]
+
+[node name="sprite" type="Sprite3D" parent="." unique_id=2062727490]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+offset = Vector2(0, 24)
+billboard = 1
+texture_filter = 2
+texture = ExtResource("1_t4h3t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1084126515]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=958782530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33828735, 0)
+shape = SubResource("CylinderShape3D_f6hdl")
