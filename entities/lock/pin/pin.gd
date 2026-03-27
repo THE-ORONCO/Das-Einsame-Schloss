@@ -15,8 +15,14 @@ signal lock_state_change
 var spring_strength: float = 32:
 	set(val):
 		spring_strength = val
-		if groove != null : 
+		if spring != null : 
 			spring.stiffness = spring_strength
+@export_range(0,4)
+var rust: float = .5:
+	set(val):
+		rust = val
+		if spring != null : 
+			spring.damping = rust
 @export_range(-20, 20)
 var move_upper: float = 0:
 	set(val): 

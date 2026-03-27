@@ -23,7 +23,7 @@ HauntedPlaces="*uid://d2gfsl7m7n7gr"
 Crt="*uid://jxnq6j0so1pk"
 UiManager="*uid://uq8ken51crrw"
 AudioManager="*uid://c2a6ls33xo3v3"
-FadeState="*uid://y7ids46vc5vc"
+FadeState="*uid://diexk3vguyhkq"
 
 [display]
 
@@ -77,8 +77,8 @@ variables/variables={
 "value": false
 }
 }
-internal/play_dialog_path="res://dialogue/example.tres"
-internal/play_start_id="START"
+internal/play_dialog_path="res://dialogue/first_encounter.tres"
+internal/play_start_id="FIRST"
 
 [gui]
 

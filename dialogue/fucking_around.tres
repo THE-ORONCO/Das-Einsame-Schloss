@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(389, 127),
 "portrait": "Ghost_Idle",
-"size": Vector2(250.00009, 394),
+"size": Vector2(281, 452),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -22,7 +22,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(94, 126),
-"size": Vector2(190.00003, 96.99996),
+"size": Vector2(227, 96.99997),
 "start_id": "LOL",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]

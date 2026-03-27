@@ -33,6 +33,7 @@ shader_parameter/bottom = 0
 
 [node name="Pin" type="Node2D" unique_id=1335108495]
 script = ExtResource("1_yjdtg")
+rust = null
 move_lower = 24.0
 
 [node name="unlock_area" type="Area2D" parent="." unique_id=647380735]
