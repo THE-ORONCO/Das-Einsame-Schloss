@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bjgx6qyq8t002" path="res://entities/emp/EMP-Geraet_5.png" id="9_555hj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7315l"]
+radius = 0.3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ltml"]
 atlas = ExtResource("2_6i0tm")
@@ -185,11 +186,13 @@ frame_5/duration = 1.0
 script = ExtResource("1_6i0tm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1334657419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3041307, 0)
 shape = SubResource("SphereShape3D_7315l")
 
 [node name="animation" type="AnimatedSprite3D" parent="." unique_id=1098111199]
 unique_name_in_owner = true
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+offset = Vector2(0, 16)
 billboard = 1
 shaded = true
 double_sided = false
@@ -218,15 +221,16 @@ texture = SubResource("AnimatedTexture_xrw5f")
 
 [node name="light" type="SpotLight3D" parent="." unique_id=639589966]
 unique_name_in_owner = true
-transform = Transform3D(-1, -7.519688e-16, -8.742277e-08, -1.4656107e-08, 0.9858472, 0.16764633, 8.618551e-08, 0.16764633, -0.9858472, 0, 0, 0)
+transform = Transform3D(-1, 2.800745e-15, -8.7422784e-08, -1.4656107e-08, 0.9858472, 0.16764633, 8.618551e-08, 0.16764633, -0.9858472, 0, 0.7655348, -0.6694547)
 light_energy = 2.041
 light_indirect_energy = 2.041
 light_volumetric_fog_energy = 3.575
+shadow_enabled = true
 spot_range = 65.182
-spot_angle = 32.48
+spot_angle = 36.17
 spot_angle_attenuation = 1.0717733
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=902753991]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.33486032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372, -0.042423427)
 light_energy = 0.288
-omni_range = 2.812
+omni_range = 1.591

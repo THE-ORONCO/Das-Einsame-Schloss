@@ -4,13 +4,12 @@
 [ext_resource type="Script" uid="uid://d1vn0bjwqsasw" path="res://entities/dialog_starter.gd" id="3_j22dg"]
 [ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="3_xedob"]
 [ext_resource type="Resource" uid="uid://cpuc0bnasebge" path="res://scenes/testing/test_dialogue.tres" id="4_4dnb8"]
-[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="4_j22dg"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
-[ext_resource type="Script" uid="uid://hp4xo3068b5y" path="res://entities/spook/spook_point.gd" id="7_atenw"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="7_xedob"]
 [ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall_hori.tscn" id="8_j22dg"]
 [ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="8_jgjqe"]
-[ext_resource type="Texture2D" uid="uid://c7nbmribjxohw" path="res://entities/tiles/rocks.png" id="9_atenw"]
+[ext_resource type="MeshLibrary" uid="uid://dfa8g0oha4ac6" path="res://entities/tiles/floor_grid.meshlib" id="10_xlm3y"]
+[ext_resource type="PackedScene" uid="uid://wfw26kmywq6i" path="res://entities/ghost/ghost.tscn" id="12_xlm3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_atenw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,16 +38,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.098759)
 [node name="Marker3D" type="Marker3D" parent="Room1/Door_to_2" unique_id=2085582859]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.255554)
 
-[node name="NPC" type="Node3D" parent="Room1" unique_id=1746844200]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669794, 0, 0)
+[node name="Wall" parent="Room1" unique_id=272459560 instance=ExtResource("8_j22dg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.088392)
 
-[node name="DialogStarter" type="Node" parent="Room1/NPC" unique_id=369435871 node_paths=PackedStringArray("interaction_point", "dialogue")]
+[node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+visible = false
+shaded = true
+double_sided = false
+texture_filter = 2
+render_priority = -100
+texture = ExtResource("8_jgjqe")
+region_enabled = true
+region_rect = Rect2(500, 500, 500, 500)
+
+[node name="GridMap" type="GridMap" parent="Room1" unique_id=1219933346]
+mesh_library = ExtResource("10_xlm3y")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65531, 65531, 0, 4, 65531, 0, 4, 65532, 0, 4, 65533, 0, 4, 65534, 0, 4, 65535, 0, 4, 0, 0, 4, 1, 0, 4, 2, 0, 4, 3, 0, 3, 3, 0, 3, 4, 0, 4, 4, 0, 2, 4, 0, 1, 4, 0, 0, 4, 0, 65535, 4, 0, 65534, 4, 0, 65533, 4, 0, 65532, 4, 0, 65531, 4, 0, 65531, 3, 0, 65531, 2, 0, 65531, 65532, 0, 65533, 65531, 0, 65534, 65531, 0, 3, 65532, 0, 3, 65533, 0, 2, 65532, 0, 1, 65532, 0, 0, 65532, 0, 65535, 65532, 0, 65534, 65532, 0, 65533, 65532, 0, 65533, 65533, 0, 65532, 65533, 0, 65532, 65534, 0, 65532, 65532, 0, 65531, 65533, 0, 65531, 65534, 0, 65532, 65535, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 1, 0, 0, 0, 0, 0, 65535, 0, 1, 65534, 0, 65535, 65533, 0, 65535, 65534, 0, 65534, 65535, 0, 65533, 1, 0, 65534, 1, 0, 65535, 0, 0, 1, 65535, 0, 2, 65535, 0, 2, 65534, 0, 65534, 65534, 0, 65533, 65534, 0, 65533, 65535, 0, 65535, 65535, 0, 0, 1, 0, 1, 0, 0, 2, 0, 0, 1, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 0, 0, 3, 65534, 0, 3, 65535, 0, 3, 1, 0, 3, 2, 0, 2, 2, 0, 2, 3, 0, 1, 3, 0, 0, 3, 0, 65535, 3, 0, 65534, 3, 0, 65533, 3, 0, 65532, 3, 0, 65531, 1, 0, 65531, 0, 0, 65531, 65535, 0, 65532, 1, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 3, 65531, 0, 2, 65531, 0, 1, 65531, 0, 0, 65531, 0, 65534, 65533, 0, 65535, 65531, 0, 65532, 65531, 0, 0, 65534, 0, 0, 65533, 0, 1, 65533, 0, 2, 65533, 0)
+}
+
+[node name="Ghost" parent="Room1" unique_id=1994396997 instance=ExtResource("12_xlm3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9473357, 0.64, -0.32341194)
+
+[node name="DialogStarter" type="Node" parent="Room1/Ghost" unique_id=369435871 node_paths=PackedStringArray("interaction_point", "dialogue")]
 script = ExtResource("3_j22dg")
-interaction_point = NodePath("Interactible")
+interaction_point = NodePath("../Interactible")
 dialogue = NodePath("DialogPlayer")
 metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
 
-[node name="DialogPlayer" type="Node" parent="Room1/NPC/DialogStarter" unique_id=2068710613]
+[node name="DialogPlayer" type="Node" parent="Room1/Ghost/DialogStarter" unique_id=2068710613]
 script = ExtResource("5_tgeax")
 _dialog_data_uid = 5867127728501058900
 _dialog_file_name = "test_dialogue"
@@ -59,29 +79,7 @@ _destroy_on_end = true
 _print_debug = false
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
-[node name="Interactible" parent="Room1/NPC/DialogStarter" unique_id=1269265622 instance=ExtResource("3_xedob")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669794, 0, 0)
-
-[node name="Sprite3D" type="Sprite3D" parent="Room1/NPC" unique_id=498059833]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-texture = ExtResource("4_j22dg")
-
-[node name="SpookPoint" type="Marker3D" parent="Room1/NPC" unique_id=739723235]
-script = ExtResource("7_atenw")
-metadata/_custom_type_script = "uid://hp4xo3068b5y"
-
-[node name="Wall" parent="Room1" unique_id=272459560 instance=ExtResource("8_j22dg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.088392)
-
-[node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
-transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
-shaded = true
-double_sided = false
-texture_filter = 2
-render_priority = -100
-texture = ExtResource("8_jgjqe")
-region_enabled = true
-region_rect = Rect2(500, 500, 500, 500)
+[node name="Interactible" parent="Room1/Ghost" unique_id=1269265622 instance=ExtResource("3_xedob")]
 
 [node name="Room2" type="Node3D" parent="." unique_id=1510660550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09994507, 0, -64.34654)
@@ -95,15 +93,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04166603, 0, 65.31506)
 [node name="Wall2" parent="Room2" unique_id=48168582 instance=ExtResource("8_j22dg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12430906, 0, -10.000999)
 
-[node name="floor" type="Sprite3D" parent="Room2" unique_id=1681073962]
-transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
-shaded = true
-double_sided = false
-texture_filter = 2
-render_priority = -100
-texture = ExtResource("9_atenw")
-region_enabled = true
-region_rect = Rect2(500, 500, 500, 500)
+[node name="GridMap" type="GridMap" parent="Room2" unique_id=1469214343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09994507, 0, 64.34654)
+mesh_library = ExtResource("10_xlm3y")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65531, 65499, 1, 65532, 65499, 1, 65533, 65500, 1, 65534, 65500, 1, 65535, 65500, 1, 0, 65500, 1, 1, 65500, 1, 2, 65500, 1, 3, 65500, 1, 4, 65500, 1, 4, 65499, 1, 3, 65499, 1, 2, 65499, 1, 1, 65499, 1, 0, 65499, 1, 65535, 65499, 1, 65534, 65499, 1, 65533, 65499, 1, 65532, 65500, 1, 65532, 65501, 1, 65532, 65502, 1, 65532, 65503, 1, 65532, 65504, 1, 65532, 65505, 1, 65533, 65506, 1, 65532, 65507, 1, 65531, 65507, 1, 65531, 65506, 1, 65531, 65505, 1, 65531, 65504, 1, 65531, 65503, 1, 65531, 65502, 1, 65531, 65501, 1, 65531, 65500, 1, 4, 65501, 1, 3, 65501, 1, 2, 65501, 1, 1, 65501, 1, 0, 65501, 1, 65535, 65501, 1, 65534, 65501, 1, 65533, 65501, 1, 65533, 65502, 1, 65533, 65503, 1, 65532, 65506, 1, 65533, 65505, 1, 65533, 65504, 1, 65534, 65503, 1, 65534, 65502, 1, 65534, 65504, 1, 65534, 65505, 1, 65534, 65506, 1, 65535, 65502, 1, 65535, 65503, 1, 65535, 65504, 1, 65535, 65505, 1, 0, 65502, 1, 65535, 65506, 1, 65535, 65507, 1, 0, 65503, 1, 0, 65504, 1, 0, 65505, 1, 0, 65506, 1, 0, 65507, 1, 1, 65506, 1, 1, 65507, 1, 1, 65505, 1, 1, 65504, 1, 1, 65503, 1, 2, 65502, 1, 2, 65503, 1, 2, 65504, 1, 2, 65505, 1, 2, 65506, 1, 1, 65502, 1, 3, 65503, 1, 3, 65502, 1, 3, 65504, 1, 3, 65505, 1, 3, 65506, 1, 4, 65502, 1, 4, 65503, 1, 4, 65504, 1, 4, 65505, 1, 3, 65507, 1, 2, 65507, 1, 4, 65506, 1, 4, 65507, 1, 65533, 65507, 1, 65534, 65507, 1)
+}
 
 [node name="Character" parent="." unique_id=1159888165 instance=ExtResource("1_i1rtt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27268744, 0)
@@ -121,4 +117,6 @@ collision_mask = 0
 [node name="everywhere" type="CollisionShape3D" parent="Floor" unique_id=250610809]
 shape = SubResource("WorldBoundaryShape3D_61nqe")
 
-[connection signal="interacted" from="Room1/NPC/DialogStarter/Interactible" to="Room1/NPC" method="_on_interactible_interacted"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1048858295]
+transform = Transform3D(1, 0, 0, 0, 0.076249145, 0.9970888, 0, -0.9970888, 0.076249145, 0, 8.067779, 0)
+light_energy = 0.04

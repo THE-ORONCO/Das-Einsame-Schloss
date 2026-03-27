@@ -10,7 +10,7 @@ const JUMP_VELOCITY = 4.5
 @onready var light_rot: float = %light.global_rotation.y
 
 @export
-var spook_increments: Array[float] = [1000000, 5, 4, 2, 1, .5]
+var spook_increments: Array[float] = [1000000, 8, 6, 3, 1, .5]
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.WALKING: return

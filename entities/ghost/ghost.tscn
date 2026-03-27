@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://wfw26kmywq6i"]
+
+[ext_resource type="Texture2D" uid="uid://csg3ud7wbu37c" path="res://entities/ghost/ghost_idle.png" id="1_81wdg"]
+[ext_resource type="PackedScene" uid="uid://b1yawdyvaadun" path="res://entities/spook/spook_point.tscn" id="2_pmbno"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmbno"]
+atlas = ExtResource("1_81wdg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qovne"]
+atlas = ExtResource("1_81wdg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txceg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmbno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qovne")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qovne"]
+
+[node name="Ghost" type="Node3D" unique_id=1994396997]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=37662945]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+billboard = 1
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_txceg")
+animation = &"idle"
+frame_progress = 0.15202698
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=59525799]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1445962924]
+shape = SubResource("CapsuleShape3D_qovne")
+
+[node name="SpookPoint" parent="." unique_id=2016770948 instance=ExtResource("2_pmbno")]
