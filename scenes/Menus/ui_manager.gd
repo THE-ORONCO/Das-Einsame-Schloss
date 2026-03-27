@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var pause_menu = $PauseMenu
 @onready var options_menu = $Options
 @onready var resume_button = $PauseMenu/VBoxContainer/continue
+@onready var audio_start: AudioStreamPlayer = $Audio/AudioStart
 
 var is_paused: bool = false
 
@@ -10,6 +11,7 @@ var is_paused: bool = false
 func _ready() -> void:
 	pause_menu.hide()
 	options_menu.close()
+	_connect_ui_sounds(self)
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
@@ -43,3 +45,16 @@ func _on_main_menu_pressed() -> void:
 
 func _on_continue_pressed() -> void:
 	toggle_pause()
+	
+func _connect_ui_sounds(node: Node) -> void:
+	for child in node.get_children():
+		if child is Button:
+			if not child.focus_entered.is_connected(AudioManager.play_ui_focus):
+				child.focus_entered.connect(AudioManager.play_ui_focus)
+				
+			if not child.mouse_entered.is_connected(AudioManager.play_ui_focus):
+				child.mouse_entered.connect(AudioManager.play_ui_focus)
+			if not child.pressed.is_connected(AudioManager.play_ui_click):
+				child.pressed.connect(AudioManager.play_ui_click)
+		_connect_ui_sounds(child)
+	
