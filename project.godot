@@ -22,6 +22,7 @@ GameState="*uid://dt21sp8cmxtos"
 UiManager="*uid://uq8ken51crrw"
 HauntedPlaces="*uid://d2gfsl7m7n7gr"
 Crt="*uid://jxnq6j0so1pk"
+FadeState="*uid://diexk3vguyhkq"
 
 [display]
 

@@ -15,6 +15,7 @@ detail_normal = ExtResource("1_s0y0m")
 [node name="Wall" type="Node3D" unique_id=272459560]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=293348511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.98770285)
 collision_layer = 4
 collision_mask = 0
 
@@ -23,7 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58099365, 0)
 shape = SubResource("BoxShape3D_7kopq")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]
-transform = Transform3D(4, 0, 0, 0, 2.828427, 2.828427, 0, -2.828427, 2.828427, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 3.4641013, 1.9999999, 0, -1.9999999, 3.4641013, 0, 0, 0.9866216)
 sorting_offset = -1.0
 material_override = SubResource("StandardMaterial3D_jnq3u")
 offset = Vector2(0, 24)

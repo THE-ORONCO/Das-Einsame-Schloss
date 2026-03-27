@@ -15,7 +15,11 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 
 func _on_player_interaction(player: CharacterBody3D) -> void:
-	player.global_position = _target.global_position
+	FadeState.screen_black.connect(func():
+		player.global_position = _target.global_position,
+		CONNECT_ONE_SHOT)
+	FadeState.fade()
+	
 
 
 func _on_editor_state_changed() -> void:

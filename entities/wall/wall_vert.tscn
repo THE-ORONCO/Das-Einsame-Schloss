@@ -1,22 +1,31 @@
 [gd_scene format=3 uid="uid://dsw13430xh2nn"]
 
 [ext_resource type="Texture2D" uid="uid://tyhh7alhax8s" path="res://entities/wall/wall.png" id="1_8ukgw"]
+[ext_resource type="Texture2D" uid="uid://fcrly1rhpmxk" path="res://entities/wall/wall_normal.png" id="2_pw2tf"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_2jwxi"]
-plane = Plane(1, 0, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kf3yc"]
+size = Vector3(0, 2, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oige5"]
+detail_enabled = true
+detail_albedo = ExtResource("1_8ukgw")
+detail_normal = ExtResource("2_pw2tf")
 
 [node name="Wall" type="Node3D" unique_id=272459560]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=293348511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.97787523, 0, 0)
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=90906056]
-shape = SubResource("WorldBoundaryShape3D_2jwxi")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_kf3yc")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]
-transform = Transform3D(-1.7484555e-07, 0, 3.9999998, -1.4210855e-14, 3.9999998, -6.211762e-22, -4, 0, -1.7484554e-07, 0, 0, 0)
+transform = Transform3D(-1.5142069e-07, -1.9999998, 3.464101, -8.7422784e-08, 3.464101, 1.9999998, -4, 0, -1.7484554e-07, 0.9730685, 0, 0)
 sorting_offset = -1.0
+material_override = SubResource("StandardMaterial3D_oige5")
 offset = Vector2(0, 24)
 double_sided = false
 texture_filter = 2

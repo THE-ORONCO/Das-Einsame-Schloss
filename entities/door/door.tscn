@@ -14,9 +14,10 @@ detail_normal = ExtResource("4_6sqah")
 script = ExtResource("1_bfv6c")
 
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_dsbe1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9860542)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=252196236]
-transform = Transform3D(4, 0, 0, 0, 2.8284268, 2.8284273, 0, -2.8284273, 2.8284268, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 3.4641013, 2.0000002, 0, -2.0000002, 3.4641013, 0, 0, 0.9929725)
 material_override = SubResource("StandardMaterial3D_uq1c4")
 offset = Vector2(0, 24)
 texture_filter = 0
