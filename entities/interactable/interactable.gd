@@ -18,6 +18,6 @@ func _on_body_exited(_body: Node3D) -> void:
 
 func _input(event: InputEvent) -> void:
 	if interactable and event.is_action_pressed("player_interact"):
-		print("interaction")
+		print("interaction")		
 		interacted.emit()
 		player_interacted.emit(_player)

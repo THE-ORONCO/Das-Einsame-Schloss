@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dwg8hbxoc53x4" path="res://entities/door/door.gd" id="1_bfv6c"]
 [ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="2_dsbe1"]
 [ext_resource type="Texture2D" uid="uid://cirnlwl4ee72a" path="res://entities/door/door.png" id="3_dsbe1"]
+[ext_resource type="AudioStream" uid="uid://con33jjgjedxw" path="res://entities/door/Key Jiggle_lock.mp3" id="3_uq1c4"]
 [ext_resource type="Texture2D" uid="uid://d2mgs285o1mmt" path="res://entities/door/door_normal.png" id="4_6sqah"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sqah"]
@@ -13,7 +14,7 @@ texture_filter = 0
 
 [node name="Door" type="Node3D" unique_id=1122510304]
 script = ExtResource("1_bfv6c")
-locked = null
+sound_interact = ExtResource("3_uq1c4")
 
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_dsbe1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9860542)

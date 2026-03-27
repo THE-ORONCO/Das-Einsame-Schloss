@@ -5,10 +5,13 @@ extends Node3D
 var locked: bool = false
 var _target: Marker3D
 
+@export var sound_interact: AudioStream
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
 	_target = get_children().filter(func(c):return c is Marker3D)[0]
+	#var sfx = load(sound_interact)
 
 func _get_configuration_warnings() -> PackedStringArray:
 	if !get_children().any(func(c):return c is Marker3D): return ["Add a Marker3D Node as child to define the target of this door"]
@@ -16,6 +19,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 
 func _on_player_interaction(player: CharacterBody3D) -> void:
+	AudioManager.play_sfx_global(sound_interact)
 	FadeState.screen_black.connect(func():
 		player.global_position = _target.global_position,
 		CONNECT_ONE_SHOT)

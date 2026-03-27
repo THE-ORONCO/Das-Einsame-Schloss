@@ -10,3 +10,6 @@ bus = &"Music"
 
 [node name="UISFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1576447732]
 bus = &"UI"
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1551058333]
+bus = &"SFX"

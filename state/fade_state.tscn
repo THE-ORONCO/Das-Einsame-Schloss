@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://diexk3vguyhkq"]
+[gd_scene format=3 uid="uid://y7ids46vc5vc"]
 
-[ext_resource type="Script" uid="uid://c1px8svx60qw" path="res://state/fade_state.gd" id="1_d6mbd"]
+[ext_resource type="Script" path="res://state/fade_state.gd" id="1_d6mbd"]
 
 [node name="FadeState" type="Control" unique_id=1158845558]
 layout_mode = 3

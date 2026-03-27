@@ -2,6 +2,7 @@ extends Node
 
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
 @onready var ui_sfx_player: AudioStreamPlayer = $UISFXPlayer
+@onready var sfx_player: AudioStreamPlayer = $SFXPlayer
 
 var click_sound = preload("res://entities/audio/Menu Selection Click.wav")
 var hover_sound = preload("res://entities/audio/Menu Selection Click.wav")
@@ -22,3 +23,7 @@ func play_ambient() -> void:
 
 func stop_ambient() -> void:
 	music_player.stop()
+
+func play_sfx_global(audiostream: AudioStream) -> void:
+	sfx_player.stream = audiostream
+	sfx_player.play()
