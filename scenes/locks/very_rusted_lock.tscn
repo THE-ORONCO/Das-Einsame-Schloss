@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cdgfekcdq35m6"]
+
+[ext_resource type="Script" uid="uid://de4ifafcd0p1i" path="res://entities/lock/lock.gd" id="1_k65kd"]
+[ext_resource type="PackedScene" uid="uid://dmrc2e072mukh" path="res://entities/lock/lock.tscn" id="2_fdvuo"]
+[ext_resource type="PackedScene" uid="uid://c7m7m5623eowl" path="res://entities/pick/pick.tscn" id="3_tfia0"]
+[ext_resource type="PackedScene" uid="uid://biy5ugxxadayn" path="res://entities/lock/tumbler/tumbler.tscn" id="4_2fsta"]
+[ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="5_br8nc"]
+
+[node name="Room2Lock" type="Node2D" unique_id=196431819]
+script = ExtResource("1_k65kd")
+
+[node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("2_fdvuo")]
+position = Vector2(604, 534)
+
+[node name="Pick" parent="." unique_id=279109275 instance=ExtResource("3_tfia0")]
+position = Vector2(1333, 490)
+
+[node name="Tumbler" parent="." unique_id=696676676 instance=ExtResource("4_2fsta")]
+position = Vector2(751, 653)
+
+[node name="Tumbler2" parent="." unique_id=766674452 instance=ExtResource("4_2fsta")]
+position = Vector2(870, 655)
+
+[node name="Tumbler3" parent="." unique_id=547018052 instance=ExtResource("4_2fsta")]
+position = Vector2(1017, 656)
+
+[node name="pins" type="Node2D" parent="." unique_id=2086653537]
+unique_name_in_owner = true
+
+[node name="Pin2" parent="pins" unique_id=1335108495 instance=ExtResource("5_br8nc")]
+position = Vector2(870, 748)
+rust = 20.351
+
+[node name="Pin3" parent="pins" unique_id=526228461 instance=ExtResource("5_br8nc")]
+position = Vector2(1017, 749)
+rust = 36.269
+
+[node name="Pin" parent="pins" unique_id=1653628140 instance=ExtResource("5_br8nc")]
+position = Vector2(751, 745)
+rust = 23.194
+
+[node name="dirt" type="Node2D" parent="." unique_id=1820531885]

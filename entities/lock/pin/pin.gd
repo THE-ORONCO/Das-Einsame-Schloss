@@ -17,7 +17,7 @@ var spring_strength: float = 32:
 		spring_strength = val
 		if spring != null : 
 			spring.stiffness = spring_strength
-@export_range(0,20)
+@export_range(0,40)
 var rust: float = .5:
 	set(val):
 		rust = val

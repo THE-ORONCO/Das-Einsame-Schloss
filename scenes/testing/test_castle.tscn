@@ -55,6 +55,17 @@ _destroy_on_end = true
 _print_debug = false
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
+[node name="DialogPlayer" type="Node" parent="Room1/WallDoor/DialogPlayer" unique_id=1052974779]
+script = ExtResource("5_tgeax")
+_dialog_data_uid = 6310426270137687607
+_dialog_file_name = "example"
+_dialog_data = ExtResource("11_fyw57")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
 [node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
 visible = false
