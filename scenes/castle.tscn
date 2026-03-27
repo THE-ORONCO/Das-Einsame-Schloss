@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall.tscn" id="5_ha01g"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="6_7pkwf"]
 [ext_resource type="PackedScene" uid="uid://bm4av1jlqx6kw" path="res://entities/tea/tea.tscn" id="6_ha01g"]
-[ext_resource type="PackedScene" uid="uid://c3v5uyb5m3a7e" path="res://entities/chimney/chimney.tscn" id="7_ha01g"]
+[ext_resource type="PackedScene" uid="uid://c3v5uyb5m3a7e" path="res://entities/chimney/chimney_kitchen.tscn" id="7_ha01g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jxdab"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
