@@ -129,4 +129,6 @@ stretch_mode = 5
 
 [node name="Timer" type="Timer" parent="." unique_id=547102511]
 
+[connection signal="continue_dialog" from="." to="." method="_dialog_clicked"]
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="meta_clicked" from="MarginContainer/VBoxContainer/DialogPanel/MarginContainer/DialogContainer/DialogDisplay" to="." method="_on_dialog_meta_clicked"]

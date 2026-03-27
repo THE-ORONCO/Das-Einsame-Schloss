@@ -21,8 +21,9 @@ func _check_unlocked():
 		print("unlocked")
 		unlocked.emit()
 		if dialog_after != null:
+			if !dialog_after.dialog_ended.is_connected(self.queue_free):
+				dialog_after.dialog_ended.connect(self.queue_free)
 			dialog_after.start()
-			dialog_after.dialog_ended.connect(self.queue_free)
 		else:
 			GameState.walk()
 			self.queue_free()

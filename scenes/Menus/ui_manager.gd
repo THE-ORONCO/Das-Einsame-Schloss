@@ -51,7 +51,6 @@ func _connect_ui_sounds(node: Node) -> void:
 		if child is Button:
 			if not child.focus_entered.is_connected(AudioManager.play_ui_focus):
 				child.focus_entered.connect(AudioManager.play_ui_focus)
-				
 			if not child.mouse_entered.is_connected(AudioManager.play_ui_focus):
 				child.mouse_entered.connect(AudioManager.play_ui_focus)
 			if not child.pressed.is_connected(AudioManager.play_ui_click):

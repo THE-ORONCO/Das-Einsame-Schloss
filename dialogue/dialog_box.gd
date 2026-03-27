@@ -13,7 +13,6 @@ extends DialogBox
 ## ---------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 
-
 func _on_dialog_box_open() -> void:
 	# --------------------------------------------------------------------------
 	# This method is called when the dialog box starts.
@@ -22,6 +21,7 @@ func _on_dialog_box_open() -> void:
 	# --------------------------------------------------------------------------
 	# In this base case, the dialog box only is shown when it starts
 	show()
+	_connect_ui_sounds(self)
 
 
 func _on_dialog_box_close() -> void:
@@ -46,6 +46,8 @@ func _on_options_displayed() -> void:
 		var first_option: DialogOption = cs.filter(func(c): return c.visible)[0]
 		first_option.call_deferred("grab_focus")
 		
+		_connect_ui_sounds(options_container)
+
 
 
 func _on_options_hidden() -> void:
@@ -69,3 +71,17 @@ func display_portrait(character_parent: Node, portrait_node: Node) -> void:
 		# If the character node already exists, add the portrait to it
 		portrait_display.get_node(NodePath(character_parent.name)).add_child(portrait_node)
 	_is_displaying_portrait = true
+
+func _connect_ui_sounds(node: Node) -> void:
+	for child in node.get_children():
+		if child is Button:
+			if not child.focus_entered.is_connected(AudioManager.play_ui_focus):
+				child.focus_entered.connect(AudioManager.play_ui_focus)
+			if not child.mouse_entered.is_connected(AudioManager.play_ui_focus):
+				child.mouse_entered.connect(AudioManager.play_ui_focus)
+			if not child.pressed.is_connected(AudioManager.play_ui_click):
+				child.pressed.connect(AudioManager.play_ui_click)
+		_connect_ui_sounds(child)
+
+func _dialog_clicked() -> void:
+	AudioManager.play_ui_focus()
