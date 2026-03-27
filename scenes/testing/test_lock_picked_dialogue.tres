@@ -37,7 +37,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1017.5, 650.5),
 "portrait": "Character_Idle",
-"size": Vector2(293.00006, 452),
+"size": Vector2(293, 452),
 "to_dialog": "",
 "to_node": ["call_method_node_1"]
 },

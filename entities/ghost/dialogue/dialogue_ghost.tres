@@ -10,15 +10,15 @@ portrait_scene_path = "res://dialogue/dialog_portrait.tscn"
 export_overrides = {
 "portrait_image": {
 "type": 4,
-"value": "res://icon.svg"
+"value": "res://entities/ghost/dialogue/ghost_portrait.png"
 }
 }
 transform_settings = {
 "ignore_main_transform": false,
 "mirror": false,
-"offset": Vector2(0, 0),
-"rotation": 180.0,
-"scale": Vector2(1, 1),
+"offset": Vector2(200, 200),
+"rotation": 0.0,
+"scale": Vector2(0, 0),
 "scale_lock_ratio": true
 }
 typing_sound = {}

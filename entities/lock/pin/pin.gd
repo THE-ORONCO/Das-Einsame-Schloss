@@ -60,7 +60,7 @@ func _physics_process(_delta: float) -> void:
 
 func _on_unlock_area_body_entered(body: Node2D) -> void:
 	unlocked = true
-	$pin_assembly/Pin/Icon.modulate = Color.RED
+	#$pin_assembly/Pin/Icon.modulate = Color.RED
 func _on_unlock_area_body_exited(body: Node2D) -> void:
 	unlocked = false
-	$pin_assembly/Pin/Icon.modulate = Color.WHITE
+	#$pin_assembly/Pin/Icon.modulate = Color.WHITE
