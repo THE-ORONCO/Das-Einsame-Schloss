@@ -197,18 +197,9 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.24390331
 
-[node name="ui" type="Control" parent="." unique_id=503274718]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="emp" type="TextureRect" parent="ui" unique_id=211814646]
+[node name="emp" type="TextureRect" parent="." unique_id=211814646]
 unique_name_in_owner = true
 texture_filter = 1
-layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0

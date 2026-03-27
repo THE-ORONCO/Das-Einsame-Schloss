@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://jxnq6j0so1pk"]
+
+[ext_resource type="Script" uid="uid://croot87m5r3h0" path="res://entities/emp/crt.gd" id="1_pn07g"]
+[ext_resource type="Shader" uid="uid://c6ixgyq57pie5" path="res://entities/emp/crt_shader2.gdshader" id="1_wdcwv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pn07g"]
+resource_local_to_scene = true
+shader = ExtResource("1_wdcwv")
+shader_parameter/overlay = true
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.034000001615
+shader_parameter/scanlines_width = 0.046000002185
+shader_parameter/grille_opacity = 0.06800000323
+shader_parameter/roll = true
+shader_parameter/roll_speed = 3.58
+shader_parameter/roll_size = 2.3130001098675
+shader_parameter/roll_variation = 0.66700002842262
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.010000047974999982
+shader_parameter/noise_opacity = 0.12800000608
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.1270000060325
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.4400000209
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.045
+shader_parameter/vignette_opacity = 0.5
+
+[node name="Crt" type="Control" unique_id=125420779]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pn07g")
+
+[node name="shading" type="ColorRect" parent="." unique_id=1043014664]
+unique_name_in_owner = true
+z_index = 1
+material = SubResource("ShaderMaterial_pn07g")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
