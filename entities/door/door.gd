@@ -1,7 +1,8 @@
 @tool
 extends Node3D
 
-var open: bool = false
+@export
+var locked: bool = false
 var _target: Marker3D
 
 # Called when the node enters the scene tree for the first time.
@@ -19,8 +20,6 @@ func _on_player_interaction(player: CharacterBody3D) -> void:
 		player.global_position = _target.global_position,
 		CONNECT_ONE_SHOT)
 	FadeState.fade()
-	
-
 
 func _on_editor_state_changed() -> void:
 	update_configuration_warnings()

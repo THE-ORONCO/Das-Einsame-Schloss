@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b8u1vlvp3egpq"]
+
+[ext_resource type="Texture2D" uid="uid://tyhh7alhax8s" path="res://entities/wall/wall.png" id="1_606et"]
+[ext_resource type="Script" uid="uid://dwg8hbxoc53x4" path="res://entities/door/door.gd" id="1_ueqem"]
+[ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="2_erntf"]
+[ext_resource type="Texture2D" uid="uid://fcrly1rhpmxk" path="res://entities/wall/wall_normal.png" id="2_tyrgj"]
+[ext_resource type="Texture2D" uid="uid://cirnlwl4ee72a" path="res://entities/door/door.png" id="5_6p4dn"]
+[ext_resource type="Texture2D" uid="uid://d2mgs285o1mmt" path="res://entities/door/door_normal.png" id="6_c0jqb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnq3u"]
+normal_texture = ExtResource("2_tyrgj")
+detail_enabled = true
+detail_albedo = ExtResource("1_606et")
+detail_normal = ExtResource("2_tyrgj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eoa2n"]
+detail_enabled = true
+detail_albedo = ExtResource("5_6p4dn")
+detail_normal = ExtResource("6_c0jqb")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7kopq"]
+size = Vector3(20, 2.1619873, 0)
+
+[node name="WallDoor" type="Node3D" unique_id=272459560]
+script = ExtResource("1_ueqem")
+
+[node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_erntf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.8773148)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]
+transform = Transform3D(4, 0, 0, 0, 3.4641013, 1.9999999, 0, -1.9999999, 3.4641013, 0, 0, 0.9866216)
+sorting_offset = -1.0
+material_override = SubResource("StandardMaterial3D_jnq3u")
+offset = Vector2(0, 24)
+shaded = true
+texture_filter = 2
+texture = ExtResource("1_606et")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 48)
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=855672941]
+transform = Transform3D(4, 0, 0, 0, 3.4641013, 2.0000002, 0, -2.0000002, 3.4641013, -0.081551135, 0, 0.9929725)
+material_override = SubResource("StandardMaterial3D_eoa2n")
+offset = Vector2(0, 24)
+shaded = true
+texture_filter = 0
+texture = ExtResource("5_6p4dn")
+vframes = 2
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=293348511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.98770285)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=90906056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58099365, 0)
+shape = SubResource("BoxShape3D_7kopq")
+
+[connection signal="player_interacted" from="Interactible" to="." method="_on_player_interaction"]

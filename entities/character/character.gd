@@ -81,7 +81,6 @@ func _update_emp(delta: float) -> void:
 	emp_sound.pitch_scale = .5 + (_target_emp_pitch)
 	emp_sound.volume_linear = (_target_emp_volume * 3.)
 
-
 func _idle_animate() -> void:
 	match _current_dir:
 		DIR.U: animation.play("idle_up")

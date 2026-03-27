@@ -5,21 +5,24 @@
 [ext_resource type="Texture2D" uid="uid://cirnlwl4ee72a" path="res://entities/door/door.png" id="3_dsbe1"]
 [ext_resource type="Texture2D" uid="uid://d2mgs285o1mmt" path="res://entities/door/door_normal.png" id="4_6sqah"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uq1c4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sqah"]
 detail_enabled = true
 detail_albedo = ExtResource("3_dsbe1")
 detail_normal = ExtResource("4_6sqah")
+texture_filter = 0
 
 [node name="Door" type="Node3D" unique_id=1122510304]
 script = ExtResource("1_bfv6c")
+locked = null
 
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_dsbe1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9860542)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=252196236]
 transform = Transform3D(4, 0, 0, 0, 3.4641013, 2.0000002, 0, -2.0000002, 3.4641013, 0, 0, 0.9929725)
-material_override = SubResource("StandardMaterial3D_uq1c4")
+material_override = SubResource("StandardMaterial3D_6sqah")
 offset = Vector2(0, 24)
+shaded = true
 texture_filter = 0
 texture = ExtResource("3_dsbe1")
 vframes = 2

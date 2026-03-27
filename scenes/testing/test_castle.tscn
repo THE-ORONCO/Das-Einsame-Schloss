@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://d0r10hwbi4wa6"]
 
+[ext_resource type="PackedScene" uid="uid://b8u1vlvp3egpq" path="res://entities/wall/wall_door.tscn" id="1_atenw"]
 [ext_resource type="PackedScene" uid="uid://2fwkdkbme2nc" path="res://entities/character/character.tscn" id="1_i1rtt"]
 [ext_resource type="Script" uid="uid://d1vn0bjwqsasw" path="res://entities/dialog_starter.gd" id="3_j22dg"]
 [ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="3_xedob"]
 [ext_resource type="Resource" uid="uid://cpuc0bnasebge" path="res://scenes/testing/test_dialogue.tres" id="4_4dnb8"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="7_xedob"]
-[ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall_hori.tscn" id="8_j22dg"]
+[ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall.tscn" id="8_j22dg"]
 [ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="8_jgjqe"]
 [ext_resource type="MeshLibrary" uid="uid://dfa8g0oha4ac6" path="res://entities/tiles/floor_grid.meshlib" id="10_xlm3y"]
-[ext_resource type="PackedScene" uid="uid://dsw13430xh2nn" path="res://entities/wall/wall_vert.tscn" id="11_atenw"]
 [ext_resource type="PackedScene" uid="uid://wfw26kmywq6i" path="res://entities/ghost/ghost.tscn" id="12_xlm3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_atenw"]
@@ -33,14 +33,11 @@ environment = SubResource("Environment_4dd1a")
 
 [node name="Room1" type="Node3D" parent="." unique_id=304703624]
 
-[node name="Door_to_2" parent="Room1" unique_id=1122510304 instance=ExtResource("7_xedob")]
+[node name="WallDoor" parent="Room1" unique_id=272459560 instance=ExtResource("1_atenw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 
-[node name="Marker3D" type="Marker3D" parent="Room1/Door_to_2" unique_id=2085582859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.255554)
-
-[node name="Wall" parent="Room1" unique_id=272459560 instance=ExtResource("8_j22dg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+[node name="Marker3D" type="Marker3D" parent="Room1/WallDoor" unique_id=2085582859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04286933, 0, -47.458256)
 
 [node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
@@ -121,6 +118,3 @@ shape = SubResource("WorldBoundaryShape3D_61nqe")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1048858295]
 transform = Transform3D(1, 0, 0, 0, 0.076249145, 0.9970888, 0, -0.9970888, 0.076249145, 0, 8.067779, 0)
 light_energy = 0.04
-
-[node name="Wall" parent="." unique_id=2003284959 instance=ExtResource("11_atenw")]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -10, 0, 0)
