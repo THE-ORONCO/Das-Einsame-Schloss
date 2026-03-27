@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0r10hwbi4wa6"]
 
-[ext_resource type="PackedScene" path="res://entities/wall/wall_door.tscn" id="1_atenw"]
+[ext_resource type="PackedScene" uid="uid://b8u1vlvp3egpq" path="res://entities/wall/wall_door.tscn" id="1_atenw"]
 [ext_resource type="PackedScene" uid="uid://2fwkdkbme2nc" path="res://entities/character/character.tscn" id="1_i1rtt"]
 [ext_resource type="AudioStream" uid="uid://con33jjgjedxw" path="res://entities/door/Key Jiggle_lock.mp3" id="2_xlm3y"]
 [ext_resource type="Script" uid="uid://d1vn0bjwqsasw" path="res://entities/dialog_starter.gd" id="3_j22dg"]
@@ -8,10 +8,12 @@
 [ext_resource type="Resource" uid="uid://cpuc0bnasebge" path="res://scenes/testing/test_dialogue.tres" id="4_4dnb8"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="7_xedob"]
-[ext_resource type="PackedScene" path="res://entities/wall/wall.tscn" id="8_j22dg"]
+[ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall.tscn" id="8_j22dg"]
 [ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="8_jgjqe"]
+[ext_resource type="PackedScene" uid="uid://c3v5uyb5m3a7e" path="res://entities/chimney/chimney_kitchen.tscn" id="10_dc4sk"]
 [ext_resource type="MeshLibrary" uid="uid://dfa8g0oha4ac6" path="res://entities/tiles/floor_grid.meshlib" id="10_xlm3y"]
-[ext_resource type="PackedScene" path="res://entities/ghost/ghost.tscn" id="12_xlm3y"]
+[ext_resource type="Resource" uid="uid://cv522fkjm35pb" path="res://dialogue/example.tres" id="11_fyw57"]
+[ext_resource type="PackedScene" uid="uid://wfw26kmywq6i" path="res://entities/ghost/ghost.tscn" id="12_xlm3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_atenw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -80,6 +82,29 @@ _print_debug = false
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="Interactible" parent="Room1/Ghost" unique_id=1269265622 instance=ExtResource("3_xedob")]
+
+[node name="Chimney" parent="Room1" unique_id=1889667099 instance=ExtResource("10_dc4sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.286698, 0, 0)
+
+[node name="DialogStarter" type="Node" parent="Room1/Chimney" unique_id=1901402582 node_paths=PackedStringArray("interaction_point", "dialogue")]
+script = ExtResource("3_j22dg")
+interaction_point = NodePath("../Interactible")
+dialogue = NodePath("DialogPlayer")
+metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
+
+[node name="DialogPlayer" type="Node" parent="Room1/Chimney/DialogStarter" unique_id=904165731]
+script = ExtResource("5_tgeax")
+_dialog_data_uid = 6310426270137687607
+_dialog_file_name = "example"
+_dialog_data = ExtResource("11_fyw57")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
+[node name="Interactible" parent="Room1/Chimney" unique_id=1671141194 instance=ExtResource("3_xedob")]
+activate_later = true
 
 [node name="Room2" type="Node3D" parent="." unique_id=1510660550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09994507, 0, -64.34654)
