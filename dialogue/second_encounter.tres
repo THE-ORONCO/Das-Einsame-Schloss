@@ -14,7 +14,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(440, 120),
 "portrait": "Ghost_Idle",
-"size": Vector2(281.0005, 394.00003),
+"size": Vector2(281.0005, 452.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_7"]
 },
@@ -26,7 +26,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1700, 320),
 "portrait": "Character_Idle",
-"size": Vector2(293.0006, 394.00037),
+"size": Vector2(293.0006, 452.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_5"]
 },
@@ -38,7 +38,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1380, 680),
 "portrait": "Character_Idle",
-"size": Vector2(293.00012, 394.0001),
+"size": Vector2(293.00012, 452.00012),
 "to_dialog": "",
 "to_node": ["dialogue_node_6"]
 },
@@ -50,7 +50,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1020, 100),
 "portrait": "Ghost_Idle",
-"size": Vector2(281.0002, 394.00043),
+"size": Vector2(281.00024, 452),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -62,7 +62,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1960, -460),
 "portrait": "Ghost_Idle",
-"size": Vector2(280.9995, 394.00018),
+"size": Vector2(281, 452),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -74,7 +74,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(2000, 0),
 "portrait": "Ghost_Idle",
-"size": Vector2(281.00018, 394.0001),
+"size": Vector2(281.00037, 452),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -86,7 +86,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(2020, 460),
 "portrait": "Ghost_Idle",
-"size": Vector2(281.0008, 394.00018),
+"size": Vector2(281.00073, 452),
 "to_dialog": "",
 "to_node": ["options_node_2"]
 },
@@ -98,7 +98,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1700, 760),
 "portrait": "Ghost_Idle",
-"size": Vector2(281.0006, 394.00067),
+"size": Vector2(281.0006, 452),
 "to_dialog": "",
 "to_node": ["END"]
 },
@@ -110,7 +110,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(720, 120),
 "portrait": "Character_Idle",
-"size": Vector2(293.0002, 394.00003),
+"size": Vector2(293.00024, 452.00003),
 "to_dialog": "",
 "to_node": ["dialogue_node_2"]
 },
@@ -122,7 +122,7 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1620, -520),
 "portrait": "Character_Idle",
-"size": Vector2(293.0006, 394),
+"size": Vector2(293.0006, 452),
 "to_dialog": "",
 "to_node": ["dialogue_node_3"]
 },
@@ -134,16 +134,16 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(1660, -100),
 "portrait": "Character_Idle",
-"size": Vector2(293.00055, 394.00043),
+"size": Vector2(293.0005, 452),
 "to_dialog": "",
 "to_node": ["dialogue_node_4"]
 },
 "options_node_2": {
 "node_index": 2,
 "node_type": "options_node",
-"offset": Vector2(1320, -100),
+"offset": Vector2(1320, -99.82996),
 "options_keys": ["SECOND_OPT2_1", "SECOND_OPT2_2", "SECOND_OPT2_3", "SECOND_OPT2_4"],
-"size": Vector2(250.00122, 679),
+"size": Vector2(250.00122, 736),
 "to_dialog": "",
 "to_node": ["dialogue_node_8", "dialogue_node_9", "dialogue_node_10", "dialogue_node_11"]
 },
@@ -151,7 +151,7 @@ graph_data = {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(200, 0),
-"size": Vector2(226.99973, 75.00018),
+"size": Vector2(227, 87),
 "start_id": "SECOND",
 "to_dialog": "",
 "to_node": ["dialogue_node_1"]

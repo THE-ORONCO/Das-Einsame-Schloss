@@ -77,8 +77,8 @@ variables/variables={
 "value": false
 }
 }
-internal/play_dialog_path="res://dialogue/first_encounter.tres"
-internal/play_start_id="FIRST"
+internal/play_dialog_path="res://dialogue/second_encounter.tres"
+internal/play_start_id="SECOND"
 
 [gui]
 
