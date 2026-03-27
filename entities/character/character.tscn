@@ -213,3 +213,10 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(8, 8)
 texture = SubResource("AnimatedTexture_xrw5f")
+
+[node name="light" type="SpotLight3D" parent="." unique_id=639589966]
+unique_name_in_owner = true
+transform = Transform3D(-1, -7.519688e-16, -8.742277e-08, -1.4656107e-08, 0.9858472, 0.16764633, 8.618551e-08, 0.16764633, -0.9858472, 0, 0, 0)
+spot_range = 19.15
+spot_angle = 13.37
+spot_angle_attenuation = 2.639016

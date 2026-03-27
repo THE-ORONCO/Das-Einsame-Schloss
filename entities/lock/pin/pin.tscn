@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bk6b4pqbb4mur" path="res://entities/lock/Pin_rounder.png" id="3_v1bbv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yjdtg"]
-radius = 25.019993
+radius = 23.0
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_e5wp6"]
 

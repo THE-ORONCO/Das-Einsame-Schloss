@@ -6,6 +6,8 @@ const JUMP_VELOCITY = 4.5
 
 @onready var animation: AnimatedSprite3D = %animation
 @onready var emp_tex: AnimatedTexture = %emp.texture
+@onready var light: SpotLight3D = %light
+@onready var light_rot: float = %light.global_rotation.y
 
 @export
 var spook_increments: Array[float] = [1000000, 5, 4, 2, 1, .5]
@@ -39,15 +41,24 @@ func _physics_process(delta: float) -> void:
 func _animate_sprite() -> void:
 	if velocity.length_squared() < 0.1:
 		animation.play("idle")
+		light.rotation.y = light_rot
 		return
 	
 	var dir := velocity.normalized()
 	if abs(dir.x) > abs(dir.z):
-		if dir.x > 0: animation.play("right")
-		if dir.x < 0: animation.play("left")
+		if dir.x > 0: 
+			animation.play("right")
+			light.global_rotation.y = light_rot + PI/2
+		if dir.x < 0: 
+			animation.play("left")
+			light.global_rotation.y = light_rot - PI/2
 	elif abs(dir.x) < abs(dir.z) :
-		if dir.z > 0: animation.play("down")
-		if dir.z < 0: animation.play("up")
+		if dir.z > 0: 
+			animation.play("down")
+			light.global_rotation.y = light_rot
+		if dir.z < 0:
+			animation.play("up")
+			light.global_rotation.y = light_rot + PI
 
 
 func _update_emp() -> void:

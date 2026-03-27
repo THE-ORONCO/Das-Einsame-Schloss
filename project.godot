@@ -75,7 +75,7 @@ variables/variables={
 "value": false
 }
 }
-internal/play_dialog_path="res://scenes/testing/test_lock_picked_dialogue.tres"
+internal/play_dialog_path="res://dialogue/example.tres"
 internal/play_start_id="START"
 
 [gui]
