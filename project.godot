@@ -19,10 +19,11 @@ config/icon="res://icon.svg"
 
 SproutyDialogs="*uid://c8gxm75j80u8c"
 GameState="*uid://dt21sp8cmxtos"
-UiManager="*uid://uq8ken51crrw"
 HauntedPlaces="*uid://d2gfsl7m7n7gr"
 Crt="*uid://jxnq6j0so1pk"
 FadeState="*uid://diexk3vguyhkq"
+UiManager="*uid://uq8ken51crrw"
+AudioManager="*uid://c2a6ls33xo3v3"
 
 [display]
 

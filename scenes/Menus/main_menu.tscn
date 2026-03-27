@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bgav8um65htnu" path="res://scenes/Menus/main_menu/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://cvex5yntews2k" path="res://scenes/Menus/main_menu/illertissen.jpg" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://e0756hvdpqi6" path="res://ui/menu_theme.tres" id="2_ekxnf"]
-[ext_resource type="AudioStream" uid="uid://bfonleil2c3h1" path="res://scenes/Menus/main_menu/low-ambient.mp3" id="4_3b8pq"]
 
 [node name="main_menu" type="Control" unique_id=621423662]
 layout_mode = 3
@@ -59,11 +58,6 @@ focus_neighbor_bottom = NodePath("../start")
 theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=752272475]
-stream = ExtResource("4_3b8pq")
-autoplay = true
-bus = &"Music"
 
 [connection signal="pressed" from="MainButtons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/options" to="." method="_on_options_pressed"]

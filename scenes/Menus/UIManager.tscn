@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://8pp2qn44uu5w" path="res://scenes/Menus/ui_manager.gd" id="1_hv25b"]
 [ext_resource type="Theme" uid="uid://e0756hvdpqi6" path="res://ui/menu_theme.tres" id="1_x3ywu"]
 [ext_resource type="PackedScene" uid="uid://b286ruo7ej0s6" path="res://scenes/Menus/options_menu.tscn" id="2_hv25b"]
+[ext_resource type="AudioStream" uid="uid://c3cgid4e7vc6c" path="res://scenes/Menus/main_menu/start.mp3" id="4_u5fu5"]
 
 [node name="UIManager" type="CanvasLayer" unique_id=876532496]
 process_mode = 3
@@ -59,6 +60,13 @@ text = "Quit"
 
 [node name="Options" parent="." unique_id=1682390146 instance=ExtResource("2_hv25b")]
 visible = false
+
+[node name="Audio" type="Node" parent="." unique_id=1269448435]
+
+[node name="AudioStart" type="AudioStreamPlayer" parent="Audio" unique_id=38073124]
+stream = ExtResource("4_u5fu5")
+max_polyphony = 2
+bus = &"SFX"
 
 [connection signal="pressed" from="PauseMenu/VBoxContainer/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="PauseMenu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
