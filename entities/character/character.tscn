@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b4hiip7c7ac14" path="res://entities/character/character.gd" id="1_6i0tm"]
 [ext_resource type="Texture2D" uid="uid://3ki5ekhq8532" path="res://entities/character/character_spritesheet.png" id="2_6i0tm"]
 [ext_resource type="Texture2D" uid="uid://dva3m3mgytane" path="res://entities/character/character_idle.png" id="3_7315l"]
+[ext_resource type="Texture2D" uid="uid://c6qlq80gib2jv" path="res://entities/character/character_idle_spritesheet.png" id="4_0vyii"]
 [ext_resource type="Texture2D" uid="uid://dn62lsvq5yip7" path="res://entities/emp/EMP-Geraet_0.png" id="4_4ya86"]
 [ext_resource type="Texture2D" uid="uid://dlxrsyk2cuxyb" path="res://entities/emp/EMP-Geraet_1.png" id="5_0vyii"]
 [ext_resource type="Texture2D" uid="uid://58ey8jq60le4" path="res://entities/emp/EMP-Geraet_2.png" id="6_6y70v"]
@@ -36,6 +37,30 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_63hgt"]
 atlas = ExtResource("2_6i0tm")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3psqv"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phiu1"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be78y"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx4sa"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfc3v"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax80r"]
+atlas = ExtResource("4_0vyii")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ceyjw"]
 atlas = ExtResource("2_6i0tm")
@@ -112,7 +137,40 @@ animations = [{
 "texture": SubResource("AtlasTexture_63hgt")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3psqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phiu1")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be78y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx4sa")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfc3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax80r")
+}],
+"loop": true,
+"name": &"idle_up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -198,9 +256,8 @@ shaded = true
 double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_oo5hp")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.24390331
+animation = &"idle_right"
+autoplay = "idle_down"
 
 [node name="emp" type="TextureRect" parent="." unique_id=211814646]
 unique_name_in_owner = true
