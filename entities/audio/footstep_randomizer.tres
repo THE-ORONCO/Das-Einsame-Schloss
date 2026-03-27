@@ -1,0 +1,17 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://lubxxl12wlo4"]
+
+[ext_resource type="AudioStream" uid="uid://dveuahvolaojf" path="res://entities/character/SFX/Footstep_Dirt_00.mp3" id="1_uv4ic"]
+[ext_resource type="AudioStream" uid="uid://vwwkfhunt8nu" path="res://entities/character/SFX/Footstep_Dirt_01.mp3" id="2_37vkg"]
+[ext_resource type="AudioStream" uid="uid://cqhi6ptq8tjcm" path="res://entities/character/SFX/Footstep_Dirt_02.mp3" id="3_p1kq6"]
+[ext_resource type="AudioStream" uid="uid://bfbggwlk67krn" path="res://entities/character/SFX/Footstep_Dirt_03.mp3" id="4_x27gv"]
+[ext_resource type="AudioStream" uid="uid://d0y1yhql2vxmg" path="res://entities/character/SFX/Footstep_Dirt_04.mp3" id="5_uddny"]
+
+[resource]
+random_pitch = 1.0293022
+random_volume_offset_db = 1.0
+streams_count = 5
+stream_0/stream = ExtResource("1_uv4ic")
+stream_1/stream = ExtResource("2_37vkg")
+stream_2/stream = ExtResource("3_p1kq6")
+stream_3/stream = ExtResource("4_x27gv")
+stream_4/stream = ExtResource("5_uddny")

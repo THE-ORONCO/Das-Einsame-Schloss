@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2a6ls33xo3v3"]
 
-[ext_resource type="Script" path="res://scenes/audio_manager.gd" id="1_8qd8g"]
+[ext_resource type="Script" uid="uid://cyot1jpl3y3ga" path="res://scenes/audio_manager.gd" id="1_8qd8g"]
 
 [node name="AudioManager" type="Node" unique_id=1256439759]
 script = ExtResource("1_8qd8g")
@@ -9,4 +9,4 @@ script = ExtResource("1_8qd8g")
 bus = &"Music"
 
 [node name="UISFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1576447732]
-bus = &"SFX"
+bus = &"UI"

@@ -10,6 +10,7 @@ const DAMPED_EMP: float = 0
 @onready var light: SpotLight3D = %light
 @onready var light_rot: float = %light.global_rotation.y
 @onready var emp_sound: AudioStreamPlayer = $emp/emp_sound
+@onready var footstep_player: AudioStreamPlayer3D = $FootstepPlayer
 
 enum DIR{
 	U,
@@ -90,10 +91,10 @@ func _idle_animate() -> void:
 
 func _move_animate() -> void:
 	match _current_dir:
-		DIR.U: animation.play("up")
-		DIR.D: animation.play("down")
-		DIR.L: animation.play("left")
-		DIR.R: animation.play("right")
+		DIR.U: animation.play("walk_up")
+		DIR.D: animation.play("walk_down")
+		DIR.L: animation.play("walk_left")
+		DIR.R: animation.play("walk_right")
 
 func _point_light() -> void:
 	match _current_dir:
@@ -101,3 +102,9 @@ func _point_light() -> void:
 		DIR.D: light.global_rotation.y = light_rot
 		DIR.L: light.global_rotation.y = light_rot - PI/2
 		DIR.R: light.global_rotation.y = light_rot + PI/2
+		
+
+func _on_animation_frame_changed() -> void:
+	if animation.animation.begins_with("walk_"):
+		if animation.frame == 0 or animation.frame == 2:
+			footstep_player.play()

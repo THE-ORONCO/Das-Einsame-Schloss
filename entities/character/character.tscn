@@ -11,25 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://b5877b8ngvfmc" path="res://entities/emp/EMP-Geraet_4.png" id="8_0i2jp"]
 [ext_resource type="Texture2D" uid="uid://bjgx6qyq8t002" path="res://entities/emp/EMP-Geraet_5.png" id="9_555hj"]
 [ext_resource type="AudioStream" uid="uid://bu0jyjy3riuqo" path="res://audio/sfx/emp.mp3" id="11_6y70v"]
+[ext_resource type="AudioStream" uid="uid://lubxxl12wlo4" path="res://entities/audio/footstep_randomizer.tres" id="12_wu0gw"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7315l"]
 radius = 0.3
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ltml"]
-atlas = ExtResource("2_6i0tm")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xn0r5"]
-atlas = ExtResource("2_6i0tm")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l75fg"]
-atlas = ExtResource("2_6i0tm")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwd7k"]
-atlas = ExtResource("2_6i0tm")
-region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oo5hp"]
 atlas = ExtResource("3_7315l")
@@ -62,6 +47,22 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ax80r"]
 atlas = ExtResource("4_0vyii")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ltml"]
+atlas = ExtResource("2_6i0tm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn0r5"]
+atlas = ExtResource("2_6i0tm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l75fg"]
+atlas = ExtResource("2_6i0tm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwd7k"]
+atlas = ExtResource("2_6i0tm")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ceyjw"]
 atlas = ExtResource("2_6i0tm")
@@ -115,23 +116,6 @@ region = Rect2(96, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2ltml")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xn0r5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l75fg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vwd7k")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_oo5hp")
 }, {
 "duration": 1.0,
@@ -176,6 +160,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_2ltml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn0r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l75fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwd7k")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ceyjw")
 }, {
 "duration": 1.0,
@@ -188,7 +189,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_6y70v")
 }],
 "loop": true,
-"name": &"left",
+"name": &"walk_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -205,7 +206,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xrw5f")
 }],
 "loop": true,
-"name": &"right",
+"name": &"walk_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -222,7 +223,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dovdo")
 }],
 "loop": true,
-"name": &"up",
+"name": &"walk_up",
 "speed": 5.0
 }]
 
@@ -257,7 +258,7 @@ shaded = true
 double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_oo5hp")
-animation = &"idle_right"
+animation = &"walk_down"
 autoplay = "idle_down"
 
 [node name="emp" type="TextureRect" parent="." unique_id=211814646]
@@ -296,3 +297,9 @@ spot_angle_attenuation = 1.0717733
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372, -0.042423427)
 light_energy = 0.288
 omni_range = 1.591
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=146446925]
+stream = ExtResource("12_wu0gw")
+bus = &"SFX"
+
+[connection signal="frame_changed" from="animation" to="." method="_on_animation_frame_changed"]
