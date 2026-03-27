@@ -1,6 +1,7 @@
 @tool
 extends Node3D
 
+var open: bool = false
 var _target: Marker3D
 
 # Called when the node enters the scene tree for the first time.

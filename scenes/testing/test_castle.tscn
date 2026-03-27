@@ -7,36 +7,30 @@
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="4_j22dg"]
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_tgeax"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="7_xedob"]
+[ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall_hori.tscn" id="8_j22dg"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_61nqe"]
 
 [node name="TestCastle" type="Node3D" unique_id=1145772969]
 
-[node name="Character" parent="." unique_id=1159888165 instance=ExtResource("1_i1rtt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27268744, 0)
-collision_mask = 4
+[node name="Room1" type="Node3D" parent="." unique_id=304703624]
 
-[node name="Camera3D" type="Camera3D" parent="Character" unique_id=1144512157]
-transform = Transform3D(1, 0, 0, 0, 0.8425746, 0.53857964, 0, -0.53857964, 0.8425746, 0, 6.584678, 9.943309)
-fov = 23.1
+[node name="Door_to_2" parent="Room1" unique_id=1122510304 instance=ExtResource("7_xedob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.098759)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=420624802]
-collision_layer = 4
-collision_mask = 0
+[node name="Marker3D" type="Marker3D" parent="Room1/Door_to_2" unique_id=2085582859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.255554)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=250610809]
-shape = SubResource("WorldBoundaryShape3D_61nqe")
-
-[node name="NPC" type="Node3D" parent="." unique_id=1746844200]
+[node name="NPC" type="Node3D" parent="Room1" unique_id=1746844200]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669794, 0, 0)
 
-[node name="DialogStarter" type="Node" parent="NPC" unique_id=369435871 node_paths=PackedStringArray("interaction_point", "dialogue")]
+[node name="DialogStarter" type="Node" parent="Room1/NPC" unique_id=369435871 node_paths=PackedStringArray("interaction_point", "dialogue")]
 script = ExtResource("3_j22dg")
 interaction_point = NodePath("Interactible")
 dialogue = NodePath("DialogPlayer")
 metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
 
-[node name="DialogPlayer" type="Node" parent="NPC/DialogStarter" unique_id=2068710613]
+[node name="DialogPlayer" type="Node" parent="Room1/NPC/DialogStarter" unique_id=2068710613]
 script = ExtResource("5_tgeax")
 _dialog_data_uid = 5867127728501058900
 _dialog_file_name = "test_dialogue"
@@ -47,17 +41,42 @@ _destroy_on_end = true
 _print_debug = false
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
-[node name="Interactible" parent="NPC/DialogStarter" unique_id=1269265622 instance=ExtResource("3_xedob")]
+[node name="Interactible" parent="Room1/NPC/DialogStarter" unique_id=1269265622 instance=ExtResource("3_xedob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669794, 0, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="NPC" unique_id=498059833]
+[node name="Sprite3D" type="Sprite3D" parent="Room1/NPC" unique_id=498059833]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 texture = ExtResource("4_j22dg")
 
-[node name="Door" parent="." unique_id=1122510304 instance=ExtResource("7_xedob")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.0168266)
+[node name="Wall" parent="Room1" unique_id=272459560 instance=ExtResource("8_j22dg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.088392)
 
-[node name="Marker3D" type="Marker3D" parent="Door" unique_id=825864557]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7692204, 0, 0)
+[node name="Room2" type="Node3D" parent="." unique_id=1510660550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09994507, 0, -64.34654)
 
-[connection signal="interacted" from="NPC/DialogStarter/Interactible" to="NPC" method="_on_interactible_interacted"]
+[node name="Door_to_1" parent="Room2" unique_id=1225174586 instance=ExtResource("7_xedob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02012968, 0, -10.0089035)
+
+[node name="Marker3D" type="Marker3D" parent="Room2/Door_to_1" unique_id=1271801694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04166603, 0, 65.31506)
+
+[node name="Wall2" parent="Room2" unique_id=48168582 instance=ExtResource("8_j22dg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.124309, 0, -10.000999)
+
+[node name="Character" parent="." unique_id=1159888165 instance=ExtResource("1_i1rtt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27268744, 0)
+collision_mask = 4
+
+[node name="Camera3D" type="Camera3D" parent="Character" unique_id=1144512157]
+transform = Transform3D(1, 0, 0, 0, 0.8425746, 0.53857964, 0, -0.53857964, 0.8425746, 0, 6.584678, 9.943309)
+fov = 23.1
+size = 3.985
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=420624802]
+collision_layer = 4
+collision_mask = 0
+
+[node name="everywhere" type="CollisionShape3D" parent="Floor" unique_id=250610809]
+shape = SubResource("WorldBoundaryShape3D_61nqe")
+
+[connection signal="interacted" from="Room1/NPC/DialogStarter/Interactible" to="Room1/NPC" method="_on_interactible_interacted"]

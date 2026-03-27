@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dsw13430xh2nn"]
+
+[ext_resource type="Texture2D" uid="uid://tyhh7alhax8s" path="res://entities/wall/wall.png" id="1_8ukgw"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_2jwxi"]
+plane = Plane(1, 0, 0, 0)
+
+[node name="Wall" type="Node3D" unique_id=272459560]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=293348511]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=90906056]
+shape = SubResource("WorldBoundaryShape3D_2jwxi")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]
+transform = Transform3D(-1.7484555e-07, 0, 3.9999998, -1.4210855e-14, 3.9999998, -6.211762e-22, -4, 0, -1.7484554e-07, 0, 0, 0)
+sorting_offset = -1.0
+offset = Vector2(0, 24)
+double_sided = false
+texture_filter = 2
+texture = ExtResource("1_8ukgw")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 48)

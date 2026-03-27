@@ -1,8 +1,18 @@
 [gd_scene format=3 uid="uid://biy5ugxxadayn"]
 
-[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="2_0tmj2"]
+[ext_resource type="Shader" uid="uid://dbxj0wb725ywe" path="res://entities/lock/9slice_shader.gdshader" id="1_0tmj2"]
+[ext_resource type="Script" uid="uid://bomt2jowao62a" path="res://entities/lock/9slice_sprite2D.gd" id="2_0tmj2"]
+[ext_resource type="Texture2D" uid="uid://bk6b4pqbb4mur" path="res://entities/lock/Pin_rounder.png" id="2_7yw71"]
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_3cfy0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3lye5"]
+shader = ExtResource("1_0tmj2")
+shader_parameter/scale = Vector2(3.375, 5.5625005)
+shader_parameter/right = 5
+shader_parameter/top = 5
+shader_parameter/left = 5
+shader_parameter/bottom = 5
 
 [node name="Tumbler" type="Node2D" unique_id=696676676]
 
@@ -30,7 +40,14 @@ lock_rotation = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tumbler" unique_id=440886639]
 polygon = PackedVector2Array(-26, -44, 22, -44, 28, -37, 28, 38, 21, 45, -26, 45)
 
-[node name="Icon" type="Sprite2D" parent="Tumbler" unique_id=792055258]
-position = Vector2(0, 9.536743e-07)
-scale = Vector2(0.45703122, 0.71874994)
-texture = ExtResource("2_0tmj2")
+[node name="PinRound" type="Sprite2D" parent="Tumbler" unique_id=434679425]
+texture_filter = 1
+material = SubResource("ShaderMaterial_3lye5")
+position = Vector2(0.9999983, 0.5000019)
+scale = Vector2(3.375, 5.5625005)
+texture = ExtResource("2_7yw71")
+script = ExtResource("2_0tmj2")
+right = 5
+top = 5
+left = 5
+bottom = 5

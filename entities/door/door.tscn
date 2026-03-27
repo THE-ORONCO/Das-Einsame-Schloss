@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dwg8hbxoc53x4" path="res://entities/door/door.gd" id="1_bfv6c"]
 [ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="2_dsbe1"]
-[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="3_dsbe1"]
+[ext_resource type="Texture2D" uid="uid://cirnlwl4ee72a" path="res://entities/door/door.png" id="3_dsbe1"]
 
 [node name="Door" type="Node3D" unique_id=1122510304]
 script = ExtResource("1_bfv6c")
@@ -10,8 +10,11 @@ script = ExtResource("1_bfv6c")
 [node name="Interactible" parent="." unique_id=1269265622 instance=ExtResource("2_dsbe1")]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=252196236]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(4, 0, 0, 0, 2.8284268, 2.8284273, 0, -2.8284273, 2.8284268, 0, 0, 0)
+offset = Vector2(0, 24)
+texture_filter = 0
 texture = ExtResource("3_dsbe1")
+vframes = 2
 
 [connection signal="editor_state_changed" from="." to="." method="_on_editor_state_changed"]
 [connection signal="player_interacted" from="Interactible" to="." method="_on_player_interaction"]

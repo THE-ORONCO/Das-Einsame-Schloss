@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://c7m7m5623eowl"]
 
 [ext_resource type="Script" uid="uid://cb5m8dd4iaacn" path="res://entities/pick/pick.gd" id="1_8aik6"]
-[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="2_is6dl"]
+[ext_resource type="Texture2D" uid="uid://c0tan27w5jhbx" path="res://entities/lock/Lock.png" id="2_is6dl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_is6dl"]
-radius = 15.752487
-height = 60.571014
+radius = 14.710103
+height = 38.07321
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is6dl"]
-size = Vector2(635.65906, 27.689608)
+size = Vector2(559.6765, 24.228405)
 
 [node name="Pick" type="RigidBody2D" unique_id=279109275]
 collision_layer = 4
@@ -18,23 +18,19 @@ linear_damp = 31.106
 script = ExtResource("1_8aik6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=367956433]
-position = Vector2(-148, 3)
+position = Vector2(-147, 12)
 scale = Vector2(1.0791949, 1.1556684)
 shape = SubResource("CapsuleShape2D_is6dl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=720444876]
-position = Vector2(191, -15.000002)
+position = Vector2(164.00002, -13.000001)
 scale = Vector2(1.0791949, 1.1556684)
 shape = SubResource("RectangleShape2D_is6dl")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1966838933]
-position = Vector2(199.55, -15.299999)
-scale = Vector2(5.335156, 0.29218748)
+[node name="Lock" type="Sprite2D" parent="." unique_id=1802290066]
+texture_filter = 1
+position = Vector2(156, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("2_is6dl")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=943143417]
-position = Vector2(609.44196, -14.71573)
-rotation = 1.5707964
-scale = Vector2(0.52719635, 0.23753321)
-texture = ExtResource("2_is6dl")
-offset = Vector2(36.483185, 3184.101)
+region_enabled = true
+region_rect = Rect2(8, 160, 312, 32)

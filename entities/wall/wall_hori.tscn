@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cwgpc76lmcvt7"]
+
+[ext_resource type="Texture2D" uid="uid://tyhh7alhax8s" path="res://entities/wall/wall.png" id="1_ndby4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7kopq"]
+size = Vector3(20, 2.1619873, 0)
+
+[node name="Wall" type="Node3D" unique_id=272459560]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=293348511]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=90906056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58099365, 0)
+shape = SubResource("BoxShape3D_7kopq")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1819344098]
+transform = Transform3D(4, 0, 0, 0, 2.828427, 2.828427, 0, -2.828427, 2.828427, 0, 0, 0)
+sorting_offset = -1.0
+offset = Vector2(0, 24)
+double_sided = false
+texture_filter = 2
+texture = ExtResource("1_ndby4")
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 48)

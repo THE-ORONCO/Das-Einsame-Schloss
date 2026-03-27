@@ -2,15 +2,34 @@
 
 [ext_resource type="Script" uid="uid://ys5e8nufcvmk" path="res://entities/lock/pin/pin.gd" id="1_yjdtg"]
 [ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="2_8rkxn"]
+[ext_resource type="Script" uid="uid://bomt2jowao62a" path="res://entities/lock/9slice_sprite2D.gd" id="3_8rkxn"]
+[ext_resource type="Shader" uid="uid://dbxj0wb725ywe" path="res://entities/lock/9slice_shader.gdshader" id="3_bemgs"]
+[ext_resource type="Texture2D" uid="uid://bk6b4pqbb4mur" path="res://entities/lock/Pin_rounder.png" id="3_v1bbv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yjdtg"]
 radius = 25.019993
 
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_e5wp6"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cxt6j"]
+shader = ExtResource("3_bemgs")
+shader_parameter/scale = Vector2(3.4375, 5.6875)
+shader_parameter/right = 5
+shader_parameter/top = 5
+shader_parameter/left = 5
+shader_parameter/bottom = 5
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yjdtg"]
 friction = 4.0
 rough = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kjeqj"]
+shader = ExtResource("3_bemgs")
+shader_parameter/scale = Vector2(0.109375015, 0.039062504)
+shader_parameter/right = 0
+shader_parameter/top = 0
+shader_parameter/left = 0
+shader_parameter/bottom = 0
 
 [node name="Pin" type="Node2D" unique_id=1335108495]
 script = ExtResource("1_yjdtg")
@@ -61,10 +80,18 @@ max_contacts_reported = 5
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pin_assembly/Pin" unique_id=268148899]
 polygon = PackedVector2Array(18, -45, 28, -36, 28, 46, -27, 46, -27, -45)
 
-[node name="Icon" type="Sprite2D" parent="pin_assembly/Pin" unique_id=1435312622]
-position = Vector2(-1.4305115e-06, 0)
-scale = Vector2(0.45703122, 0.71874994)
-texture = ExtResource("2_8rkxn")
+[node name="Lock" type="Sprite2D" parent="pin_assembly/Pin" unique_id=1652425985]
+texture_filter = 1
+material = SubResource("ShaderMaterial_cxt6j")
+position = Vector2(0.49999928, 0.4999994)
+scale = Vector2(3.4375, 5.6875)
+texture = ExtResource("3_v1bbv")
+region_rect = Rect2(240, 80, 16, 16)
+script = ExtResource("3_8rkxn")
+right = 5
+top = 5
+left = 5
+bottom = 5
 
 [node name="block_assembly" type="Node2D" parent="." unique_id=123564368]
 position = Vector2(6, 0)
@@ -95,9 +122,11 @@ gravity_scale = 0.0
 lock_rotation = true
 
 [node name="Icon" type="Sprite2D" parent="block_assembly/cylinder" unique_id=1401252725]
+material = SubResource("ShaderMaterial_kjeqj")
 position = Vector2(-2.3841858e-07, 0)
 scale = Vector2(0.109375015, 0.039062504)
 texture = ExtResource("2_8rkxn")
+script = ExtResource("3_8rkxn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="block_assembly/cylinder" unique_id=1772380983]
 polygon = PackedVector2Array(6, 5, -8, 0, 6, -5)

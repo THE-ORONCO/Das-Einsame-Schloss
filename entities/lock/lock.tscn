@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://dmrc2e072mukh"]
 
-[ext_resource type="Texture2D" uid="uid://dxpijbqnhf0f" path="res://icon.svg" id="1_2dbbp"]
 [ext_resource type="Script" uid="uid://dxxr7j55dm16u" path="res://entities/lock/lock.gd" id="1_c3vu3"]
+[ext_resource type="Texture2D" uid="uid://c0tan27w5jhbx" path="res://entities/lock/Lock.png" id="2_2dbbp"]
 
 [node name="Lock" type="Node2D" unique_id=1995817171]
 script = ExtResource("1_c3vu3")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=496550688]
-position = Vector2(340, -133)
-scale = Vector2(5.5679684, 0.31249997)
-texture = ExtResource("1_2dbbp")
+[node name="Lock" type="Sprite2D" parent="." unique_id=1308776653]
+texture_filter = 1
+position = Vector2(216, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2dbbp")
+region_enabled = true
+region_rect = Rect2(0, 0, 208, 144)
 
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1281596472]
-position = Vector2(343, 165)
-scale = Vector2(5.566406, 0.3164062)
-texture = ExtResource("1_2dbbp")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=444472857]
-position = Vector2(-1.7500014, 22.49998)
-scale = Vector2(0.26171875, 2.6953123)
-texture = ExtResource("1_2dbbp")
+[node name="Lock2" type="Sprite2D" parent="." unique_id=1467484257]
+texture_filter = 1
+position = Vector2(434, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2dbbp")
+region_enabled = true
+region_rect = Rect2(32, 0, 176, 144)
 
 [node name="body" type="StaticBody2D" parent="." unique_id=1004575419]
 unique_name_in_owner = true
@@ -28,4 +29,4 @@ collision_mask = 0
 [node name="shape" type="CollisionPolygon2D" parent="body" unique_id=880163441]
 unique_name_in_owner = true
 position = Vector2(0.30000305, 0.5)
-polygon = PackedVector2Array(685.7, -121.5, 687.7, -148.5, -22.300003, -151.5, -24.300003, 195.5, 693.7, 177.5, 699.7, 139.5, 5.699997, 145.5, 4.699997, -121.5)
+polygon = PackedVector2Array(697.7, -120.5, 697.7, -216.5, -96.3, -216.5, -96.3, 215.5, 697.7, 215.5, 697.7, 119.5, -0.30000305, 119.5, -0.30000305, -120.5)
