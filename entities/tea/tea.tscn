@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bm4av1jlqx6kw"]
+
+[ext_resource type="Texture2D" uid="uid://bff7qmdn6tjoj" path="res://entities/tea/Ringservies.png" id="1_gumyh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gumyh"]
+radius = 0.14453125
+height = 1.0097656
+
+[node name="Tea" type="Node3D" unique_id=7008610]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1550345132]
+transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+texture_filter = 2
+texture = ExtResource("1_gumyh")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=2112349913]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+offset = Vector2(0, 6)
+billboard = 1
+texture_filter = 2
+texture = ExtResource("1_gumyh")
+region_enabled = true
+region_rect = Rect2(36, 0, 12, 13)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1094513096]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1872977237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4951172, 0)
+shape = SubResource("CapsuleShape3D_gumyh")
