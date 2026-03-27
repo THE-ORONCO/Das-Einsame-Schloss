@@ -68,7 +68,6 @@ theme_override_font_sizes/font_size = 50
 text = "Quit"
 
 [node name="Credits" type="Control" parent="." unique_id=951642292]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -110,25 +109,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Credits/VBoxContainer" unique_id=583665871]
-custom_minimum_size = Vector2(900, 400)
+custom_minimum_size = Vector2(1100, 400)
 layout_mode = 2
 theme = ExtResource("4_3b8pq")
-text = "This Games was made at the \"Schlossjam 2026\" 
+text = "
+This Games was made at the \"Schlossjam 2026\" 
 with the topic 
 
 \"Das einsame Schloss\" 
 (\"The Lonely Castle\")
 
-[Names] contributed to this project.
-[Names] contributed to this project.
-[Names] contributed to this project.
-[Names] contributed to this project.
-[Names] contributed to this project.
+Théo roncoletta - contributed to this project.
+[Names] - contributed to this project.
+[Names] - contributed to this project.
+Vuk Mirkovic - contributed to this project.
+Florian Brauner - contributed to this project.
 
-For Sounds 
-https://pixabay.com and 
-https://opengameart.org 
-was used"
+Sounds:
+- https://pixabay.com 
+- https://opengameart.org 
+
+"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1

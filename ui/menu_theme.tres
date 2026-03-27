@@ -1,6 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://e0756hvdpqi6"]
 
+[ext_resource type="FontFile" uid="uid://csaauilrebegq" path="res://ui/Kenney Pixel Square.ttf" id="1_3ymh7"]
+
 [resource]
+default_font = ExtResource("1_3ymh7")
 default_font_size = 50
 Button/font_sizes/font_size = 50
-Button/fonts/font = null
+Button/fonts/font = ExtResource("1_3ymh7")

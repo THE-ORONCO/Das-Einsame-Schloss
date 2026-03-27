@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://wllmgjqyw7nh"]
 
 [ext_resource type="Script" uid="uid://deyius06443n3" path="res://scenes/Menus/audio_control.gd" id="1_rqwbh"]
+[ext_resource type="FontFile" uid="uid://csaauilrebegq" path="res://ui/Kenney Pixel Square.ttf" id="2_l46fo"]
 
 [node name="AudioSlider" type="Control" unique_id=864199972]
 custom_minimum_size = Vector2(150, 30)
@@ -29,6 +30,8 @@ alignment = 1
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=1418825874]
 custom_minimum_size = Vector2(60, 30)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l46fo")
+theme_override_font_sizes/font_size = 20
 text = "Test"
 vertical_alignment = 1
 

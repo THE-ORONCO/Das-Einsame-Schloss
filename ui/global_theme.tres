@@ -1,3 +1,11 @@
 [gd_resource type="Theme" format=3 uid="uid://xf2nmq50d88v"]
 
+[ext_resource type="FontFile" uid="uid://csaauilrebegq" path="res://ui/Kenney Pixel Square.ttf" id="1_24ibd"]
+[ext_resource type="StyleBox" uid="uid://cgnhs258y0qvl" path="res://ui/box_flat.tres" id="2_41rka"]
+[ext_resource type="StyleBox" uid="uid://7er5qmmuc70o" path="res://ui/box_flat_hover.tres" id="3_y3nm7"]
+
 [resource]
+Button/fonts/font = ExtResource("1_24ibd")
+Button/styles/focus = ExtResource("2_41rka")
+Button/styles/hover = ExtResource("2_41rka")
+Button/styles/normal = ExtResource("3_y3nm7")
