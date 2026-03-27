@@ -1,13 +1,15 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+const SPEED: float = 5.0
+const JUMP_VELOCITY: float = 4.5
+const DAMPED_EMP: float = 0
 
 @onready var animation: AnimatedSprite3D = %animation
 @onready var emp_tex: AnimatedTexture = %emp.texture
 @onready var light: SpotLight3D = %light
 @onready var light_rot: float = %light.global_rotation.y
+@onready var emp_sound: AudioStreamPlayer = $emp/emp_sound
 
 enum DIR{
 	U,
@@ -18,11 +20,15 @@ enum DIR{
 
 var _current_dir: DIR = DIR.D
 var _moving: bool = false
+var _target_emp_pitch: float = 0.
+var _target_emp_volume: float = 0.
 
 @export
-var spook_increments: Array[float] = [1000000, 8, 6, 3, 1, .5]
+var spook_increments: Array[float] = [1000000, 12, 8, 5, 3, 1]
 
 func _physics_process(delta: float) -> void:
+	_update_emp(delta)
+	
 	if GameState.current_state != GameState.WALKING: return
 	# Add the gravity.
 	if not is_on_floor():
@@ -42,7 +48,6 @@ func _physics_process(delta: float) -> void:
 	if _moving: _move_animate()
 	else: _idle_animate()
 	_point_light()
-	_update_emp()
 
 
 func _orientate() -> void:
@@ -58,14 +63,23 @@ func _orientate() -> void:
 		if dir.z < 0: _current_dir = DIR.U
 
 
-func _update_emp() -> void:
+func _update_emp(delta: float) -> void:
 	var distance := HauntedPlaces.nearest_spook_distance(self.global_position)
 	var max_spook := spook_increments.size()
 	for i in range(max_spook):
 		var increment := spook_increments[i]
 		if distance <= increment:
 			var random_offset := randf() *3 - 1
-			emp_tex.current_frame = clampf(i + random_offset, 0, max_spook - 1) 
+			emp_tex.current_frame = clampf(i + random_offset, 0, max_spook - 1)
+
+	var mod = 1. / distance if distance > 0.1 else 1.
+	_target_emp_pitch = move_toward(_target_emp_pitch, mod, delta)
+	if GameState.current_state != GameState.WALKING:
+		_target_emp_volume = move_toward(_target_emp_volume, DAMPED_EMP, delta)
+	else:
+		_target_emp_volume = move_toward(_target_emp_volume, mod, delta)
+	emp_sound.pitch_scale = .5 + (_target_emp_pitch)
+	emp_sound.volume_linear = (_target_emp_volume * 3.)
 
 
 func _idle_animate() -> void:

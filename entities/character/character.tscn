@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ckrj6ow8jol0r" path="res://entities/emp/EMP-Geraet_3.png" id="7_wu0gw"]
 [ext_resource type="Texture2D" uid="uid://b5877b8ngvfmc" path="res://entities/emp/EMP-Geraet_4.png" id="8_0i2jp"]
 [ext_resource type="Texture2D" uid="uid://bjgx6qyq8t002" path="res://entities/emp/EMP-Geraet_5.png" id="9_555hj"]
+[ext_resource type="AudioStream" uid="uid://bu0jyjy3riuqo" path="res://audio/sfx/emp.mp3" id="11_6y70v"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7315l"]
 radius = 0.3
@@ -275,6 +276,10 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(8, 8)
 texture = SubResource("AnimatedTexture_xrw5f")
+
+[node name="emp_sound" type="AudioStreamPlayer" parent="emp" unique_id=509281026]
+stream = ExtResource("11_6y70v")
+autoplay = true
 
 [node name="light" type="SpotLight3D" parent="." unique_id=639589966]
 unique_name_in_owner = true
