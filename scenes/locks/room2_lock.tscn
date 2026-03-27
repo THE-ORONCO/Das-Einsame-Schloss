@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bhcf5uw16rrfs"]
+
+[ext_resource type="Script" uid="uid://de4ifafcd0p1i" path="res://entities/lock/lock.gd" id="1_6274q"]
+[ext_resource type="PackedScene" uid="uid://dmrc2e072mukh" path="res://entities/lock/lock.tscn" id="2_a5hne"]
+[ext_resource type="PackedScene" uid="uid://biy5ugxxadayn" path="res://entities/lock/tumbler/tumbler.tscn" id="3_qsevr"]
+[ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="4_8d1cc"]
+[ext_resource type="PackedScene" uid="uid://cjrrsf4gc180i" path="res://entities/dirt/dirt1.tscn" id="5_ujpj8"]
+[ext_resource type="PackedScene" uid="uid://c7m7m5623eowl" path="res://entities/pick/pick.tscn" id="6_a5hne"]
+[ext_resource type="PackedScene" uid="uid://52napiir2pju" path="res://entities/dirt/dirt2.tscn" id="7_ujpj8"]
+[ext_resource type="PackedScene" uid="uid://4c02mgvym8wb" path="res://entities/dirt/dirt3.tscn" id="8_5rju1"]
+[ext_resource type="PackedScene" uid="uid://jntty1po5ykl" path="res://entities/dirt/dirt4.tscn" id="9_f4lxt"]
+
+[node name="Room2Lock" type="Node2D" unique_id=196431819]
+script = ExtResource("1_6274q")
+
+[node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("2_a5hne")]
+position = Vector2(604, 534)
+
+[node name="Pick" parent="." unique_id=279109275 instance=ExtResource("6_a5hne")]
+position = Vector2(1333, 490)
+
+[node name="Tumbler" parent="." unique_id=696676676 instance=ExtResource("3_qsevr")]
+position = Vector2(751, 653)
+
+[node name="Tumbler2" parent="." unique_id=766674452 instance=ExtResource("3_qsevr")]
+position = Vector2(870, 655)
+
+[node name="pins" type="Node2D" parent="." unique_id=2086653537]
+unique_name_in_owner = true
+
+[node name="Pin2" parent="pins" unique_id=1335108495 instance=ExtResource("4_8d1cc")]
+position = Vector2(870, 748)
+
+[node name="Pin" parent="pins" unique_id=1653628140 instance=ExtResource("4_8d1cc")]
+position = Vector2(751, 745)
+
+[node name="dirt" type="Node2D" parent="." unique_id=1820531885]
+
+[node name="Dirt5" parent="dirt" unique_id=2114067695 instance=ExtResource("5_ujpj8")]
+position = Vector2(1161.9999, 602)
+rotation = -1.0243306
+
+[node name="Dirt2" parent="dirt" unique_id=1591597488 instance=ExtResource("8_5rju1")]
+position = Vector2(1034, 597)
+
+[node name="Dirt4" parent="dirt" unique_id=1075283443 instance=ExtResource("8_5rju1")]
+position = Vector2(1111, 601)
+rotation = 0.9301788
+
+[node name="Dirt" parent="dirt" unique_id=2142384804 instance=ExtResource("7_ujpj8")]
+position = Vector2(1094, 525)
+
+[node name="Dirt3" parent="dirt" unique_id=526002766 instance=ExtResource("9_f4lxt")]
+position = Vector2(944, 572)

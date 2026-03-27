@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://dmrc2e072mukh"]
 
-[ext_resource type="Script" uid="uid://dxxr7j55dm16u" path="res://entities/lock/lock.gd" id="1_c3vu3"]
 [ext_resource type="Texture2D" uid="uid://c0tan27w5jhbx" path="res://entities/lock/Lock.png" id="2_2dbbp"]
 
 [node name="Lock" type="Node2D" unique_id=1995817171]
-script = ExtResource("1_c3vu3")
 
 [node name="Lock" type="Sprite2D" parent="." unique_id=1308776653]
 texture_filter = 1

@@ -8,6 +8,11 @@ var speed: Vector2 = Vector2(700,300)
 @export_range(0., 3.)
 var turn_speed: float = 1
 
+var _extent: Vector2
+
+func _ready() -> void:
+	_extent = DisplayServer.screen_get_size()
+
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.LOCK_PICK: return
@@ -21,3 +26,7 @@ func _physics_process(delta: float) -> void:
 	self.lock_rotation = !Input.is_action_pressed("pick_anti_clockwise") && !Input.is_action_pressed("pick_clockwise")
 	
 	move_and_collide(Vector2.ZERO)
+	
+	var max: float = clamp(self.position.x, 0, _extent.x)
+	var may: float = clamp(self.position.y, 0, _extent.y)
+	self.position = Vector2(max, may)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c34fep77d45tx"]
+
+[ext_resource type="Script" uid="uid://de4ifafcd0p1i" path="res://entities/lock/lock.gd" id="1_4hivu"]
+[ext_resource type="PackedScene" uid="uid://dmrc2e072mukh" path="res://entities/lock/lock.tscn" id="2_fbgc2"]
+[ext_resource type="PackedScene" uid="uid://dv2dm4auixepg" path="res://entities/lock/pin/pin.tscn" id="3_m4oe8"]
+[ext_resource type="PackedScene" uid="uid://biy5ugxxadayn" path="res://entities/lock/tumbler/tumbler.tscn" id="4_nqwnb"]
+[ext_resource type="PackedScene" uid="uid://c7m7m5623eowl" path="res://entities/pick/pick.tscn" id="5_jndyb"]
+
+[node name="EntranceLock" type="Node2D" unique_id=1563609292]
+script = ExtResource("1_4hivu")
+
+[node name="Lock" parent="." unique_id=1995817171 instance=ExtResource("2_fbgc2")]
+position = Vector2(464, 545)
+
+[node name="Tumbler" parent="." unique_id=696676676 instance=ExtResource("4_nqwnb")]
+position = Vector2(879, 653)
+
+[node name="Pick" parent="." unique_id=279109275 instance=ExtResource("5_jndyb")]
+position = Vector2(1213, 556)
+
+[node name="pins" type="Node2D" parent="." unique_id=566986419]
+unique_name_in_owner = true
+position = Vector2(464, 545)
+
+[node name="Pin" parent="pins" unique_id=1335108495 instance=ExtResource("3_m4oe8")]
+position = Vector2(417, 202)
