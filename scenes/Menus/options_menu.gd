@@ -1,7 +1,8 @@
 extends Panel
 
 var previous_focus: Control
-@onready var first_setting_element = $VBoxContainer/CheckButton
+@onready var first_setting_element = $VBoxContainer/JumpscareButton
+var iSeeYou = preload("res://scenes/Menus/main_menu/i-see-you.mp3")
 # Reference to your back button
 #@onready var back_button = $back
 
@@ -30,3 +31,7 @@ func _input(event: InputEvent) -> void:
 		# Tell Godot: "I handled this input, do not pass it to the Pause Menu or game!"
 		get_viewport().set_input_as_handled()
 		close()
+
+
+func _on_jumpscare_button_pressed() -> void:
+	AudioManager.play_sfx_global(iSeeYou)

@@ -42,13 +42,14 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CheckButton" type="CheckButton" parent="VBoxContainer" unique_id=1219450671]
+[node name="JumpscareButton" type="CheckButton" parent="VBoxContainer" unique_id=1219450671]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+text = "Jumpscare"
 
 [node name="AudioSliderMaster" parent="VBoxContainer" unique_id=1422607701 instance=ExtResource("4_gn0ho")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../CheckButton")
+focus_neighbor_top = NodePath("../JumpscareButton")
 audio_bus_name = "Master"
 
 [node name="AudioSliderSFX" parent="VBoxContainer" unique_id=1266949156 instance=ExtResource("4_gn0ho")]
@@ -71,4 +72,5 @@ theme = ExtResource("1_liyum")
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[connection signal="pressed" from="VBoxContainer/JumpscareButton" to="." method="_on_jumpscare_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
