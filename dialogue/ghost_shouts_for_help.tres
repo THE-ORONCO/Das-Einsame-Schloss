@@ -1,0 +1,194 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://bjwxtk3nubehn"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_7m1qg"]
+
+[resource]
+script = ExtResource("1_7m1qg")
+graph_data = {
+"START": {
+"call_method_node_1": {
+"autoload": "GameState",
+"method": "walk",
+"node_index": 1,
+"node_type": "call_method_node",
+"offset": Vector2(5151.1797, 2066.0452),
+"parameters": [],
+"size": Vector2(292, 232),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialog_character",
+"dialog_key": "START_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(426.5, 338.5),
+"portrait": "Character_Idle",
+"size": Vector2(293, 452),
+"to_dialog": "",
+"to_node": ["wait_node_1"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(1156.5, 767.5),
+"portrait": "Ghost_Idle",
+"size": Vector2(281, 452),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "dialog_character",
+"dialog_key": "START_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(1606.5, 1090.5),
+"portrait": "Character_Idle",
+"size": Vector2(293, 452),
+"to_dialog": "",
+"to_node": ["dialogue_node_4"]
+},
+"dialogue_node_4": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_4",
+"node_index": 4,
+"node_type": "dialogue_node",
+"offset": Vector2(1960, 1200),
+"portrait": "Ghost_Idle",
+"size": Vector2(460, 452),
+"to_dialog": "",
+"to_node": ["dialogue_node_5"]
+},
+"dialogue_node_5": {
+"char_expand": true,
+"character": "dialog_character",
+"dialog_key": "START_DIALOG_5",
+"node_index": 5,
+"node_type": "dialogue_node",
+"offset": Vector2(2600, 1460),
+"portrait": "Character_Idle",
+"size": Vector2(293, 452),
+"to_dialog": "",
+"to_node": ["dialogue_node_6"]
+},
+"dialogue_node_6": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_6",
+"node_index": 6,
+"node_type": "dialogue_node",
+"offset": Vector2(3020, 1680),
+"portrait": "Ghost_Idle",
+"size": Vector2(640, 452),
+"to_dialog": "",
+"to_node": ["options_node_1"]
+},
+"dialogue_node_7": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_7",
+"node_index": 7,
+"node_type": "dialogue_node",
+"offset": Vector2(4440, 2120),
+"portrait": "Ghost_Idle",
+"size": Vector2(293, 452),
+"to_dialog": "",
+"to_node": ["call_method_node_1"]
+},
+"dialogue_node_8": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "START_DIALOG_8",
+"node_index": 8,
+"node_type": "dialogue_node",
+"offset": Vector2(4420, 1560),
+"portrait": "Ghost_Idle",
+"size": Vector2(281, 452),
+"to_dialog": "",
+"to_node": ["call_method_node_1"]
+},
+"options_node_1": {
+"node_index": 1,
+"node_type": "options_node",
+"offset": Vector2(3880, 1940),
+"options_keys": ["START_OPT1_1", "START_OPT1_2"],
+"size": Vector2(250, 414),
+"to_dialog": "",
+"to_node": ["dialogue_node_8", "dialogue_node_7"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(110.5, 245.5),
+"size": Vector2(227, 97),
+"start_id": "START",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+},
+"wait_node_1": {
+"node_index": 1,
+"node_type": "wait_node",
+"offset": Vector2(797.5, 710.5),
+"size": Vector2(219, 86),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"],
+"wait_time": 1.0
+}
+}
+}
+dialogs = {
+"START_DIALOG_1": {
+"default": "My EMP is reacting. This place is defentelly haunted",
+"en": ""
+},
+"START_DIALOG_2": {
+"default": "Hello, is there anyone?",
+"en": ""
+},
+"START_DIALOG_3": {
+"default": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!
+A ghost!",
+"en": ""
+},
+"START_DIALOG_4": {
+"default": "Come now. I waited here for so long just for you to scream and run away?",
+"en": ""
+},
+"START_DIALOG_5": {
+"default": "Yes?",
+"en": ""
+},
+"START_DIALOG_6": {
+"default": "At least break my chains so I can get out of here as well. I am the lady of the castle and have been for 576 years and counting. Been dead for most of that time.
+Something is keeping me here and I'm rather bored of the same old rooms.
+Could you help me out?
+It's not like I need the castle when I am finally freed.",
+"en": ""
+},
+"START_DIALOG_7": {
+"default": "you have to open all the doors in the castle to break me free.",
+"en": ""
+},
+"START_DIALOG_8": {
+"default": "I just need you to open all the doors in the castle to break me free.",
+"en": ""
+},
+"START_OPT1_1": {
+"default": "Hmmm. House seems haunted. I'm not sure."
+},
+"START_OPT1_2": {
+"default": "Some more views for my channel and a whole castle? count me in! where do I start"
+}
+}
+characters = {
+"START": {
+"dialog_character": 3005546294628586876,
+"dialogue_ghost": 2784968421574489778
+}
+}

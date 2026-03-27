@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://de0ddvt4khxfc"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_okjmw"]
+
+[resource]
+script = ExtResource("1_okjmw")
+graph_data = {
+"START": {
+"call_method_node_1": {
+"autoload": "GameState",
+"method": "pick_entrance_lock",
+"node_index": 1,
+"node_type": "call_method_node",
+"offset": Vector2(1100, 580),
+"parameters": [],
+"size": Vector2(292.00006, 232.00012),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialog_character",
+"dialog_key": "START_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(466.4256, 248.7314),
+"portrait": "Character_Idle",
+"size": Vector2(500.00018, 452),
+"to_dialog": "",
+"to_node": ["call_method_node_1"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(141.88016, 159.6405),
+"size": Vector2(227, 97),
+"start_id": "START",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"START_DIALOG_1": {
+"default": "So this is the place my subscribers told be about. Looks haunted as hell.
+And the door seems locked.
+Guess i have to lockpick it, to get in.",
+"en": ""
+}
+}
+characters = {
+"START": {
+"dialog_character": 3005546294628586876
+}
+}

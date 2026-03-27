@@ -12,7 +12,9 @@ var current_state = WALKING
 enum Locks {
 	TEST
 }
-const _test_lock: PackedScene = preload("uid://d4e0pcnkiwhcu")
+const TEST_LOCK: PackedScene = preload("uid://d4e0pcnkiwhcu")
+const ENTRANCE_LOCK: PackedScene = preload("uid://c34fep77d45tx")
+const VERY_RUSTED_LOCK = preload("uid://cdgfekcdq35m6")
 
 @onready var popup_canvas: CanvasLayer
 
@@ -36,7 +38,9 @@ func _pick(lock: PackedScene) -> void:
 	popup_canvas.add_child(lock_scene)
 func set_state(game_state) -> void: current_state = game_state
 
-func pick_test_lock() -> void: _pick(_test_lock)
+func pick_test_lock() -> void: _pick(TEST_LOCK)
+func pick_entrance_lock() -> void: _pick(ENTRANCE_LOCK)
+func pick_rusty_lock() -> void: _pick(VERY_RUSTED_LOCK)
 
 func _ready() -> void:
 	popup_canvas = CanvasLayer.new()

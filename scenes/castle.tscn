@@ -3,11 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://2fwkdkbme2nc" path="res://entities/character/character.tscn" id="1_bly62"]
 [ext_resource type="MeshLibrary" uid="uid://dfa8g0oha4ac6" path="res://entities/tiles/floor_grid.meshlib" id="3_jxdab"]
 [ext_resource type="PackedScene" uid="uid://b8u1vlvp3egpq" path="res://entities/wall/wall_door.tscn" id="4_7pkwf"]
+[ext_resource type="PackedScene" uid="uid://ioty8lgxcn4i" path="res://entities/interactable/interactable.tscn" id="4_ty4iy"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="5_c4gjn"]
 [ext_resource type="PackedScene" uid="uid://cwgpc76lmcvt7" path="res://entities/wall/wall.tscn" id="5_ha01g"]
 [ext_resource type="PackedScene" uid="uid://cc88dntjug45n" path="res://entities/door/door.tscn" id="6_7pkwf"]
 [ext_resource type="PackedScene" uid="uid://bm4av1jlqx6kw" path="res://entities/tea/tea.tscn" id="6_ha01g"]
+[ext_resource type="Resource" uid="uid://bjwxtk3nubehn" path="res://dialogue/ghost_shouts_for_help.tres" id="6_xggso"]
+[ext_resource type="PackedScene" uid="uid://c3v5uyb5m3a7e" path="res://entities/chimney/chimney_kitchen.tscn" id="7_ha01g"]
+[ext_resource type="Script" uid="uid://d1vn0bjwqsasw" path="res://entities/dialog_starter.gd" id="7_u327c"]
+[ext_resource type="Resource" uid="uid://de0ddvt4khxfc" path="res://dialogue/have_to_lock_pick_front_door.tres" id="8_47cd3"]
 [ext_resource type="PackedScene" uid="uid://p805qlu6j0kh" path="res://entities/furniture/closet.tscn" id="8_lbl1g"]
 [ext_resource type="PackedScene" uid="uid://0tvhwykah20i" path="res://entities/furniture/table.tscn" id="9_feow2"]
+[ext_resource type="Resource" uid="uid://dm81rrw1hmyki" path="res://dialogue/rusty_lock.tres" id="10_jb4j5"]
 [ext_resource type="PackedScene" uid="uid://dtoyqtbwemd3u" path="res://entities/tiles/cobweb.tscn" id="10_qd3ve"]
 [ext_resource type="PackedScene" uid="uid://skkm7i2fkcii" path="res://entities/tiles/chain.tscn" id="11_qd3ve"]
 [ext_resource type="PackedScene" uid="uid://b8pmmovpsyo1u" path="res://entities/furniture/dresser.tscn" id="12_3rrw6"]
@@ -65,9 +72,41 @@ data = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 35)
 
 [node name="WallDoor" parent="courtyard" unique_id=272459560 instance=ExtResource("4_7pkwf")]
+locked = true
 
 [node name="Marker3D" type="Marker3D" parent="courtyard/WallDoor" unique_id=1661855076]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+
+[node name="Interactible" parent="courtyard/WallDoor/Marker3D" unique_id=1269265622 instance=ExtResource("4_ty4iy")]
+trigger_on_contact = true
+
+[node name="DialogPlayer" type="Node" parent="courtyard/WallDoor/Marker3D" unique_id=1404819740]
+script = ExtResource("5_c4gjn")
+_dialog_data_uid = 3064967577047985779
+_dialog_file_name = "ghost_shouts_for_help"
+_dialog_data = ExtResource("6_xggso")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
+[node name="DialogStarter" type="Node" parent="courtyard/WallDoor/Marker3D" unique_id=1781555538 node_paths=PackedStringArray("interaction_point", "dialogue")]
+script = ExtResource("7_u327c")
+interaction_point = NodePath("../Interactible")
+dialogue = NodePath("../DialogPlayer")
+metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
+
+[node name="DialogPlayer" type="Node" parent="courtyard/WallDoor" unique_id=1087039002]
+script = ExtResource("5_c4gjn")
+_dialog_data_uid = 7491815511515870656
+_dialog_file_name = "have_to_lock_pick_front_door"
+_dialog_data = ExtResource("8_47cd3")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="Wall" parent="courtyard" unique_id=1848765767 instance=ExtResource("5_ha01g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
@@ -102,9 +141,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -42)
 
 [node name="WallDoor2" parent="room1" unique_id=55665471 instance=ExtResource("4_7pkwf")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10, 0, 0)
+locked = true
 
 [node name="Marker3D2" type="Marker3D" parent="room1/WallDoor2" unique_id=814548379]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.8358783e-06, 0, -42)
+
+[node name="DialogPlayer" type="Node" parent="room1/WallDoor2" unique_id=2048850895]
+script = ExtResource("5_c4gjn")
+_dialog_data_uid = 8071262569001800396
+_dialog_file_name = "rusty_lock"
+_dialog_data = ExtResource("10_jb4j5")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
 
 [node name="WallDoor3" parent="room1" unique_id=296017561 instance=ExtResource("4_7pkwf")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -10, 0, 0)

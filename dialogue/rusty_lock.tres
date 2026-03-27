@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://dm81rrw1hmyki"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_vl8tl"]
+
+[resource]
+script = ExtResource("1_vl8tl")
+graph_data = {
+"START": {
+"call_method_node_1": {
+"autoload": "GameState",
+"method": "pick_rusty_lock",
+"node_index": 1,
+"node_type": "call_method_node",
+"offset": Vector2(900, 580),
+"parameters": [],
+"size": Vector2(292, 232.00006),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "START_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(620, 160),
+"portrait": "",
+"size": Vector2(250.00003, 452),
+"to_dialog": "",
+"to_node": ["call_method_node_1"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(360, 100),
+"size": Vector2(227.00006, 97),
+"start_id": "START",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"START_DIALOG_1": {
+"default": "This lock seems really rusty. I should use my trusty tool with (X)!",
+"en": ""
+}
+}
+characters = {
+"START": {}
+}

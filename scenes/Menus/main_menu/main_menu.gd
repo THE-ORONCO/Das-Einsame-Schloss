@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	#UiManager.playStartSFX()
 	AudioManager.play_gb_music()
-	get_tree().change_scene_to_file("res://scenes/testing/test_castle.tscn")
+	get_tree().change_scene_to_file("res://scenes/castle.tscn")
 
 
 func _on_options_pressed() -> void:
