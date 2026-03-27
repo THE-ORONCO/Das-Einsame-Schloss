@@ -113,7 +113,9 @@ custom_minimum_size = Vector2(1100, 400)
 layout_mode = 2
 theme = ExtResource("4_3b8pq")
 text = "
-This Games was made at the \"Schlossjam 2026\" 
+This Games was made at the 
+\"Schlossjam 2026\" 
+in 30 Hours
 with the topic 
 
 \"Das einsame Schloss\" 
