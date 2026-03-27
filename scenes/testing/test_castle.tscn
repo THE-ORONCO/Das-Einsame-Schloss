@@ -106,6 +106,30 @@ metadata/_custom_type_script = "uid://1mxdpoyob13n"
 [node name="Interactible" parent="Room1/Chimney" unique_id=1671141194 instance=ExtResource("3_xedob")]
 activate_later = true
 
+[node name="Chimney2" parent="Room1" unique_id=1040767172 instance=ExtResource("10_dc4sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6015482, 0, -3.2055044)
+
+[node name="DialogStarter" type="Node" parent="Room1/Chimney2" unique_id=1222414169 node_paths=PackedStringArray("interaction_point", "dialogue")]
+script = ExtResource("3_j22dg")
+interaction_point = NodePath("../Interactible")
+dialogue = NodePath("DialogPlayer")
+metadata/_custom_type_script = "uid://d1vn0bjwqsasw"
+
+[node name="DialogPlayer" type="Node" parent="Room1/Chimney2/DialogStarter" unique_id=1240276621]
+script = ExtResource("5_tgeax")
+_dialog_data_uid = 6310426270137687607
+_dialog_file_name = "example"
+_dialog_data = ExtResource("11_fyw57")
+_start_id = "START"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
+[node name="Interactible" parent="Room1/Chimney2" unique_id=291312456 instance=ExtResource("3_xedob")]
+activate_later = true
+trigger_on_contact = true
+
 [node name="Room2" type="Node3D" parent="." unique_id=1510660550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09994507, 0, -64.34654)
 
