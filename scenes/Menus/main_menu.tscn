@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bgav8um65htnu" path="res://scenes/Menus/main_menu/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://cvex5yntews2k" path="res://scenes/Menus/main_menu/illertissen.jpg" id="1_ekxnf"]
 [ext_resource type="Theme" uid="uid://e0756hvdpqi6" path="res://ui/menu_theme.tres" id="2_ekxnf"]
+[ext_resource type="Theme" uid="uid://b7mh7ir5pjbl0" path="res://scenes/Menus/credit_theme.tres" id="4_3b8pq"]
 
 [node name="main_menu" type="Control" unique_id=621423662]
 layout_mode = 3
@@ -50,6 +51,13 @@ size_flags_vertical = 3
 theme = ExtResource("2_ekxnf")
 text = "Settings"
 
+[node name="credits" type="Button" parent="MainButtons" unique_id=342044234]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_ekxnf")
+text = "Credits"
+
 [node name="quit" type="Button" parent="MainButtons" unique_id=1255993981]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -59,6 +67,80 @@ theme = ExtResource("2_ekxnf")
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 
+[node name="Credits" type="Control" parent="." unique_id=951642292]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Credits" unique_id=142804435]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Credits" unique_id=1656365718]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -20.0
+offset_right = 27.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="Credits/VBoxContainer" unique_id=1005257616]
+layout_mode = 2
+theme = ExtResource("4_3b8pq")
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/VBoxContainer" unique_id=583665871]
+custom_minimum_size = Vector2(900, 400)
+layout_mode = 2
+theme = ExtResource("4_3b8pq")
+text = "This Games was made at the \"Schlossjam 2026\" 
+with the topic 
+
+\"Das einsame Schloss\" 
+(\"The Lonely Castle\")
+
+[Names] contributed to this project.
+[Names] contributed to this project.
+[Names] contributed to this project.
+[Names] contributed to this project.
+[Names] contributed to this project.
+
+For Sounds 
+https://pixabay.com and 
+https://opengameart.org 
+was used"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Credits/VBoxContainer" unique_id=1500277204]
+layout_mode = 2
+theme = ExtResource("4_3b8pq")
+text = "Return"
+
 [connection signal="pressed" from="MainButtons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainButtons/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MainButtons/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Credits/VBoxContainer/Back" to="." method="_on_credits_back_pressed"]
