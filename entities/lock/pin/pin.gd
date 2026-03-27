@@ -17,7 +17,7 @@ var spring_strength: float = 32:
 		spring_strength = val
 		if spring != null : 
 			spring.stiffness = spring_strength
-@export_range(0,4)
+@export_range(0,20)
 var rust: float = .5:
 	set(val):
 		rust = val
@@ -53,6 +53,7 @@ func _ready() -> void:
 	spring_strength = spring_strength
 	move_lower = move_lower
 	move_upper = move_upper
+	rust = rust
 	
 	
 func _physics_process(_delta: float) -> void:

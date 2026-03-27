@@ -8,14 +8,24 @@ var speed: Vector2 = Vector2(700,300)
 @export_range(0., 3.)
 var turn_speed: float = 1
 
+var toggle: bool = false
+
 var _extent: Vector2
 
 func _ready() -> void:
 	_extent = DisplayServer.screen_get_size()
+	GameState.equip_pick()
+	GameState.pick_was_equipped.connect(self.show)
+	GameState.wp42_was_equipped.connect(self.hide)
 
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.LOCK_PICK: return
+	if !GameState.pick_equipped: return
+	
+	if Input.is_action_just_pressed("use_wp42"):
+		GameState.equip_wp42()
+		return
 	
 	var move_dir: Vector2 = Input.get_vector("pick_left", "pick_right", "pick_up", "pick_down")
 	self.linear_velocity = move_dir * speed

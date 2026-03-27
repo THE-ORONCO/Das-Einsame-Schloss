@@ -9,14 +9,22 @@ var speed: Vector2 = Vector2(700,300)
 var turn_speed: float = 1
 
 var _extent: Vector2
-var _affected_pins: Array[Pin] = []
+var _affected_pins: Dictionary[NodePath, Pin] = {}
 
 func _ready() -> void:
 	_extent = DisplayServer.screen_get_size()
+	GameState.pick_was_equipped.connect(self.hide)
+	GameState.wp42_was_equipped.connect(self.show)
+	self.hide()
 
 
 func _physics_process(delta: float) -> void:
 	if GameState.current_state != GameState.LOCK_PICK: return
+	if GameState.pick_equipped: return
+	
+	if Input.is_action_just_pressed("use_pick"):
+		GameState.equip_pick()
+		return
 	
 	var move_dir: Vector2 = Input.get_vector("pick_left", "pick_right", "pick_up", "pick_down")
 	self.linear_velocity = move_dir * speed
@@ -32,18 +40,17 @@ func _physics_process(delta: float) -> void:
 	var may: float = clamp(self.position.y, 0, _extent.y)
 	self.position = Vector2(max, may)
 	
-	for pin in _affected_pins:
+	for pin in _affected_pins.values():
 		if pin.rust >= 0.6:
-			pin.rust = move_toward(pin.rust, 0.6, delta)
+			pin.rust = move_toward(pin.rust, 0.6, delta * 10)
 
 
 func _pin_entered(body: Node2D) -> void:
-	if body is Pin:
-		_affected_pins.append(body)
+	var grand_parent := body.get_parent().get_parent()
+	if grand_parent is Pin:
+		_affected_pins[grand_parent.get_path()] = grand_parent
 
 
 func _pin_exited(body: Node2D) -> void:
-	if body is Pin:
-		var index := _affected_pins.find(body)
-		if index > 0:
-			_affected_pins.remove_at(index)
+	var grand_parent := body.get_parent().get_parent()
+	_affected_pins.erase(grand_parent.get_path())

@@ -16,6 +16,15 @@ const _test_lock: PackedScene = preload("uid://d4e0pcnkiwhcu")
 
 @onready var popup_canvas: CanvasLayer
 
+signal pick_was_equipped
+signal wp42_was_equipped
+var pick_equipped: bool = true
+func equip_pick() -> void: 
+	pick_equipped = true
+	pick_was_equipped.emit()
+func equip_wp42() -> void:
+	pick_equipped = false
+	wp42_was_equipped.emit()
 
 func walk() -> void: current_state = WALKING
 func talk() -> void: current_state = DIALOGUE
