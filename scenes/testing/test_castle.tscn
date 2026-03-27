@@ -12,9 +12,24 @@
 [ext_resource type="Texture2D" uid="uid://rrr4haaja4xn" path="res://entities/tiles/wood.png" id="8_jgjqe"]
 [ext_resource type="Texture2D" uid="uid://c7nbmribjxohw" path="res://entities/tiles/rocks.png" id="9_atenw"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_atenw"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_xlm3y"]
+sky_material = SubResource("ProceduralSkyMaterial_atenw")
+
+[sub_resource type="Environment" id="Environment_4dd1a"]
+background_mode = 1
+sky = SubResource("Sky_xlm3y")
+tonemap_mode = 2
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_61nqe"]
 
 [node name="TestCastle" type="Node3D" unique_id=1145772969]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=282736588]
+environment = SubResource("Environment_4dd1a")
 
 [node name="Room1" type="Node3D" parent="." unique_id=304703624]
 
@@ -60,6 +75,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.088392)
 
 [node name="floor" type="Sprite3D" parent="Room1" unique_id=153915772]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+shaded = true
 double_sided = false
 texture_filter = 2
 render_priority = -100
@@ -81,6 +97,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12430906, 0, -10.000999)
 
 [node name="floor" type="Sprite3D" parent="Room2" unique_id=1681073962]
 transform = Transform3D(4, 0, 0, 0, -1.7484555e-07, 4, 0, -4, -1.7484555e-07, 0, 0, 0)
+shaded = true
+double_sided = false
 texture_filter = 2
 render_priority = -100
 texture = ExtResource("9_atenw")

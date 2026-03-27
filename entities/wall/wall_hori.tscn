@@ -19,6 +19,7 @@ shape = SubResource("BoxShape3D_7kopq")
 transform = Transform3D(4, 0, 0, 0, 2.828427, 2.828427, 0, -2.828427, 2.828427, 0, 0, 0)
 sorting_offset = -1.0
 offset = Vector2(0, 24)
+shaded = true
 double_sided = false
 texture_filter = 2
 texture = ExtResource("1_ndby4")

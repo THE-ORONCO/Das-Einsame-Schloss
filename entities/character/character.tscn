@@ -191,6 +191,8 @@ shape = SubResource("SphereShape3D_7315l")
 unique_name_in_owner = true
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 billboard = 1
+shaded = true
+double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_oo5hp")
 animation = &"idle"
@@ -217,6 +219,14 @@ texture = SubResource("AnimatedTexture_xrw5f")
 [node name="light" type="SpotLight3D" parent="." unique_id=639589966]
 unique_name_in_owner = true
 transform = Transform3D(-1, -7.519688e-16, -8.742277e-08, -1.4656107e-08, 0.9858472, 0.16764633, 8.618551e-08, 0.16764633, -0.9858472, 0, 0, 0)
-spot_range = 19.15
-spot_angle = 13.37
-spot_angle_attenuation = 2.639016
+light_energy = 2.041
+light_indirect_energy = 2.041
+light_volumetric_fog_energy = 3.575
+spot_range = 65.182
+spot_angle = 32.48
+spot_angle_attenuation = 1.0717733
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=902753991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.33486032)
+light_energy = 0.288
+omni_range = 2.812
