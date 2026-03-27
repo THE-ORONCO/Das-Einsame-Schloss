@@ -16,6 +16,8 @@ const _test_lock: PackedScene = preload("uid://d4e0pcnkiwhcu")
 
 @onready var popup_canvas: CanvasLayer
 
+signal main_menu_opened
+
 signal pick_was_equipped
 signal wp42_was_equipped
 var pick_equipped: bool = true

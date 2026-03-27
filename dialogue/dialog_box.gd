@@ -1,6 +1,9 @@
 @tool
 extends DialogBox
 
+func _ready() -> void:
+	GameState.main_menu_opened.connect(self.stop_dialog)
+
 # -----------------------------------------------------------------------------
 # This is a template for a custom dialog box with a default behavior.
 # -----------------------------------------------------------------------------

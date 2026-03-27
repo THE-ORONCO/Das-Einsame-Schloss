@@ -11,6 +11,7 @@ var dialog_after: DialogPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameState.set_state(GameState.LOCK_PICK)
+	GameState.main_menu_opened.connect(self.queue_free)
 	for pin in %pins.get_children().filter(func(c) : return c is Pin):
 		pin = pin as Pin
 		pins.append(pin)

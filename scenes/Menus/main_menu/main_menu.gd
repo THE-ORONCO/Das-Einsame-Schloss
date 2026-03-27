@@ -12,6 +12,7 @@ func _ready() -> void:
 	start_button.grab_focus()
 	UiManager._connect_ui_sounds(self)
 	AudioManager.play_ambient()
+	GameState.main_menu_opened.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

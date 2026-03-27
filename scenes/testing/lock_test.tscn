@@ -22,8 +22,6 @@ position = Vector2(815, 313)
 
 [node name="Wp42" parent="." unique_id=1289379381 instance=ExtResource("9_a6cio")]
 position = Vector2(1055, 378)
-speed = null
-turn_speed = null
 
 [node name="Dirt" parent="." unique_id=1075283443 instance=ExtResource("3_8f5g6")]
 position = Vector2(613, 321)
