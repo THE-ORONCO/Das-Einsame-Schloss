@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://sdasgg706n7x"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_sqt20"]
+
+[resource]
+script = ExtResource("1_sqt20")
+graph_data = {
+"CHAIN": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "dialogue_ghost",
+"dialog_key": "CHAIN_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(357, 281),
+"portrait": "Ghost_Idle",
+"size": Vector2(250, 394),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(95, 283),
+"size": Vector2(190.00006, 97),
+"start_id": "CHAIN",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"CHAIN_DIALOG_1": {
+"default": "“Please, make haste…”",
+"en": ""
+}
+}
+characters = {
+"CHAIN": {
+"dialogue_ghost": 2784968421574489778
+}
+}
