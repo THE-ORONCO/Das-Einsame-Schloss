@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://skkm7i2fkcii"]
+
+[ext_resource type="Texture2D" uid="uid://p3hcg85e6hon" path="res://entities/tiles/chains.png" id="1_13i2s"]
+
+[node name="Node3D" type="Node3D" unique_id=691710267]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=54194751]
+pixel_size = 0.04
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_13i2s")

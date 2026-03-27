@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3hcg85e6hon"
-path.s3tc="res://.godot/imported/chains.png-d5dab67626da989d41834c3220d39dc7.s3tc.ctex"
+uid="uid://dfglx6oe42oha"
+path.s3tc="res://.godot/imported/Ritter.png-1753e0af4cf65f25f5eeacf84348a3ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://entities/tiles/chains.png"
-dest_files=["res://.godot/imported/chains.png-d5dab67626da989d41834c3220d39dc7.s3tc.ctex"]
+source_file="res://entities/tiles/Ritter.png"
+dest_files=["res://.godot/imported/Ritter.png-1753e0af4cf65f25f5eeacf84348a3ae.s3tc.ctex"]
 
 [params]
 
